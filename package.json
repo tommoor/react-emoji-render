@@ -4,7 +4,7 @@
   "author": "Tom Moor",
   "description": "Render emoji's the way your users expect.",
   "scripts": {
-    "build": "babel src -d lib --ignore __tests__",
+    "build": "babel src -d lib --ignore test",
     "test": "jest",
     "lint": "eslint src --fix"
   },
@@ -21,7 +21,8 @@
     "emoji"
   ],
   "peerDependencies": {
-    "react": ">=0.14.0"
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
@@ -38,7 +39,8 @@
     "jest": "^18.1.0",
     "prettier": "^0.16.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.4.2"
   },
   "jest": {
     "testPathDirs": [
@@ -46,6 +48,8 @@
     ]
   },
   "dependencies": {
-    "emoji-regex": "^6.4.1"
+    "emoji-regex": "^6.4.1",
+    "react-string-replace": "^0.4.0",
+    "string-replace-to-array": "^1.0.1"
   }
 }
