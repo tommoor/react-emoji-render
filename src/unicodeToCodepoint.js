@@ -1,10 +1,13 @@
 // avoid runtime RegExp creation for not so smart,
 // not JIT based, and old browsers / engines
+// https://github.com/twitter/twemoji/blob/gh-pages/2/twemoji.js#L232
 const UFE0Fg = /\uFE0F/g;
 
-// avoid using a string literal like '\u200D' here because minifiers expand it inline
+// \u200D is a zero-width joiner character
+// https://github.com/twitter/twemoji/blob/gh-pages/2/twemoji.js#L235
 const U200D = String.fromCharCode(0x200d);
 
+// convert utf16 into code points
 function toCodePoint(input, separator = "-") {
   const codePoints = [];
   for (let codePoint of input) {

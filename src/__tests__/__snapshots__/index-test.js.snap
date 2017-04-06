@@ -1,30 +1,81 @@
-exports[`test Handles emoji with a multiple codepoints 1`] = `
-<span
-  className={undefined}>
-  Great work 
-  <img
-    src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png" />
-   
-  <img
-    src="https://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png" />
-</span>
-`;
-
-exports[`test Handles emoji with a single codepoint 1`] = `
-<span
-  className={undefined}>
+exports[`test A mixture of emoji syntax 1`] = `
+<span>
   This 
   <img
-    src="https://twemoji.maxcdn.com/2/72x72/2764.png" />
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f468-1f3fd.png" />
    is 
   <img
+    className={undefined}
     src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
 </span>
 `;
 
-exports[`test Handles strings with no emoji 1`] = `
-<span
-  className={undefined}>
+exports[`test Aliases containing underscores 1`] = `
+<span>
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f61c.png" />
+   wow
+</span>
+`;
+
+exports[`test Aliases with skin tone modifiers 1`] = `
+<span>
+  Say hello to 
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png" />
+</span>
+`;
+
+exports[`test Does nothing to unknown aliases 1`] = `
+<span>
+  An :unknown: alias
+</span>
+`;
+
+exports[`test Emoji with a multiple codepoints 1`] = `
+<span>
+  Great work 
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png" />
+   
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png" />
+</span>
+`;
+
+exports[`test Emoji with a single codepoint 1`] = `
+<span>
+  This 
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png" />
+   is 
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
+</span>
+`;
+
+exports[`test Simple aliases 1`] = `
+<span>
+  This 
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f604.png" />
+   is nice 
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f4a9.png" />
+</span>
+`;
+
+exports[`test Strings with no emoji 1`] = `
+<span>
   Facebook
 </span>
 `;

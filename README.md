@@ -6,7 +6,7 @@ Render emoji's the way your users expect.
 - Supports emoticons such as :) :x :/
 - Supports slack-style emoji names such as :smile:
 - Allows styling differently for strings that are only emoji, eg: to make them larger
-- Choose between twemoji, emojione or native characters.
+- Choose between twemoji, emojione or custom image sets.
 
 
 ## Installation
