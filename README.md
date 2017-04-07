@@ -1,4 +1,6 @@
-# emoji-react
+[![CircleCI](https://circleci.com/gh/tommoor/react-emoji.svg?style=svg)](https://circleci.com/gh/tommoor/react-emoji)
+
+# react-emoji
 
 Render emoji's the way your users expect.
 
