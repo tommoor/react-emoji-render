@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   angry: [">:(", ">:-("],
   blush: [':")', ':-")'],
   broken_heart: ["</3", "<\\3"],

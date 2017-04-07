@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   "skin-tone-2": "🏻",
   "skin-tone-3": "🏿",
   "skin-tone-4": "🏽",
