@@ -29,24 +29,45 @@ import Emoji from '<PACKAGE-NAME>';
 </Emoji>
 ```
 
+### Twemoji
+
+```javascript
+import { Twemoji } from '<PACKAGE-NAME>';
+
+<Twemoji>
+  This ❤️ sentence includes :+1: a variety of emoji types :)
+</Twemoji>
+```
+
+### Emojione
+
+```javascript
+import { Emojione } from '<PACKAGE-NAME>';
+
+<Emojione>
+  This ❤️ sentence includes :+1: a variety of emoji types :)
+</Emojione>
+```
+
 ## Advanced Usage
 
-If you wish to use emojis other than twemoji then options are exposed, I recommend
-creating a HOC which wraps your options and exposes a new component, something like:
+If you wish to use a custom emoji location then you can pass options into the prop.
+I recommend creating a HOC which wraps your options and exposes a new component,
+something like:
 
 ```javascript
 import Emoji from '<PACKAGE-NAME>';
 
-function MyEmojiRenderer({children}) {
-  const options = options || {
-    baseUrl: 'https://twemoji.maxcdn.com/2/svg/',
+function MyEmojiRenderer({children, ...rest}) {
+  const options = {
+    baseUrl: 'https://mycustom.cdn.com/emojis/',
     ext: '.svg',
     size: ''
   };
 
   return (
-    <Emoji options={options}>{children}</Emoji>
-  )
+    <Emoji options={options} {...rest}>{children}</Emoji>
+  );
 }
 ```
 
@@ -56,3 +77,4 @@ You can then use the HOC like so:
 <MyEmojiRenderer>
   This ❤️ sentence includes :+1: a variety of emoji types :)
 </MyEmojiRenderer>
+```
