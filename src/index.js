@@ -1,23 +1,14 @@
 import React from "react";
 import isString from "lodash.isstring";
-import flatten from "lodash.flatten";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
+import asciiRegex from "./asciiRegex";
 import normalizeProtocol from "./normalizeProtocol";
 import unicodeToCodepoint from "./unicodeToCodepoint";
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
 
-function quoteRE(str) {
-  return str.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
-}
-
-const asciiAliasKeys = Object.keys(asciiAliases);
-const names = flatten(
-  asciiAliasKeys.map(name => asciiAliases[name].map(alias => quoteRE(alias)))
-).join("|");
-
-const asciiAliasesRegex = new RegExp(`(^|\\s)(${names})(\s|$)`, "g");
+const asciiAliasesRegex = asciiRegex();
 const unicodeEmojiRegex = emojiRegex();
 const aliasesRegex = /:([\w\-\_]+):/g;
 const defaultOptions = {
@@ -48,6 +39,7 @@ export default function Emoji({ children, options, ...rest }) {
   }
 
   function replaceAsciiAliases(...match) {
+    const asciiAliasKeys = Object.keys(asciiAliases);
     for (let i in asciiAliasKeys) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
