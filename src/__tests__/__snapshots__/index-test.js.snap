@@ -1,6 +1,436 @@
-exports[`test A mixture of emoji syntax 1`] = `
+exports[`Emoji a mixture of emoji syntax 1`] = `
 <span>
-  This 
+  This
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👨🏽
+  </span>
+   is
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
+exports[`Emoji aliases containing underscores 1`] = `
+<span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😜
+  </span>
+   wow
+</span>
+`;
+
+exports[`Emoji aliases with skin tone modifiers 1`] = `
+<span>
+  Say hello to
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👩🏿
+  </span>
+</span>
+`;
+
+exports[`Emoji ascii aliases 1`] = `
+<span>
+  That\'s awesome
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😃
+  </span>
+</span>
+`;
+
+exports[`Emoji does nothing to unknown aliases 1`] = `
+<span>
+  An :unknown: alias
+</span>
+`;
+
+exports[`Emoji emoji with a multiple codepoints 1`] = `
+<span>
+  Great work
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍🏾
+  </span>
+
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👨‍👩‍👧‍👦
+  </span>
+</span>
+`;
+
+exports[`Emoji emoji with a single codepoint 1`] = `
+<span>
+  This
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    ❤️
+  </span>
+   is
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
+exports[`Emoji simple aliases 1`] = `
+<span>
+  This
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😄
+  </span>
+   is nice
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    💩
+  </span>
+</span>
+`;
+
+exports[`Emoji strings with no emoji 1`] = `
+<span>
+  Just some words
+</span>
+`;
+
+exports[`Emoji with svg prop 1`] = `
+<span
+  svg={true}>
+  This
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👨🏿
+  </span>
+   is
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
+exports[`Emojione a mixture of emoji syntax 1`] = `
+<span>
+  This
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-1f3fd.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione aliases containing underscores 1`] = `
+<span>
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f61c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   wow
+</span>
+`;
+
+exports[`Emojione aliases with skin tone modifiers 1`] = `
+<span>
+  Say hello to
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione ascii aliases 1`] = `
+<span>
+  That\'s awesome
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione does nothing to unknown aliases 1`] = `
+<span>
+  An :unknown: alias
+</span>
+`;
+
+exports[`Emojione emoji with a multiple codepoints 1`] = `
+<span>
+  Great work
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione emoji with a single codepoint 1`] = `
+<span>
+  This
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione simple aliases 1`] = `
+<span>
+  This
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is nice
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4a9.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione strings with no emoji 1`] = `
+<span>
+  Just some words
+</span>
+`;
+
+exports[`Emojione with svg prop 1`] = `
+<span>
+  This
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f468-1f3ff.svg"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44c.svg"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji a mixture of emoji syntax 1`] = `
+<span>
+  This
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f468-1f3fd.png"
@@ -12,7 +442,7 @@ exports[`test A mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   is 
+   is
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
@@ -27,7 +457,7 @@ exports[`test A mixture of emoji syntax 1`] = `
 </span>
 `;
 
-exports[`test Aliases containing underscores 1`] = `
+exports[`Twemoji aliases containing underscores 1`] = `
 <span>
   <img
     className={undefined}
@@ -44,9 +474,9 @@ exports[`test Aliases containing underscores 1`] = `
 </span>
 `;
 
-exports[`test Aliases with skin tone modifiers 1`] = `
+exports[`Twemoji aliases with skin tone modifiers 1`] = `
 <span>
-  Say hello to 
+  Say hello to
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png"
@@ -61,7 +491,7 @@ exports[`test Aliases with skin tone modifiers 1`] = `
 </span>
 `;
 
-exports[`test Ascii aliases 1`] = `
+exports[`Twemoji ascii aliases 1`] = `
 <span>
   That\'s awesome
   <img
@@ -78,15 +508,15 @@ exports[`test Ascii aliases 1`] = `
 </span>
 `;
 
-exports[`test Does nothing to unknown aliases 1`] = `
+exports[`Twemoji does nothing to unknown aliases 1`] = `
 <span>
   An :unknown: alias
 </span>
 `;
 
-exports[`test Emoji with a multiple codepoints 1`] = `
+exports[`Twemoji emoji with a multiple codepoints 1`] = `
 <span>
-  Great work 
+  Great work
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
@@ -98,7 +528,7 @@ exports[`test Emoji with a multiple codepoints 1`] = `
         "width": "1em",
       }
     } />
-   
+
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
@@ -113,9 +543,9 @@ exports[`test Emoji with a multiple codepoints 1`] = `
 </span>
 `;
 
-exports[`test Emoji with a single codepoint 1`] = `
+exports[`Twemoji emoji with a single codepoint 1`] = `
 <span>
-  This 
+  This
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/2764.png"
@@ -127,7 +557,7 @@ exports[`test Emoji with a single codepoint 1`] = `
         "width": "1em",
       }
     } />
-   is 
+   is
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
@@ -142,37 +572,9 @@ exports[`test Emoji with a single codepoint 1`] = `
 </span>
 `;
 
-exports[`test Emojione 1`] = `
+exports[`Twemoji simple aliases 1`] = `
 <span>
-  Hola 
-  <img
-    className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-1f3ff.png"
-    style={
-      Object {
-        "height": "1em",
-        "margin": "0 .05em 0 .1em",
-        "verticalAlign": "-0.1em",
-        "width": "1em",
-      }
-    } />
-  <img
-    className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
-    style={
-      Object {
-        "height": "1em",
-        "margin": "0 .05em 0 .1em",
-        "verticalAlign": "-0.1em",
-        "width": "1em",
-      }
-    } />
-</span>
-`;
-
-exports[`test Simple aliases 1`] = `
-<span>
-  This 
+  This
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
@@ -184,7 +586,7 @@ exports[`test Simple aliases 1`] = `
         "width": "1em",
       }
     } />
-   is nice 
+   is nice
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f4a9.png"
@@ -199,8 +601,37 @@ exports[`test Simple aliases 1`] = `
 </span>
 `;
 
-exports[`test Strings with no emoji 1`] = `
+exports[`Twemoji strings with no emoji 1`] = `
 <span>
-  Facebook
+  Just some words
+</span>
+`;
+
+exports[`Twemoji with svg prop 1`] = `
+<span>
+  This
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/svg/1f468-1f3ff.svg"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/svg/1f44c.svg"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;

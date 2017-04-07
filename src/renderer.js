@@ -7,7 +7,6 @@ import normalizeProtocol from "./normalizeProtocol";
 import unicodeToCodepoint from "./unicodeToCodepoint";
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
-import defaultOptions from "./options";
 
 const asciiAliasesRegex = asciiRegex();
 const unicodeEmojiRegex = emojiRegex();
@@ -21,18 +20,19 @@ const style = {
   verticalAlign: "-0.1em"
 };
 
-export default function Emoji({ children, options, ...rest }) {
-  options = { ...defaultOptions, ...options };
+export default function Emoji({ children, options = {}, ...rest }) {
   const protocol = normalizeProtocol(options.protocol);
-  const onlyEmoji = false; // TODO
 
   function replaceUnicodeEmoji(match, i) {
-    const src = protocol +
-      options.baseUrl +
-      options.size +
-      (options.size ? "/" : "") +
-      unicodeToCodepoint(match) +
-      options.ext;
+    if (!options.baseUrl) {
+      return (
+        <span key={i} style={style} className={options.className}>{match}</span>
+      );
+    }
+
+    const separator = options.size ? "/" : "";
+    const codepoint = unicodeToCodepoint(match);
+    const src = `${protocol}${options.baseUrl}${options.size}${separator}${codepoint}.${options.ext}`;
 
     return (
       <img
