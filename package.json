@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "author": "Tom Moor",
   "description": "Render emoji's the way your users expect.",
+  "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src -d lib --ignore test",
@@ -52,7 +53,6 @@
     "emoji-regex": "^6.4.1",
     "lodash.flatten": "^4.4.0",
     "lodash.isstring": "^4.0.1",
-    "react-string-replace": "^0.4.0",
     "string-replace-to-array": "^1.0.1"
   }
 }
