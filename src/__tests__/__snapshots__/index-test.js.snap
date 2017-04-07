@@ -1,6 +1,6 @@
 exports[`Emoji a mixture of emoji syntax 1`] = `
 <span>
-  This
+  This 
   <span
     className={undefined}
     style={
@@ -13,7 +13,7 @@ exports[`Emoji a mixture of emoji syntax 1`] = `
     }>
     👨🏽
   </span>
-   is
+   is 
   <span
     className={undefined}
     style={
@@ -49,7 +49,7 @@ exports[`Emoji aliases containing underscores 1`] = `
 
 exports[`Emoji aliases with skin tone modifiers 1`] = `
 <span>
-  Say hello to
+  Say hello to 
   <span
     className={undefined}
     style={
@@ -91,7 +91,7 @@ exports[`Emoji does nothing to unknown aliases 1`] = `
 
 exports[`Emoji emoji with a multiple codepoints 1`] = `
 <span>
-  Great work
+  Great work 
   <span
     className={undefined}
     style={
@@ -104,7 +104,7 @@ exports[`Emoji emoji with a multiple codepoints 1`] = `
     }>
     👍🏾
   </span>
-
+   
   <span
     className={undefined}
     style={
@@ -122,7 +122,7 @@ exports[`Emoji emoji with a multiple codepoints 1`] = `
 
 exports[`Emoji emoji with a single codepoint 1`] = `
 <span>
-  This
+  This 
   <span
     className={undefined}
     style={
@@ -135,7 +135,7 @@ exports[`Emoji emoji with a single codepoint 1`] = `
     }>
     ❤️
   </span>
-   is
+   is 
   <span
     className={undefined}
     style={
@@ -153,7 +153,7 @@ exports[`Emoji emoji with a single codepoint 1`] = `
 
 exports[`Emoji simple aliases 1`] = `
 <span>
-  This
+  This 
   <span
     className={undefined}
     style={
@@ -166,7 +166,7 @@ exports[`Emoji simple aliases 1`] = `
     }>
     😄
   </span>
-   is nice
+   is nice 
   <span
     className={undefined}
     style={
@@ -191,7 +191,7 @@ exports[`Emoji strings with no emoji 1`] = `
 exports[`Emoji with svg prop 1`] = `
 <span
   svg={true}>
-  This
+  This 
   <span
     className={undefined}
     style={
@@ -204,7 +204,7 @@ exports[`Emoji with svg prop 1`] = `
     }>
     👨🏿
   </span>
-   is
+   is 
   <span
     className={undefined}
     style={
@@ -222,7 +222,7 @@ exports[`Emoji with svg prop 1`] = `
 
 exports[`Emojione a mixture of emoji syntax 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-1f3fd.png"
@@ -234,7 +234,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   is
+   is 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
@@ -268,7 +268,7 @@ exports[`Emojione aliases containing underscores 1`] = `
 
 exports[`Emojione aliases with skin tone modifiers 1`] = `
 <span>
-  Say hello to
+  Say hello to 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-1f3ff.png"
@@ -308,7 +308,7 @@ exports[`Emojione does nothing to unknown aliases 1`] = `
 
 exports[`Emojione emoji with a multiple codepoints 1`] = `
 <span>
-  Great work
+  Great work 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
@@ -320,7 +320,7 @@ exports[`Emojione emoji with a multiple codepoints 1`] = `
         "width": "1em",
       }
     } />
-
+   
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-200d-1f469-200d-1f467-200d-1f466.png"
@@ -337,7 +337,7 @@ exports[`Emojione emoji with a multiple codepoints 1`] = `
 
 exports[`Emojione emoji with a single codepoint 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
@@ -349,7 +349,7 @@ exports[`Emojione emoji with a single codepoint 1`] = `
         "width": "1em",
       }
     } />
-   is
+   is 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
@@ -366,7 +366,7 @@ exports[`Emojione emoji with a single codepoint 1`] = `
 
 exports[`Emojione simple aliases 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
@@ -378,7 +378,7 @@ exports[`Emojione simple aliases 1`] = `
         "width": "1em",
       }
     } />
-   is nice
+   is nice 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4a9.png"
@@ -401,7 +401,7 @@ exports[`Emojione strings with no emoji 1`] = `
 
 exports[`Emojione with svg prop 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f468-1f3ff.svg"
@@ -413,7 +413,7 @@ exports[`Emojione with svg prop 1`] = `
         "width": "1em",
       }
     } />
-   is
+   is 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44c.svg"
@@ -430,7 +430,7 @@ exports[`Emojione with svg prop 1`] = `
 
 exports[`Twemoji a mixture of emoji syntax 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f468-1f3fd.png"
@@ -442,7 +442,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   is
+   is 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
@@ -476,7 +476,7 @@ exports[`Twemoji aliases containing underscores 1`] = `
 
 exports[`Twemoji aliases with skin tone modifiers 1`] = `
 <span>
-  Say hello to
+  Say hello to 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png"
@@ -516,7 +516,7 @@ exports[`Twemoji does nothing to unknown aliases 1`] = `
 
 exports[`Twemoji emoji with a multiple codepoints 1`] = `
 <span>
-  Great work
+  Great work 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
@@ -528,7 +528,7 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
         "width": "1em",
       }
     } />
-
+   
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
@@ -545,7 +545,7 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
 
 exports[`Twemoji emoji with a single codepoint 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/2764.png"
@@ -557,7 +557,7 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
         "width": "1em",
       }
     } />
-   is
+   is 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
@@ -574,7 +574,7 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
 
 exports[`Twemoji simple aliases 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
@@ -586,7 +586,7 @@ exports[`Twemoji simple aliases 1`] = `
         "width": "1em",
       }
     } />
-   is nice
+   is nice 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f4a9.png"
@@ -609,7 +609,7 @@ exports[`Twemoji strings with no emoji 1`] = `
 
 exports[`Twemoji with svg prop 1`] = `
 <span>
-  This
+  This 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/svg/1f468-1f3ff.svg"
@@ -621,7 +621,7 @@ exports[`Twemoji with svg prop 1`] = `
         "width": "1em",
       }
     } />
-   is
+   is 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/svg/1f44c.svg"
