@@ -15,6 +15,8 @@ Render emoji's the way your users expect.
 Install with your favorite package manager:
 ```
 npm install <PACKAGE-NAME> --save
+```
+```
 yarn add <PACKAGE-NAME>
 ```
 
@@ -42,6 +44,11 @@ import { Twemoji } from '<PACKAGE-NAME>';
 <Twemoji>
   This ❤️ sentence includes :+1: a variety of emoji types :)
 </Twemoji>
+
+// or, for svg images:
+<Twemoji svg>
+  This ❤️ sentence includes :+1: a variety of emoji types :)
+</Twemoji>
 ```
 
 ### Emojione
@@ -53,6 +60,11 @@ you can use the included `Emojione` component to render emoji images in this sty
 import { Emojione } from '<PACKAGE-NAME>';
 
 <Emojione>
+  This ❤️ sentence includes :+1: a variety of emoji types :)
+</Emojione>
+
+// or, for svg images:
+<Emojione svg>
   This ❤️ sentence includes :+1: a variety of emoji types :)
 </Emojione>
 ```
