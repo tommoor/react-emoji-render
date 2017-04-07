@@ -1,5 +1,5 @@
 import React from "react";
-import Emoji from "../../src/index";
+import Emoji, { Twemoji, Emojione } from "../../src/index";
 import renderer from "react-test-renderer";
 
 test("Strings with no emoji", () => {
@@ -57,6 +57,14 @@ test("Does nothing to unknown aliases", () => {
 test("A mixture of emoji syntax", () => {
   const component = renderer.create(
     <Emoji>This :man::skin-tone-4: is 👌</Emoji>
+  );
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test("Emojione", () => {
+  const component = renderer.create(
+    <Emojione>Hola :woman::skin-tone-3: :D</Emojione>
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

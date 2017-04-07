@@ -3,11 +3,27 @@ exports[`test A mixture of emoji syntax 1`] = `
   This 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f468-1f3fd.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f468-1f3fd.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
    is 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
@@ -15,7 +31,15 @@ exports[`test Aliases containing underscores 1`] = `
 <span>
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f61c.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f61c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
    wow
 </span>
 `;
@@ -25,7 +49,15 @@ exports[`test Aliases with skin tone modifiers 1`] = `
   Say hello to 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
@@ -34,7 +66,15 @@ exports[`test Ascii aliases 1`] = `
   That\'s awesome
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f603.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
@@ -49,11 +89,27 @@ exports[`test Emoji with a multiple codepoints 1`] = `
   Great work 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
    
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
@@ -62,11 +118,55 @@ exports[`test Emoji with a single codepoint 1`] = `
   This 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/2764.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
    is 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`test Emojione 1`] = `
+<span>
+  Hola 
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
@@ -75,11 +175,27 @@ exports[`test Simple aliases 1`] = `
   This 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f604.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
    is nice 
   <img
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f4a9.png" />
+    src="http://twemoji.maxcdn.com/2/72x72/1f4a9.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
