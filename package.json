@@ -1,6 +1,6 @@
 {
   "name": "react-emoji-render",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Tom Moor",
   "description": "Render emoji's the way your users expect.",
   "main": "lib/index.js",
