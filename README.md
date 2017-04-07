@@ -1,8 +1,8 @@
 [![CircleCI](https://circleci.com/gh/tommoor/react-emoji.svg?style=svg)](https://circleci.com/gh/tommoor/react-emoji)
 
-# react-emoji
+# react-emoji-render
 
-Render emoji's the way your users expect.
+Normalize and render emoji's the way your users expect.
 
 - Supports unicode emoji characters
 - Supports emoticons such as :) :x :/
@@ -14,10 +14,10 @@ Render emoji's the way your users expect.
 
 Install with your favorite package manager:
 ```
-npm install <PACKAGE-NAME> --save
+npm install react-emoji-render --save
 ```
 ```
-yarn add <PACKAGE-NAME>
+yarn add react-emoji-render
 ```
 
 ## Basic Usage
@@ -26,7 +26,7 @@ By default the component will normalize all of the different emoji notations to
 native unicode characters.
 
 ```javascript
-import Emoji from '<PACKAGE-NAME>';
+import Emoji from 'react-emoji-render';
 
 <Emoji>
   This ❤️ sentence includes :+1: a variety of emoji types :)
@@ -39,7 +39,7 @@ import Emoji from '<PACKAGE-NAME>';
 you can use the included `Twemoji` component to render emoji images in this style.
 
 ```javascript
-import { Twemoji } from '<PACKAGE-NAME>';
+import { Twemoji } from 'react-emoji-render';
 
 <Twemoji>
   This ❤️ sentence includes :+1: a variety of emoji types :)
@@ -57,7 +57,7 @@ import { Twemoji } from '<PACKAGE-NAME>';
 you can use the included `Emojione` component to render emoji images in this style.
 
 ```javascript
-import { Emojione } from '<PACKAGE-NAME>';
+import { Emojione } from 'react-emoji-render';
 
 <Emojione>
   This ❤️ sentence includes :+1: a variety of emoji types :)
@@ -76,7 +76,7 @@ the prop. I recommend creating a HOC which wraps your options and exposes a new
 component, something like:
 
 ```javascript
-import Emoji from '<PACKAGE-NAME>';
+import Emoji from 'react-emoji-render';
 
 function MyEmojiRenderer({children, ...rest}) {
   const options = {
