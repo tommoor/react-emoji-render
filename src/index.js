@@ -6,7 +6,18 @@ import emojiRegex from "emoji-regex";
 import normalizeProtocol from "./normalizeProtocol";
 import unicodeToCodepoint from "./unicodeToCodepoint";
 import aliases from "../data/aliases";
+import asciiAliases from "../data/asciiAliases";
 
+function quoteRE(str) {
+  return str.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
+}
+
+const asciiAliasKeys = Object.keys(asciiAliases);
+const names = flatten(
+  asciiAliasKeys.map(name => asciiAliases[name].map(alias => quoteRE(alias)))
+).join("|");
+
+const asciiAliasesRegex = new RegExp(`(^|\\s)(${names})(\s|$)`, "g");
 const unicodeEmojiRegex = emojiRegex();
 const aliasesRegex = /:([\w\-\_]+):/g;
 const defaultOptions = {
@@ -36,14 +47,27 @@ export default function Emoji({ children, options, ...rest }) {
     );
   }
 
-  function replaceAliases(match, alias, i) {
-    return aliases[alias] || match;
+  function replaceAsciiAliases(...match) {
+    for (let i in asciiAliasKeys) {
+      const alias = asciiAliasKeys[i];
+      const data = asciiAliases[alias];
+      if (data.includes(match[2])) {
+        return `:${alias}:`;
+      }
+    }
+    return match;
+  }
+
+  function replaceAliases(...match) {
+    return aliases[match[1]] || match[0];
   }
 
   return (
     <span {...rest}>
       {replace(
-        children.replace(aliasesRegex, replaceAliases),
+        children
+          .replace(asciiAliasesRegex, replaceAsciiAliases)
+          .replace(aliasesRegex, replaceAliases),
         unicodeEmojiRegex,
         replaceUnicodeEmoji
       )}

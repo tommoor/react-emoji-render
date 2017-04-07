@@ -29,6 +29,15 @@ exports[`test Aliases with skin tone modifiers 1`] = `
 </span>
 `;
 
+exports[`test Ascii aliases 1`] = `
+<span>
+  That\'s awesome
+  <img
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f603.png" />
+</span>
+`;
+
 exports[`test Does nothing to unknown aliases 1`] = `
 <span>
   An :unknown: alias

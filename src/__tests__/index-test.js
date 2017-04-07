@@ -42,6 +42,12 @@ test("Aliases with skin tone modifiers", () => {
   expect(tree).toMatchSnapshot();
 });
 
+test("Ascii aliases", () => {
+  const component = renderer.create(<Emoji>{`That's awesome :)`}</Emoji>);
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
 test("Does nothing to unknown aliases", () => {
   const component = renderer.create(<Emoji>An :unknown: alias</Emoji>);
   let tree = component.toJSON();
