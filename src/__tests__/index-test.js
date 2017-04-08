@@ -66,7 +66,9 @@ import renderer from "react-test-renderer";
 
     test("a mixture of emoji syntax", () => {
       const component = renderer.create(
-        <Component input="This :man::skin-tone-4: is 👌" />
+        <Component
+          input=":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-3:"
+        />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();

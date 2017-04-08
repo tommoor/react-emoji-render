@@ -1,6 +1,5 @@
 exports[`Emoji a mixture of emoji syntax 1`] = `
 <span>
-  This 
   <span
     className={undefined}
     style={
@@ -11,9 +10,9 @@ exports[`Emoji a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     }>
-    👨🏽
+    😆
   </span>
-   is 
+   This is a selection of 
   <span
     className={undefined}
     style={
@@ -24,7 +23,32 @@ exports[`Emoji a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     }>
-    👌
+    💩
+  </span>
+   emoji
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😃
+  </span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌🏿
   </span>
 </span>
 `;
@@ -256,10 +280,9 @@ exports[`Emoji with svg prop 1`] = `
 
 exports[`Emojione a mixture of emoji syntax 1`] = `
 <span>
-  This 
   <img
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-1f3fd.png"
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f606.png"
     style={
       Object {
         "height": "1em",
@@ -268,10 +291,33 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   is 
+   This is a selection of 
   <img
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4a9.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   emoji
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c-1f3ff.png"
     style={
       Object {
         "height": "1em",
@@ -496,10 +542,9 @@ exports[`Emojione with svg prop 1`] = `
 
 exports[`Twemoji a mixture of emoji syntax 1`] = `
 <span>
-  This 
   <img
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f468-1f3fd.png"
+    src="http://twemoji.maxcdn.com/2/72x72/1f606.png"
     style={
       Object {
         "height": "1em",
@@ -508,10 +553,33 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   is 
+   This is a selection of 
   <img
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    src="http://twemoji.maxcdn.com/2/72x72/1f4a9.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   emoji
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f44c-1f3ff.png"
     style={
       Object {
         "height": "1em",

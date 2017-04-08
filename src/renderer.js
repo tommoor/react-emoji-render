@@ -47,6 +47,7 @@ export default function Emoji({ input, options = {}, ...rest }) {
 
   function replaceAsciiAliases(...match) {
     const asciiAliasKeys = Object.keys(asciiAliases);
+
     for (let i in asciiAliasKeys) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
