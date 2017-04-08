@@ -75,7 +75,7 @@ function MyEmojiRenderer({children, ...rest}) {
   };
 
   return (
-    <Emoji options={options} {...rest}>{children}</Emoji>
+    <Emoji options={options} {...rest} />
   );
 }
 ```
