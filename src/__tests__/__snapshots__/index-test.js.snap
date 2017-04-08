@@ -151,6 +151,40 @@ exports[`Emoji emoji with a single codepoint 1`] = `
 </span>
 `;
 
+exports[`Emoji just emoji 1`] = `
+<span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😀
+  </span>
+</span>
+`;
+
+exports[`Emoji just emoticon 1`] = `
+<span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😄
+  </span>
+</span>
+`;
+
 exports[`Emoji simple aliases 1`] = `
 <span>
   This 
@@ -364,6 +398,38 @@ exports[`Emojione emoji with a single codepoint 1`] = `
 </span>
 `;
 
+exports[`Emojione just emoji 1`] = `
+<span>
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione just emoticon 1`] = `
+<span>
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Emojione simple aliases 1`] = `
 <span>
   This 
@@ -561,6 +627,38 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji just emoji 1`] = `
+<span>
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji just emoticon 1`] = `
+<span>
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
     style={
       Object {
         "height": "1em",

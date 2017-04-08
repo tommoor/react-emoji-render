@@ -9,7 +9,7 @@ if (typeof location !== "undefined" && location.protocol === "https:") {
 
 export default Emoji;
 
-export function Twemoji({ children, svg, options, ...rest }) {
+export function Twemoji({ svg, options, ...rest }) {
   const size = svg ? "" : "72x72";
   const ext = svg ? "svg" : "png";
 
@@ -21,16 +21,16 @@ export function Twemoji({ children, svg, options, ...rest }) {
     ...options
   };
 
-  return <Emoji options={options} {...rest}>{children}</Emoji>;
+  return <Emoji options={options} {...rest} />;
 }
 
 Twemoji.propTypes = {
-  children: PropTypes.string,
+  input: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool
 };
 
-export function Emojione({ children, svg, options, ...rest }) {
+export function Emojione({ svg, options, ...rest }) {
   const ext = svg ? "svg" : "png";
 
   options = {
@@ -41,11 +41,11 @@ export function Emojione({ children, svg, options, ...rest }) {
     ...options
   };
 
-  return <Emoji options={options} {...rest}>{children}</Emoji>;
+  return <Emoji options={options} {...rest} />;
 }
 
 Emojione.propTypes = {
-  children: PropTypes.string,
+  input: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool
 };
