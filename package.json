@@ -53,7 +53,6 @@
   "dependencies": {
     "emoji-regex": "^6.4.1",
     "lodash.flatten": "^4.4.0",
-    "lodash.isstring": "^4.0.1",
     "string-replace-to-array": "^1.0.1"
   }
 }

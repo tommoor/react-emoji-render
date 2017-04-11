@@ -1,6 +1,5 @@
 import React, { PropTypes } from "react";
 import classnames from "classnames";
-import isString from "lodash.isstring";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
 import asciiRegex from "./asciiRegex";
