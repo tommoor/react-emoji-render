@@ -25,7 +25,7 @@ export function Twemoji({ svg, options, ...rest }) {
 }
 
 Twemoji.propTypes = {
-  input: PropTypes.string,
+  text: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool
 };
@@ -45,7 +45,7 @@ export function Emojione({ svg, options, ...rest }) {
 }
 
 Emojione.propTypes = {
-  input: PropTypes.string,
+  text: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool
 };

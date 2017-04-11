@@ -20,7 +20,7 @@ const style = {
   verticalAlign: "-0.1em"
 };
 
-export default function Emoji({ input, options = {}, ...rest }) {
+export default function Emoji({ text, options = {}, ...rest }) {
   const protocol = normalizeProtocol(options.protocol);
 
   function replaceUnicodeEmoji(match, i) {
@@ -65,7 +65,7 @@ export default function Emoji({ input, options = {}, ...rest }) {
   return (
     <span {...rest}>
       {replace(
-        input
+        text
           .replace(asciiAliasesRegex, replaceAsciiAliases)
           .replace(aliasesRegex, replaceAliases),
         unicodeEmojiRegex,
@@ -76,7 +76,7 @@ export default function Emoji({ input, options = {}, ...rest }) {
 }
 
 Emoji.propTypes = {
-  input: PropTypes.string,
+  text: PropTypes.string,
   props: PropTypes.object,
   options: PropTypes.shape({
     baseUrl: PropTypes.string,

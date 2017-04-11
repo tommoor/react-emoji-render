@@ -28,7 +28,7 @@ native unicode characters.
 ```javascript
 import Emoji from 'react-emoji-render';
 
-<Emoji input="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<Emoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
 
 ### Twemoji
@@ -39,10 +39,10 @@ you can use the included `Twemoji` component to render emoji images in this styl
 ```javascript
 import { Twemoji } from 'react-emoji-render';
 
-<Twemoji input="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<Twemoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 
 // or, for svg images:
-<Twemoji svg input="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<Twemoji svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
 
 ### Emojione
@@ -53,10 +53,10 @@ you can use the included `Emojione` component to render emoji images in this sty
 ```javascript
 import { Emojione } from 'react-emoji-render';
 
-<Emojione input="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<Emojione text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 
 // or, for svg images:
-<Emojione svg input="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<Emojione svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
 
 ## Advanced Usage
@@ -83,5 +83,5 @@ function MyEmojiRenderer({children, ...rest}) {
 You can then use the HOC like so:
 
 ```javascript
-<MyEmojiRenderer input="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<MyEmojiRenderer text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
