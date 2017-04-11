@@ -8,7 +8,7 @@ Normalize and render emoji's the way your users expect.
 - Supports emoticons such as :) :x :/
 - Supports slack-style emoji names such as `:smile:`
 - Choose between native, twemoji, emojione or custom image sets.
-
+- Add custom styles when text contains only emoji (to make it bigger, of course)
 
 ## Installation
 
@@ -61,9 +61,21 @@ import { Emojione } from 'react-emoji-render';
 
 ## Advanced Usage
 
+### Only Emoji
+
+The className passed as the `onlyEmojiClassName` prop is added when the provided
+text contains only three or less emoji characters. This allows you to add custom
+styles in this scenario. For example:
+
+```javascript
+<Emoji text=":+1:" onlyEmojiClassName="make-emojis-large" />
+```
+
+
+### Custom Images
 If you wish to use a custom emoji set / location then you can pass options into
-the prop. I recommend creating a HOC which wraps your options and exposes a new
-component, something like:
+the prop. I recommend creating a higher order component which wraps your options
+and exposes a new component, something like:
 
 ```javascript
 import Emoji from 'react-emoji-render';

@@ -1,5 +1,6 @@
 exports[`Emoji a mixture of emoji syntax 1`] = `
-<span>
+<span
+  classes="">
   <span
     className={undefined}
     style={
@@ -54,7 +55,8 @@ exports[`Emoji a mixture of emoji syntax 1`] = `
 `;
 
 exports[`Emoji aliases containing underscores 1`] = `
-<span>
+<span
+  classes="">
   <span
     className={undefined}
     style={
@@ -72,7 +74,8 @@ exports[`Emoji aliases containing underscores 1`] = `
 `;
 
 exports[`Emoji aliases with skin tone modifiers 1`] = `
-<span>
+<span
+  classes="">
   Say hello to 
   <span
     className={undefined}
@@ -90,7 +93,8 @@ exports[`Emoji aliases with skin tone modifiers 1`] = `
 `;
 
 exports[`Emoji ascii aliases 1`] = `
-<span>
+<span
+  classes="">
   That\'s awesome
   <span
     className={undefined}
@@ -108,13 +112,15 @@ exports[`Emoji ascii aliases 1`] = `
 `;
 
 exports[`Emoji does nothing to unknown aliases 1`] = `
-<span>
+<span
+  classes="">
   An :unknown: alias
 </span>
 `;
 
 exports[`Emoji emoji with a multiple codepoints 1`] = `
-<span>
+<span
+  classes="">
   Great work 
   <span
     className={undefined}
@@ -145,7 +151,8 @@ exports[`Emoji emoji with a multiple codepoints 1`] = `
 `;
 
 exports[`Emoji emoji with a single codepoint 1`] = `
-<span>
+<span
+  classes="">
   This 
   <span
     className={undefined}
@@ -175,8 +182,63 @@ exports[`Emoji emoji with a single codepoint 1`] = `
 </span>
 `;
 
-exports[`Emoji just emoji 1`] = `
-<span>
+exports[`Emoji four emoji should not add onlyEmojiClassName 1`] = `
+<span
+  classes="">
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👋
+  </span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😀
+  </span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍🏾
+  </span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    💞
+  </span>
+</span>
+`;
+
+exports[`Emoji just emoji should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
   <span
     className={undefined}
     style={
@@ -192,8 +254,9 @@ exports[`Emoji just emoji 1`] = `
 </span>
 `;
 
-exports[`Emoji just emoticon 1`] = `
-<span>
+exports[`Emoji just emoticon should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
   <span
     className={undefined}
     style={
@@ -210,7 +273,8 @@ exports[`Emoji just emoticon 1`] = `
 `;
 
 exports[`Emoji simple aliases 1`] = `
-<span>
+<span
+  classes="">
   This 
   <span
     className={undefined}
@@ -241,13 +305,57 @@ exports[`Emoji simple aliases 1`] = `
 `;
 
 exports[`Emoji strings with no emoji 1`] = `
-<span>
+<span
+  classes="">
   Just some words
+</span>
+`;
+
+exports[`Emoji three emoji should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😀
+  </span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍🏾
+  </span>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    💞
+  </span>
 </span>
 `;
 
 exports[`Emoji with svg prop 1`] = `
 <span
+  classes=""
   svg={true}>
   This 
   <span
@@ -279,7 +387,8 @@ exports[`Emoji with svg prop 1`] = `
 `;
 
 exports[`Emojione a mixture of emoji syntax 1`] = `
-<span>
+<span
+  classes="">
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f606.png"
@@ -330,7 +439,8 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
 `;
 
 exports[`Emojione aliases containing underscores 1`] = `
-<span>
+<span
+  classes="">
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f61c.png"
@@ -347,7 +457,8 @@ exports[`Emojione aliases containing underscores 1`] = `
 `;
 
 exports[`Emojione aliases with skin tone modifiers 1`] = `
-<span>
+<span
+  classes="">
   Say hello to 
   <img
     className={undefined}
@@ -364,7 +475,8 @@ exports[`Emojione aliases with skin tone modifiers 1`] = `
 `;
 
 exports[`Emojione ascii aliases 1`] = `
-<span>
+<span
+  classes="">
   That\'s awesome
   <img
     className={undefined}
@@ -381,13 +493,15 @@ exports[`Emojione ascii aliases 1`] = `
 `;
 
 exports[`Emojione does nothing to unknown aliases 1`] = `
-<span>
+<span
+  classes="">
   An :unknown: alias
 </span>
 `;
 
 exports[`Emojione emoji with a multiple codepoints 1`] = `
-<span>
+<span
+  classes="">
   Great work 
   <img
     className={undefined}
@@ -416,7 +530,8 @@ exports[`Emojione emoji with a multiple codepoints 1`] = `
 `;
 
 exports[`Emojione emoji with a single codepoint 1`] = `
-<span>
+<span
+  classes="">
   This 
   <img
     className={undefined}
@@ -444,8 +559,59 @@ exports[`Emojione emoji with a single codepoint 1`] = `
 </span>
 `;
 
-exports[`Emojione just emoji 1`] = `
-<span>
+exports[`Emojione four emoji should not add onlyEmojiClassName 1`] = `
+<span
+  classes="">
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44b.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione just emoji should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
@@ -460,8 +626,9 @@ exports[`Emojione just emoji 1`] = `
 </span>
 `;
 
-exports[`Emojione just emoticon 1`] = `
-<span>
+exports[`Emojione just emoticon should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
@@ -477,7 +644,8 @@ exports[`Emojione just emoticon 1`] = `
 `;
 
 exports[`Emojione simple aliases 1`] = `
-<span>
+<span
+  classes="">
   This 
   <img
     className={undefined}
@@ -506,13 +674,54 @@ exports[`Emojione simple aliases 1`] = `
 `;
 
 exports[`Emojione strings with no emoji 1`] = `
-<span>
+<span
+  classes="">
   Just some words
 </span>
 `;
 
+exports[`Emojione three emoji should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Emojione with svg prop 1`] = `
-<span>
+<span
+  classes="">
   This 
   <img
     className={undefined}
@@ -541,7 +750,8 @@ exports[`Emojione with svg prop 1`] = `
 `;
 
 exports[`Twemoji a mixture of emoji syntax 1`] = `
-<span>
+<span
+  classes="">
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f606.png"
@@ -592,7 +802,8 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
 `;
 
 exports[`Twemoji aliases containing underscores 1`] = `
-<span>
+<span
+  classes="">
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f61c.png"
@@ -609,7 +820,8 @@ exports[`Twemoji aliases containing underscores 1`] = `
 `;
 
 exports[`Twemoji aliases with skin tone modifiers 1`] = `
-<span>
+<span
+  classes="">
   Say hello to 
   <img
     className={undefined}
@@ -626,7 +838,8 @@ exports[`Twemoji aliases with skin tone modifiers 1`] = `
 `;
 
 exports[`Twemoji ascii aliases 1`] = `
-<span>
+<span
+  classes="">
   That\'s awesome
   <img
     className={undefined}
@@ -643,13 +856,15 @@ exports[`Twemoji ascii aliases 1`] = `
 `;
 
 exports[`Twemoji does nothing to unknown aliases 1`] = `
-<span>
+<span
+  classes="">
   An :unknown: alias
 </span>
 `;
 
 exports[`Twemoji emoji with a multiple codepoints 1`] = `
-<span>
+<span
+  classes="">
   Great work 
   <img
     className={undefined}
@@ -678,7 +893,8 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
 `;
 
 exports[`Twemoji emoji with a single codepoint 1`] = `
-<span>
+<span
+  classes="">
   This 
   <img
     className={undefined}
@@ -706,8 +922,59 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
 </span>
 `;
 
-exports[`Twemoji just emoji 1`] = `
-<span>
+exports[`Twemoji four emoji should not add onlyEmojiClassName 1`] = `
+<span
+  classes="">
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f44b.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji just emoji should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
@@ -722,8 +989,9 @@ exports[`Twemoji just emoji 1`] = `
 </span>
 `;
 
-exports[`Twemoji just emoticon 1`] = `
-<span>
+exports[`Twemoji just emoticon should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
@@ -739,7 +1007,8 @@ exports[`Twemoji just emoticon 1`] = `
 `;
 
 exports[`Twemoji simple aliases 1`] = `
-<span>
+<span
+  classes="">
   This 
   <img
     className={undefined}
@@ -768,13 +1037,54 @@ exports[`Twemoji simple aliases 1`] = `
 `;
 
 exports[`Twemoji strings with no emoji 1`] = `
-<span>
+<span
+  classes="">
   Just some words
 </span>
 `;
 
+exports[`Twemoji three emoji should add onlyEmojiClassName 1`] = `
+<span
+  classes="onlyEmojiClass">
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    className={undefined}
+    src="http://twemoji.maxcdn.com/2/72x72/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Twemoji with svg prop 1`] = `
-<span>
+<span
+  classes="">
   This 
   <img
     className={undefined}

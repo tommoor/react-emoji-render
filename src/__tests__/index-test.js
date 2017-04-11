@@ -72,14 +72,34 @@ import renderer from "react-test-renderer";
       expect(tree).toMatchSnapshot();
     });
 
-    test("just emoticon", () => {
-      const component = renderer.create(<Component text=":D" />);
+    test("just emoticon should add onlyEmojiClassName", () => {
+      const component = renderer.create(
+        <Component text=":D" onlyEmojiClassName="onlyEmojiClass" />
+      );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
 
-    test("just emoji", () => {
-      const component = renderer.create(<Component text="😀" />);
+    test("just emoji should add onlyEmojiClassName", () => {
+      const component = renderer.create(
+        <Component text="😀" onlyEmojiClassName="onlyEmojiClass" />
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("three emoji should add onlyEmojiClassName", () => {
+      const component = renderer.create(
+        <Component text="😀👍🏾💞" onlyEmojiClassName="onlyEmojiClass" />
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("four emoji should not add onlyEmojiClassName", () => {
+      const component = renderer.create(
+        <Component text="👋😀👍🏾💞" onlyEmojiClassName="onlyEmojiClass" />
+      );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });

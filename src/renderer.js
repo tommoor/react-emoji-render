@@ -1,4 +1,5 @@
 import React, { PropTypes } from "react";
+import classnames from "classnames";
 import isString from "lodash.isstring";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
@@ -20,7 +21,9 @@ const style = {
   verticalAlign: "-0.1em"
 };
 
-export default function Emoji({ text, options = {}, ...rest }) {
+export default function Emoji(
+  { text, onlyEmojiClassName, options = {}, className, ...rest }
+) {
   const protocol = normalizeProtocol(options.protocol);
 
   function replaceUnicodeEmoji(match, i) {
@@ -62,15 +65,31 @@ export default function Emoji({ text, options = {}, ...rest }) {
     return aliases[match[1]] || match[0];
   }
 
+  function isOnlyEmoji(output) {
+    if (output.length > 3) return false;
+
+    for (let i = 0; i < output.length; i++) {
+      if (typeof output[i] === "string") return false;
+    }
+
+    return true;
+  }
+
+  const output = replace(
+    text
+      .replace(asciiAliasesRegex, replaceAsciiAliases)
+      .replace(aliasesRegex, replaceAliases),
+    unicodeEmojiRegex,
+    replaceUnicodeEmoji
+  );
+
+  const classes = classnames(className, {
+    [onlyEmojiClassName]: isOnlyEmoji(output)
+  });
+
   return (
-    <span {...rest}>
-      {replace(
-        text
-          .replace(asciiAliasesRegex, replaceAsciiAliases)
-          .replace(aliasesRegex, replaceAliases),
-        unicodeEmojiRegex,
-        replaceUnicodeEmoji
-      )}
+    <span {...rest} classes={classes}>
+      {output}
     </span>
   );
 }
@@ -78,6 +97,7 @@ export default function Emoji({ text, options = {}, ...rest }) {
 Emoji.propTypes = {
   text: PropTypes.string,
   props: PropTypes.object,
+  onlyEmojiClassName: PropTypes.string,
   options: PropTypes.shape({
     baseUrl: PropTypes.string,
     size: PropTypes.string,
