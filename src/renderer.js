@@ -1,4 +1,5 @@
-import React, { PropTypes } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import classnames from "classnames";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
@@ -87,7 +88,7 @@ export default function Emoji(
   });
 
   return (
-    <span {...rest} classes={classes}>
+    <span {...rest} className={classes}>
       {output}
     </span>
   );

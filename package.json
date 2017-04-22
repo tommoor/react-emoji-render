@@ -53,6 +53,7 @@
     "classnames": "^2.2.5",
     "emoji-regex": "^6.4.1",
     "lodash.flatten": "^4.4.0",
+    "prop-types": "^15.5.8",
     "string-replace-to-array": "^1.0.1"
   }
 }
