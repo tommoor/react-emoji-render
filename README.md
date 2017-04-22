@@ -10,6 +10,8 @@ Normalize and render emoji's the way your users expect.
 - Choose between native, twemoji, emojione or custom image sets.
 - Add custom styles when text contains only emoji (to make it bigger, of course)
 
+<a class="requirebin-link" target="_blank" href="http://requirebin.com/?gist=0ad25fccefcdde664d8a0becad6955f9">Live Demo on RequireBin</a>
+
 ## Installation
 
 Install with your favorite package manager:
