@@ -299,7 +299,7 @@ exports[`Emoji simple aliases 1`] = `
         "width": "1em",
       }
     }>
-    💩
+    👍
   </span>
 </span>
 `;
@@ -661,7 +661,7 @@ exports[`Emojione simple aliases 1`] = `
    is nice 
   <img
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4a9.png"
+    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png"
     style={
       Object {
         "height": "1em",
@@ -1024,7 +1024,7 @@ exports[`Twemoji simple aliases 1`] = `
    is nice 
   <img
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f4a9.png"
+    src="http://twemoji.maxcdn.com/2/72x72/1f44d.png"
     style={
       Object {
         "height": "1em",

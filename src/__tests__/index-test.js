@@ -26,7 +26,7 @@ import renderer from "react-test-renderer";
 
     test("simple aliases", () => {
       const component = renderer.create(
-        <Component text="This :smile: is nice :poop:" />
+        <Component text="This :smile: is nice :+1:" />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();

@@ -11,7 +11,7 @@ import asciiAliases from "../data/asciiAliases";
 
 const asciiAliasesRegex = asciiRegex();
 const unicodeEmojiRegex = emojiRegex();
-const aliasesRegex = /:([\w\-\_]+):/g;
+const aliasesRegex = /:([\w\-\_\+]+):/g;
 
 // using em's we can ensure size matches surrounding font
 const style = {
