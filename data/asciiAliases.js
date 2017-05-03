@@ -18,7 +18,7 @@ module.exports = {
   smiley: [":)", ":-)"],
   smiling_imp: ["]:)", "]:-)"],
   sob: [":,'(", ":,'-(", ";(", ";-("],
-  stuck_out_tongue: [":P", ":-P"],
+  stuck_out_tongue: [":P", ":-P", ":p", ":-p"],
   sunglasses: ["8-)", "B-)"],
   sweat: [",:(", ",:-("],
   sweat_smile: [",:)", ",:-)"],
