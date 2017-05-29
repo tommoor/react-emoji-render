@@ -22,10 +22,6 @@
     "react-component",
     "emoji"
   ],
-  "peerDependencies": {
-    "react": ">=0.14.0",
-    "react-dom": ">=0.14.0"
-  },
   "devDependencies": {
     "babel-cli": "^6.7.5",
     "babel-eslint": "^7.1.1",
@@ -54,6 +50,8 @@
     "emoji-regex": "^6.4.1",
     "lodash.flatten": "^4.4.0",
     "prop-types": "^15.5.8",
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0",
     "string-replace-to-array": "^1.0.1"
   }
 }
