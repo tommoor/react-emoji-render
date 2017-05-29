@@ -53,7 +53,7 @@ export function toArray(text, options = {}) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
       if (data.includes(match[2])) {
-        return `:${alias}:`;
+        return `${match[1]}:${alias}:${match[3]}`;
       }
     }
     return match;

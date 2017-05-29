@@ -26,7 +26,7 @@ exports[`Emoji a mixture of emoji syntax 1`] = `
     }>
     💩
   </span>
-   emoji
+   emoji 
   <span
     className={undefined}
     style={
@@ -39,6 +39,7 @@ exports[`Emoji a mixture of emoji syntax 1`] = `
     }>
     😃
   </span>
+   
   <span
     className={undefined}
     style={
@@ -95,7 +96,7 @@ exports[`Emoji aliases with skin tone modifiers 1`] = `
 exports[`Emoji ascii aliases 1`] = `
 <span
   className="">
-  That's awesome
+  That\'s awesome 
   <span
     className={undefined}
     style={
@@ -412,7 +413,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   emoji
+   emoji 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
@@ -424,6 +425,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
+   
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c-1f3ff.png"
@@ -477,7 +479,7 @@ exports[`Emojione aliases with skin tone modifiers 1`] = `
 exports[`Emojione ascii aliases 1`] = `
 <span
   className="">
-  That's awesome
+  That\'s awesome 
   <img
     className={undefined}
     src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
@@ -775,7 +777,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
-   emoji
+   emoji 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f603.png"
@@ -787,6 +789,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
         "width": "1em",
       }
     } />
+   
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f44c-1f3ff.png"
@@ -840,7 +843,7 @@ exports[`Twemoji aliases with skin tone modifiers 1`] = `
 exports[`Twemoji ascii aliases 1`] = `
 <span
   className="">
-  That's awesome
+  That\'s awesome 
   <img
     className={undefined}
     src="http://twemoji.maxcdn.com/2/72x72/1f603.png"
@@ -1139,7 +1142,7 @@ Array [
     }>
     💩
 </span>,
-  " emoji",
+  " emoji ",
   <span
     className={undefined}
     style={
@@ -1152,6 +1155,7 @@ Array [
     }>
     😃
 </span>,
+  " ",
   <span
     className={undefined}
     style={
