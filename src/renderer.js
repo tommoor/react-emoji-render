@@ -21,9 +21,7 @@ const style = {
   verticalAlign: "-0.1em"
 };
 
-export default function Emoji(
-  { text, onlyEmojiClassName, options = {}, className, ...rest }
-) {
+export function toArray(text, options = {}) {
   const protocol = normalizeProtocol(options.protocol);
 
   function replaceUnicodeEmoji(match, i) {
@@ -65,6 +63,18 @@ export default function Emoji(
     return aliases[match[1]] || match[0];
   }
 
+  return replace(
+    text
+      .replace(asciiAliasesRegex, replaceAsciiAliases)
+      .replace(aliasesRegex, replaceAliases),
+    unicodeEmojiRegex,
+    replaceUnicodeEmoji
+  );
+}
+
+export default function Emoji(
+  { text, onlyEmojiClassName, options = {}, className, ...rest }
+) {
   function isOnlyEmoji(output) {
     if (output.length > 3) return false;
 
@@ -75,14 +85,7 @@ export default function Emoji(
     return true;
   }
 
-  const output = replace(
-    text
-      .replace(asciiAliasesRegex, replaceAsciiAliases)
-      .replace(aliasesRegex, replaceAliases),
-    unicodeEmojiRegex,
-    replaceUnicodeEmoji
-  );
-
+  const output = toArray(text, options);
   const classes = classnames(className, {
     [onlyEmojiClassName]: isOnlyEmoji(output)
   });

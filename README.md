@@ -10,7 +10,7 @@ Normalize and render emoji's the way your users expect.
 - Choose between native, twemoji, emojione or custom image sets.
 - Add custom styles when text contains only emoji (to make it bigger, of course)
 
-<a class="requirebin-link" target="_blank" href="http://requirebin.com/?gist=0ad25fccefcdde664d8a0becad6955f9">Live Demo on RequireBin</a>
+[Live Demo on RequireBin](http://requirebin.com/?gist=0ad25fccefcdde664d8a0becad6955f9)
 
 ## Installation
 
@@ -71,6 +71,19 @@ styles in this scenario. For example:
 
 ```javascript
 <Emoji text=":+1:" onlyEmojiClassName="make-emojis-large" />
+```
+
+### Array output
+
+If you want to do further processing on the output, for example parsing HTML then
+it may be useful to not have the normalized emojis be wrapped in a component.
+
+```javascript
+import { toArray } from 'react-emoji-render';
+
+// content is an array of text and emoji components, you can now loop through this
+// array and perform further processing. Avoid using `dangerouslySetInnerHTML`!
+const content = toArray("This ❤️ sentence includes :+1: a variety of emoji types :)");
 ```
 
 

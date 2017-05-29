@@ -1,5 +1,5 @@
 import React from "react";
-import Emoji, { Twemoji, Emojione } from "../../src/index";
+import Emoji, { Twemoji, Emojione, toArray } from "../../src/index";
 import renderer from "react-test-renderer";
 
 [Emoji, Twemoji, Emojione].forEach(Component => {
@@ -111,5 +111,14 @@ import renderer from "react-test-renderer";
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
+  });
+});
+
+describe("toArray", () => {
+  test("a mixture of emoji syntax", () => {
+    const content = toArray(
+      ":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-3:"
+    );
+    expect(content).toMatchSnapshot();
   });
 });

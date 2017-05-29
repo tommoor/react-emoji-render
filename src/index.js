@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Emoji from "./renderer";
+export { toArray } from "./renderer";
 
 let protocol = "http";
 
