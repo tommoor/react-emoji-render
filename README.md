@@ -73,7 +73,7 @@ styles in this scenario. For example:
 <Emoji text=":+1:" onlyEmojiClassName="make-emojis-large" />
 ```
 
-### Array output
+### Array Output
 
 If you want to do further processing on the output, for example parsing HTML then
 it may be useful to not have the normalized emojis be wrapped in a component.
