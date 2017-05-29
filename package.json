@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tommoor/react-emoji.git"
+    "url": "https://github.com/tommoor/react-emoji-render.git"
   },
   "bugs": {
-    "url": "https://github.com/tommoor/react-emoji/issues"
+    "url": "https://github.com/tommoor/react-emoji-render/issues"
   },
   "license": "MIT",
   "keywords": [
