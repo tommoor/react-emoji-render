@@ -9,6 +9,7 @@ module.exports = {
   smile: "😄",
   smiley: "😃",
   grinning: "😀",
+  slightly_smiling_face: "🙂",
   blush: "😊",
   relaxed: "☺️",
   wink: "😉",
