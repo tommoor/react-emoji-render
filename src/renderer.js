@@ -38,6 +38,7 @@ export function toArray(text, options = {}) {
     return (
       <img
         key={i}
+        alt={match}
         src={src}
         style={style}
         className={options.className}
