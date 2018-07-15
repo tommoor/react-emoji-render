@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import Emoji from "./renderer";
 export { toArray } from "./renderer";
 
-let protocol = "http";
+let protocol = "https";
 
-if (typeof location !== "undefined" && location.protocol === "https:") {
-  protocol = "https";
+if (typeof location !== "undefined" && location.protocol === "http:") {
+  protocol = "http";
 }
 
 export default Emoji;
