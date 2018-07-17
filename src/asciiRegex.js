@@ -10,6 +10,8 @@ const names = flatten(
     asciiAliases[name].map(alias => quoteRE(alias)))
 ).join("|");
 
+// Emojis' unicode ranges from
+// https://stackoverflow.com/questions/24840667/what-is-the-regex-to-extract-all-the-emojis-from-a-string
 export default function() {
-  return new RegExp(`(${names})([^\\s:]*)`, "g");
+  return new RegExp(`(${names})([^\\s:\\uD83C-\\uDBFF\\uDC00-\\uDFFF]*)`, "g");
 }

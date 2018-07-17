@@ -128,20 +128,44 @@ describe("toArray", () => {
     expect(content).toMatchSnapshot();
   });
   test("consecutive different ascii emojis", () => {
-    let content = toArray(
+    const content = toArray(
       ":) :D"
     );
     expect(content).toMatchSnapshot();
   });
   test("consecutive same ascii emojis without word-break", () => {
-    let content = toArray(
+    const content = toArray(
       ":):)"
     );
     expect(content).toMatchSnapshot();
   });
   test("consecutive different ascii emojis without word-break", () => {
-    let content = toArray(
+    const content = toArray(
       ":):D"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("consecutive ascii and simple alias emojis without word-break", () => {
+    const content = toArray(
+      ":):smile:"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("consecutive simple alias and ascii emojis without word-break", () => {
+    const content = toArray(
+      ":smile::)"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("consecutive ascii and unicode emojis without word-break", () => {
+    const content = toArray(
+      ":)💩"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("consecutive unicode and ascii emojis without word-break", () => {
+    const content = toArray(
+      "💩:)"
     );
     expect(content).toMatchSnapshot();
   });
