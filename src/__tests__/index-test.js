@@ -121,4 +121,16 @@ describe("toArray", () => {
     );
     expect(content).toMatchSnapshot();
   });
+  test("consecutive same ascii emojis", () => {
+    const content = toArray(
+      ":) :)"
+    );
+    expect(content).toMatchSnapshot();
+  });
+    test("consecutive different ascii emojis", () => {
+    let content = toArray(
+      ":) :D"
+    );
+    expect(content).toMatchSnapshot();
+  });
 });
