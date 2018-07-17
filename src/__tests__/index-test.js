@@ -127,9 +127,21 @@ describe("toArray", () => {
     );
     expect(content).toMatchSnapshot();
   });
-    test("consecutive different ascii emojis", () => {
+  test("consecutive different ascii emojis", () => {
     let content = toArray(
       ":) :D"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("consecutive same ascii emojis without word-break", () => {
+    let content = toArray(
+      ":):)"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("consecutive different ascii emojis without word-break", () => {
+    let content = toArray(
+      ":):D"
     );
     expect(content).toMatchSnapshot();
   });

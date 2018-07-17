@@ -11,5 +11,5 @@ const names = flatten(
 ).join("|");
 
 export default function() {
-  return new RegExp(`(${names})(\\s|$)`, "g");
+  return new RegExp(`(${names})([^\\s:]*)`, "g");
 }
