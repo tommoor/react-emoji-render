@@ -141,7 +141,7 @@ describe("toArray", () => {
   });
   test("consecutive different ascii emojis without word-break", () => {
     const content = toArray(
-      ":):D"
+      ":)<3"
     );
     expect(content).toMatchSnapshot();
   });
