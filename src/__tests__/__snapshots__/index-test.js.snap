@@ -393,7 +393,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
   <img
     alt="😆"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f606.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f606.png"
     style={
       Object {
         "height": "1em",
@@ -406,7 +406,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
   <img
     alt="💩"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4a9.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f4a9.png"
     style={
       Object {
         "height": "1em",
@@ -419,7 +419,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
   <img
     alt="😃"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
     style={
       Object {
         "height": "1em",
@@ -432,7 +432,7 @@ exports[`Emojione a mixture of emoji syntax 1`] = `
   <img
     alt="👌🏿"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c-1f3ff.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c-1f3ff.png"
     style={
       Object {
         "height": "1em",
@@ -450,7 +450,7 @@ exports[`Emojione aliases containing underscores 1`] = `
   <img
     alt="😜"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f61c.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f61c.png"
     style={
       Object {
         "height": "1em",
@@ -470,7 +470,7 @@ exports[`Emojione aliases with skin tone modifiers 1`] = `
   <img
     alt="👩🏿"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-1f3ff.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-1f3ff.png"
     style={
       Object {
         "height": "1em",
@@ -489,7 +489,7 @@ exports[`Emojione ascii aliases 1`] = `
   <img
     alt="😃"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f603.png"
     style={
       Object {
         "height": "1em",
@@ -515,7 +515,7 @@ exports[`Emojione emoji with a multiple codepoints 1`] = `
   <img
     alt="👍🏾"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
     style={
       Object {
         "height": "1em",
@@ -528,7 +528,7 @@ exports[`Emojione emoji with a multiple codepoints 1`] = `
   <img
     alt="👨‍👩‍👧‍👦"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-200d-1f469-200d-1f467-200d-1f466.png"
     style={
       Object {
         "height": "1em",
@@ -547,7 +547,7 @@ exports[`Emojione emoji with a single codepoint 1`] = `
   <img
     alt="❤️"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
     style={
       Object {
         "height": "1em",
@@ -560,7 +560,7 @@ exports[`Emojione emoji with a single codepoint 1`] = `
   <img
     alt="👌"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
     style={
       Object {
         "height": "1em",
@@ -578,7 +578,7 @@ exports[`Emojione four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="👋"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44b.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44b.png"
     style={
       Object {
         "height": "1em",
@@ -590,7 +590,7 @@ exports[`Emojione four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="😀"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
     style={
       Object {
         "height": "1em",
@@ -602,7 +602,7 @@ exports[`Emojione four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="👍🏾"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
     style={
       Object {
         "height": "1em",
@@ -614,7 +614,7 @@ exports[`Emojione four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="💞"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49e.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49e.png"
     style={
       Object {
         "height": "1em",
@@ -632,7 +632,7 @@ exports[`Emojione just emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="😀"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
     style={
       Object {
         "height": "1em",
@@ -650,7 +650,7 @@ exports[`Emojione just emoticon should add onlyEmojiClassName 1`] = `
   <img
     alt="😄"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
     style={
       Object {
         "height": "1em",
@@ -669,7 +669,7 @@ exports[`Emojione simple aliases 1`] = `
   <img
     alt="😄"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png"
     style={
       Object {
         "height": "1em",
@@ -682,7 +682,7 @@ exports[`Emojione simple aliases 1`] = `
   <img
     alt="👍"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png"
     style={
       Object {
         "height": "1em",
@@ -707,7 +707,7 @@ exports[`Emojione three emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="😀"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f600.png"
     style={
       Object {
         "height": "1em",
@@ -719,7 +719,7 @@ exports[`Emojione three emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="👍🏾"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d-1f3fe.png"
     style={
       Object {
         "height": "1em",
@@ -731,7 +731,7 @@ exports[`Emojione three emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="💞"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49e.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49e.png"
     style={
       Object {
         "height": "1em",
@@ -750,7 +750,7 @@ exports[`Emojione with svg prop 1`] = `
   <img
     alt="👨🏿"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f468-1f3ff.svg"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f468-1f3ff.svg"
     style={
       Object {
         "height": "1em",
@@ -763,7 +763,7 @@ exports[`Emojione with svg prop 1`] = `
   <img
     alt="👌"
     className={undefined}
-    src="http://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44c.svg"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44c.svg"
     style={
       Object {
         "height": "1em",
@@ -781,7 +781,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
   <img
     alt="😆"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f606.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f606.png"
     style={
       Object {
         "height": "1em",
@@ -794,7 +794,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
   <img
     alt="💩"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f4a9.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f4a9.png"
     style={
       Object {
         "height": "1em",
@@ -807,7 +807,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
   <img
     alt="😃"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f603.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f603.png"
     style={
       Object {
         "height": "1em",
@@ -820,7 +820,7 @@ exports[`Twemoji a mixture of emoji syntax 1`] = `
   <img
     alt="👌🏿"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44c-1f3ff.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c-1f3ff.png"
     style={
       Object {
         "height": "1em",
@@ -838,7 +838,7 @@ exports[`Twemoji aliases containing underscores 1`] = `
   <img
     alt="😜"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f61c.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f61c.png"
     style={
       Object {
         "height": "1em",
@@ -858,7 +858,7 @@ exports[`Twemoji aliases with skin tone modifiers 1`] = `
   <img
     alt="👩🏿"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f469-1f3ff.png"
     style={
       Object {
         "height": "1em",
@@ -877,7 +877,7 @@ exports[`Twemoji ascii aliases 1`] = `
   <img
     alt="😃"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f603.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f603.png"
     style={
       Object {
         "height": "1em",
@@ -903,7 +903,7 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
   <img
     alt="👍🏾"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
     style={
       Object {
         "height": "1em",
@@ -916,7 +916,7 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
   <img
     alt="👨‍👩‍👧‍👦"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
     style={
       Object {
         "height": "1em",
@@ -935,7 +935,7 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
   <img
     alt="❤️"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/2764.png"
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png"
     style={
       Object {
         "height": "1em",
@@ -948,7 +948,7 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
   <img
     alt="👌"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
     style={
       Object {
         "height": "1em",
@@ -966,7 +966,7 @@ exports[`Twemoji four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="👋"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44b.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44b.png"
     style={
       Object {
         "height": "1em",
@@ -978,7 +978,7 @@ exports[`Twemoji four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="😀"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f600.png"
     style={
       Object {
         "height": "1em",
@@ -990,7 +990,7 @@ exports[`Twemoji four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="👍🏾"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
     style={
       Object {
         "height": "1em",
@@ -1002,7 +1002,7 @@ exports[`Twemoji four emoji should not add onlyEmojiClassName 1`] = `
   <img
     alt="💞"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f49e.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f49e.png"
     style={
       Object {
         "height": "1em",
@@ -1020,7 +1020,7 @@ exports[`Twemoji just emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="😀"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f600.png"
     style={
       Object {
         "height": "1em",
@@ -1038,7 +1038,7 @@ exports[`Twemoji just emoticon should add onlyEmojiClassName 1`] = `
   <img
     alt="😄"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f604.png"
     style={
       Object {
         "height": "1em",
@@ -1057,7 +1057,7 @@ exports[`Twemoji simple aliases 1`] = `
   <img
     alt="😄"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f604.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f604.png"
     style={
       Object {
         "height": "1em",
@@ -1070,7 +1070,7 @@ exports[`Twemoji simple aliases 1`] = `
   <img
     alt="👍"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44d.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44d.png"
     style={
       Object {
         "height": "1em",
@@ -1095,7 +1095,7 @@ exports[`Twemoji three emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="😀"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f600.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f600.png"
     style={
       Object {
         "height": "1em",
@@ -1107,7 +1107,7 @@ exports[`Twemoji three emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="👍🏾"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fe.png"
     style={
       Object {
         "height": "1em",
@@ -1119,7 +1119,7 @@ exports[`Twemoji three emoji should add onlyEmojiClassName 1`] = `
   <img
     alt="💞"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/72x72/1f49e.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f49e.png"
     style={
       Object {
         "height": "1em",
@@ -1138,7 +1138,7 @@ exports[`Twemoji with svg prop 1`] = `
   <img
     alt="👨🏿"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/svg/1f468-1f3ff.svg"
+    src="https://twemoji.maxcdn.com/2/svg/1f468-1f3ff.svg"
     style={
       Object {
         "height": "1em",
@@ -1151,7 +1151,7 @@ exports[`Twemoji with svg prop 1`] = `
   <img
     alt="👌"
     className={undefined}
-    src="http://twemoji.maxcdn.com/2/svg/1f44c.svg"
+    src="https://twemoji.maxcdn.com/2/svg/1f44c.svg"
     style={
       Object {
         "height": "1em",
