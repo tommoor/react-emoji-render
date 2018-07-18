@@ -1218,3 +1218,237 @@ Array [
 </span>,
 ]
 `;
+
+exports[`toArray consecutive ascii and simple alias emojis without word-break 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😄
+</span>,
+]
+`;
+
+exports[`toArray consecutive ascii and unicode emojis without word-break 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    💩
+</span>,
+]
+`;
+
+exports[`toArray consecutive different ascii emojis 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  " ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😄
+</span>,
+]
+`;
+
+exports[`toArray consecutive different ascii emojis without word-break 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❤️
+</span>,
+]
+`;
+
+exports[`toArray consecutive same ascii emojis 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  " ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+]
+`;
+
+exports[`toArray consecutive same ascii emojis without word-break 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+]
+`;
+
+exports[`toArray consecutive simple alias and ascii emojis without word-break 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😄
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+]
+`;
+
+exports[`toArray consecutive unicode and ascii emojis without word-break 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    💩
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+]
+`;

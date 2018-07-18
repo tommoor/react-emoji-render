@@ -8,6 +8,7 @@
     "prepublish": "npm run build",
     "build": "babel src -d lib --ignore test",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "lint": "eslint src --fix"
   },
   "repository": {
