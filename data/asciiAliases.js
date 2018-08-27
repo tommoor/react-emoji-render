@@ -2,7 +2,7 @@ module.exports = {
   angry: [">:(", ">:-("],
   blush: [':")', ':-")'],
   broken_heart: ["</3", "<\\3"],
-  confused: [":/", ":-/"],
+  confused: [":-/"],
   cry: [":'(", ":'-(", ":,(", ":,-("],
   frowning: [":(", ":-("],
   heart: ["<3"],
