@@ -65,7 +65,6 @@ export function toArray(text, options = {}) {
         return match[0];
       }
     }
-    return match;
   }
 
   function replaceAliases(...match) {
