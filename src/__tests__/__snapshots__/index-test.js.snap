@@ -1221,7 +1221,19 @@ Array [
 
 exports[`toArray consecutive ascii and non char word-break 1`] = `
 Array [
-  ":)a",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  "a",
 ]
 `;
 
@@ -1461,7 +1473,19 @@ Array [
 
 exports[`toArray emoji and url (no space) 1`] = `
 Array [
-  ":)https://google.com",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  "https://google.com",
 ]
 `;
 

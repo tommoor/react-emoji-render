@@ -56,9 +56,10 @@ export function toArray(text, options = {}) {
       const aliasFound = match[2];
 
       if (data.includes(aliasFound)) {
-        const isEdgeCase = match[1];
-        const afterAsciiAlias = match[3];
-        if (!isEdgeCase && afterAsciiAlias === "") {
+        const isEdgeCase = match[1] || match[5];
+        const aliasContent = match[0].slice(1, -1); // remove ":" at the beginning and end
+        const validAsciiAlias = !aliases[aliasContent];
+        if (!isEdgeCase && validAsciiAlias) {
           return `:${alias}:`;
         }
         // return the original word to replace its value in aliasesRegex
