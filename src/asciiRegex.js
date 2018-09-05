@@ -20,7 +20,7 @@ const edgeCases = ["http", "https"].join("|");
 //    - Allow characters included in normal aliases (to check later cases like :s and :smile:)
 export default function() {
   return new RegExp(
-    `(${edgeCases})?(${names})((?!(${edgeCases}))[a-z0-9_-]+:)?`,
+    `(${edgeCases})?(${names})((?!(${edgeCases}))[a-z0-9_\\-\\+]+:)?`,
     "g"
   );
 }
