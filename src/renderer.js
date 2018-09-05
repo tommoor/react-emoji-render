@@ -53,11 +53,14 @@ export function toArray(text, options = {}) {
     for (let i in asciiAliasKeys) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
-      if (data.includes(match[1])) {
-        const afterAsciiAlias = match[2];
-        if(afterAsciiAlias === "") {
+      const aliasFound = match[2];
+
+      if (data.includes(aliasFound)) {
+        const isEdgeCase = match[1];
+        const afterAsciiAlias = match[3];
+        if(!isEdgeCase && afterAsciiAlias === "") {
           return `:${alias}:`;
-        }
+        } 
         // return the original word to replace its value in aliasesRegex
         return match[0]; 
       }

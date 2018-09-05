@@ -1219,6 +1219,12 @@ Array [
 ]
 `;
 
+exports[`toArray consecutive ascii and non char word-break 1`] = `
+Array [
+  ":)a",
+]
+`;
+
 exports[`toArray consecutive ascii and simple alias emojis without word-break 1`] = `
 Array [
   <span
@@ -1450,5 +1456,71 @@ Array [
     }>
     😃
 </span>,
+]
+`;
+
+exports[`toArray emoji and url (no space) 1`] = `
+Array [
+  ":)https://google.com",
+]
+`;
+
+exports[`toArray emoji and url (with space) 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+  " https://google.com",
+]
+`;
+
+exports[`toArray url and emoji (no space) 1`] = `
+Array [
+  "https://google.com",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+]
+`;
+
+exports[`toArray url and emoji (with space) 1`] = `
+Array [
+  "https://google.com ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😃
+</span>,
+]
+`;
+
+exports[`toArray urls not parsing ascii emoji ":/" 1`] = `
+Array [
+  "https://google.com",
 ]
 `;
