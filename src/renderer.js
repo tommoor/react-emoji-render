@@ -58,11 +58,11 @@ export function toArray(text, options = {}) {
       if (data.includes(aliasFound)) {
         const isEdgeCase = match[1];
         const afterAsciiAlias = match[3];
-        if(!isEdgeCase && afterAsciiAlias === "") {
+        if (!isEdgeCase && afterAsciiAlias === "") {
           return `:${alias}:`;
-        } 
+        }
         // return the original word to replace its value in aliasesRegex
-        return match[0]; 
+        return match[0];
       }
     }
     return match;
