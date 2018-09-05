@@ -56,12 +56,14 @@ export function toArray(text, options = {}) {
       const aliasFound = match[2];
 
       if (data.includes(aliasFound)) {
-        const isEdgeCase = match[1] || match[5];
-        const aliasContent = match[0].slice(1, -1); // remove ":" at the beginning and end
-        const validAsciiAlias = !aliases[aliasContent];
+        const isEdgeCase = match[1];
+        const fullMatchContent = match[0].slice(1, -1); // remove ":" at the beginning and end
+        const validAsciiAlias = !aliases[fullMatchContent]; // ":" + fullMatchContent + ":" alias doesn't exist
+
         if (!isEdgeCase && validAsciiAlias) {
           return `:${alias}:`;
         }
+
         // return the original word to replace its value in aliasesRegex
         return match[0];
       }
