@@ -53,16 +53,21 @@ export function toArray(text, options = {}) {
     for (let i in asciiAliasKeys) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
-      if (data.includes(match[1])) {
-        const afterAsciiAlias = match[2];
-        if(afterAsciiAlias === "") {
+      const aliasFound = match[2];
+
+      if (data.includes(aliasFound)) {
+        const isEdgeCase = match[1];
+        const fullMatchContent = match[0].slice(1, -1); // remove ":" at the beginning and end
+        const validAsciiAlias = !aliases[fullMatchContent]; // ":" + fullMatchContent + ":" alias doesn't exist
+
+        if (!isEdgeCase && validAsciiAlias) {
           return `:${alias}:`;
         }
+
         // return the original word to replace its value in aliasesRegex
-        return match[0]; 
+        return match[0];
       }
     }
-    return match;
   }
 
   function replaceAliases(...match) {

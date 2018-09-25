@@ -169,4 +169,40 @@ describe("toArray", () => {
     );
     expect(content).toMatchSnapshot();
   });
+  test("consecutive ascii and non char word-break", () => {
+    const content = toArray(
+      ":)a"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("urls not parsing ascii emoji \":/\"", () => {
+    const content = toArray(
+      "https://google.com"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("url and emoji (no space)", () => {
+    const content = toArray(
+      "https://google.com:)"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("url and emoji (with space)", () => {
+    const content = toArray(
+      "https://google.com :)"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("emoji and url (no space)", () => {
+    const content = toArray(
+      ":)https://google.com"
+    );
+    expect(content).toMatchSnapshot();
+  });
+  test("emoji and url (with space)", () => {
+    const content = toArray(
+      ":) https://google.com"
+    );
+    expect(content).toMatchSnapshot();
+  });
 });

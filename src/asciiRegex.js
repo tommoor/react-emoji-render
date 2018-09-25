@@ -10,8 +10,17 @@ const names = flatten(
     asciiAliases[name].map(alias => quoteRE(alias)))
 ).join("|");
 
-// Emojis' unicode ranges from
-// https://stackoverflow.com/questions/24840667/what-is-the-regex-to-extract-all-the-emojis-from-a-string
+const edgeCases = ["http", "https"].join("|");
+
+// Regex reads as following:
+//
+// Match ascii aliases with optional edge cases before it (to know if parsing is needed)
+// Additionally, after the ascii alias:
+//    - Forbid edge cases
+//    - Allow characters included in normal aliases (to check later cases like :s and :smile:)
 export default function() {
-  return new RegExp(`(${names})([^\\s(${names})\\uD83C-\\uDBFF\\uDC00-\\uDFFF]*)`, "g");
+  return new RegExp(
+    `(${edgeCases})?(${names})((?!(${edgeCases}))[a-z0-9_\\-\\+]+:)?`,
+    "g"
+  );
 }
