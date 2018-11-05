@@ -59,6 +59,9 @@ import { Emojione } from 'react-emoji-render';
 
 // or, for svg images:
 <Emojione svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+
+// or, for Emojione v4 (only png):
+<EmojioneV4 text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
 
 ## Advanced Usage

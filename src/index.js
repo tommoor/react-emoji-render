@@ -46,8 +46,23 @@ export function Emojione({ svg, options, ...rest }) {
   return <Emoji options={options} {...rest} />;
 }
 
+export function EmojioneV4({ size = "64", options, ...rest }) {
+  const ext = "png";
+
+  options = {
+    protocol,
+    baseUrl: `//cdn.jsdelivr.net/emojione/assets/4.0/${ext}/`,
+    size,
+    ext,
+    ...options
+  };
+
+  return <Emoji options={options} {...rest} />;
+}
+
 Emojione.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
-  svg: PropTypes.bool
+  svg: PropTypes.bool,
+  size: PropTypes.oneOf(["32", "64", "128"])
 };

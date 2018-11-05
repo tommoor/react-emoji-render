@@ -354,6 +354,39 @@ exports[`Emoji three emoji should add onlyEmojiClassName 1`] = `
 </span>
 `;
 
+exports[`Emoji with size prop 1`] = `
+<span
+  className=""
+  size="32">
+  This 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👨🏿
+  </span>
+   is 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
 exports[`Emoji with svg prop 1`] = `
 <span
   className=""
@@ -743,6 +776,39 @@ exports[`Emojione three emoji should add onlyEmojiClassName 1`] = `
 </span>
 `;
 
+exports[`Emojione with size prop 1`] = `
+<span
+  className=""
+  size="32">
+  This 
+  <img
+    alt="👨🏿"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Emojione with svg prop 1`] = `
 <span
   className="">
@@ -764,6 +830,427 @@ exports[`Emojione with svg prop 1`] = `
     alt="👌"
     className={undefined}
     src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44c.svg"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 a mixture of emoji syntax 1`] = `
+<span
+  className="">
+  <img
+    alt="😆"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f606.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   This is a selection of 
+  <img
+    alt="💩"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f4a9.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   emoji 
+  <img
+    alt="😃"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   
+  <img
+    alt="👌🏿"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 aliases containing underscores 1`] = `
+<span
+  className="">
+  <img
+    alt="😜"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f61c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   wow
+</span>
+`;
+
+exports[`EmojioneV4 aliases with skin tone modifiers 1`] = `
+<span
+  className="">
+  Say hello to 
+  <img
+    alt="👩🏿"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f469-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 ascii aliases 1`] = `
+<span
+  className="">
+  That\'s awesome 
+  <img
+    alt="😃"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 does nothing to unknown aliases 1`] = `
+<span
+  className="">
+  An :unknown: alias
+</span>
+`;
+
+exports[`EmojioneV4 emoji with a multiple codepoints 1`] = `
+<span
+  className="">
+  Great work 
+  <img
+    alt="👍🏾"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   
+  <img
+    alt="👨‍👩‍👧‍👦"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 emoji with a single codepoint 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 four emoji should not add onlyEmojiClassName 1`] = `
+<span
+  className="">
+  <img
+    alt="👋"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44b.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="😀"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="👍🏾"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="💞"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 just emoji should add onlyEmojiClassName 1`] = `
+<span
+  className="onlyEmojiClass">
+  <img
+    alt="😀"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 just emoticon should add onlyEmojiClassName 1`] = `
+<span
+  className="onlyEmojiClass">
+  <img
+    alt="😄"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 simple aliases 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="😄"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is nice 
+  <img
+    alt="👍"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44d.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 strings with no emoji 1`] = `
+<span
+  className="">
+  Just some words
+</span>
+`;
+
+exports[`EmojioneV4 three emoji should add onlyEmojiClassName 1`] = `
+<span
+  className="onlyEmojiClass">
+  <img
+    alt="😀"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="👍🏾"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="💞"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 with size prop 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="👨🏿"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/32/1f468-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/32/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 with svg prop 1`] = `
+<span
+  className=""
+  svg={true}>
+  This 
+  <img
+    alt="👨🏿"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f468-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
     style={
       Object {
         "height": "1em",
@@ -1120,6 +1607,39 @@ exports[`Twemoji three emoji should add onlyEmojiClassName 1`] = `
     alt="💞"
     className={undefined}
     src="https://twemoji.maxcdn.com/2/72x72/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji with size prop 1`] = `
+<span
+  className=""
+  size="32">
+  This 
+  <img
+    alt="👨🏿"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f468-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
     style={
       Object {
         "height": "1em",

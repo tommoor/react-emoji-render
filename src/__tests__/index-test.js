@@ -1,8 +1,8 @@
 import React from "react";
-import Emoji, { Twemoji, Emojione, toArray } from "../../src/index";
+import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../../src/index";
 import renderer from "react-test-renderer";
 
-[Emoji, Twemoji, Emojione].forEach(Component => {
+[Emoji, Twemoji, Emojione, EmojioneV4].forEach(Component => {
   describe(Component.name, () => {
     test("strings with no emoji", () => {
       const component = renderer.create(<Component text="Just some words" />);
@@ -107,6 +107,14 @@ import renderer from "react-test-renderer";
     test("with svg prop", () => {
       const component = renderer.create(
         <Component text="This :man::skin-tone-6: is 👌" svg />
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("with size prop", () => {
+      const component = renderer.create(
+        <Component text="This :man::skin-tone-6: is 👌" size="32" />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
