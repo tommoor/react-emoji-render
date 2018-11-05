@@ -46,7 +46,13 @@ export function Emojione({ svg, options, ...rest }) {
   return <Emoji options={options} {...rest} />;
 }
 
-export function EmojioneV4({ size = "64", options, ...rest }) {
+Emojione.propTypes = {
+  text: PropTypes.string,
+  options: PropTypes.object,
+  svg: PropTypes.bool
+};
+
+export function EmojioneV4({ size, options, ...rest }) {
   const ext = "png";
 
   options = {
@@ -60,9 +66,11 @@ export function EmojioneV4({ size = "64", options, ...rest }) {
   return <Emoji options={options} {...rest} />;
 }
 
-Emojione.propTypes = {
+EmojioneV4.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
-  svg: PropTypes.bool,
-  size: PropTypes.oneOf(["32", "64", "128"])
+  size: PropTypes.oneOf([32, 64, 128])
+};
+EmojioneV4.defaultProps = {
+  size: 64
 };

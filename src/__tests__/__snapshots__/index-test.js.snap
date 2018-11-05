@@ -357,7 +357,7 @@ exports[`Emoji three emoji should add onlyEmojiClassName 1`] = `
 exports[`Emoji with size prop 1`] = `
 <span
   className=""
-  size="32">
+  size={32}>
   This 
   <span
     className={undefined}
@@ -779,7 +779,7 @@ exports[`Emojione three emoji should add onlyEmojiClassName 1`] = `
 exports[`Emojione with size prop 1`] = `
 <span
   className=""
-  size="32">
+  size={32}>
   This 
   <img
     alt="👨🏿"
@@ -1621,7 +1621,7 @@ exports[`Twemoji three emoji should add onlyEmojiClassName 1`] = `
 exports[`Twemoji with size prop 1`] = `
 <span
   className=""
-  size="32">
+  size={32}>
   This 
   <img
     alt="👨🏿"

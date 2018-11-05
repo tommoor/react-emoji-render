@@ -114,7 +114,7 @@ import renderer from "react-test-renderer";
 
     test("with size prop", () => {
       const component = renderer.create(
-        <Component text="This :man::skin-tone-6: is 👌" size="32" />
+        <Component text="This :man::skin-tone-6: is 👌" size={32} />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();

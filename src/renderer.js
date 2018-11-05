@@ -114,7 +114,7 @@ Emoji.propTypes = {
   onlyEmojiClassName: PropTypes.string,
   options: PropTypes.shape({
     baseUrl: PropTypes.string,
-    size: PropTypes.string,
+    size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     ext: PropTypes.string,
     className: PropTypes.string
   })
