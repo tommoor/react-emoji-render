@@ -59,6 +59,14 @@ import { Emojione } from 'react-emoji-render';
 
 // or, for svg images:
 <Emojione svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+
+// or, for Emojione v4
+<EmojioneV4 text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+// note: only png supported -->
+// https://github.com/emojione/emojione-assets/issues/2
+
+// in v4 size prop can be set at 32, 64 (default) or 128
+<EmojioneV4 size={32} text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
 
 ## Advanced Usage

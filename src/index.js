@@ -40,6 +40,7 @@ export function Emojione({ svg, options, ...rest }) {
     baseUrl: `//cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/${ext}/`,
     size: "",
     ext,
+    emojione: true,
     ...options
   };
 
@@ -50,4 +51,28 @@ Emojione.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool
+};
+
+export function EmojioneV4({ size, options, ...rest }) {
+  const ext = "png";
+
+  options = {
+    protocol,
+    baseUrl: `//cdn.jsdelivr.net/emojione/assets/4.0/${ext}/`,
+    size,
+    ext,
+    emojione: true,
+    ...options
+  };
+
+  return <Emoji options={options} {...rest} />;
+}
+
+EmojioneV4.propTypes = {
+  text: PropTypes.string,
+  options: PropTypes.object,
+  size: PropTypes.oneOf([32, 64, 128])
+};
+EmojioneV4.defaultProps = {
+  size: 64
 };
