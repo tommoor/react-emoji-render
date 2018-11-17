@@ -112,6 +112,24 @@ exports[`Emoji ascii aliases 1`] = `
 </span>
 `;
 
+exports[`Emoji composed emojis containing U+200D and U+FE0F chars 1`] = `
+<span
+  className="undefined">
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👩‍⚕️
+  </span>
+</span>
+`;
+
 exports[`Emoji does nothing to unknown aliases 1`] = `
 <span
   className="">
@@ -534,6 +552,24 @@ exports[`Emojione ascii aliases 1`] = `
 </span>
 `;
 
+exports[`Emojione composed emojis containing U+200D and U+FE0F chars 1`] = `
+<span
+  className="undefined">
+  <img
+    alt="👩‍⚕️"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f469-2695.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Emojione does nothing to unknown aliases 1`] = `
 <span
   className="">
@@ -561,7 +597,7 @@ exports[`Emojione emoji with a multiple codepoints 1`] = `
   <img
     alt="👨‍👩‍👧‍👦"
     className={undefined}
-    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f468-1f469-1f467-1f466.png"
     style={
       Object {
         "height": "1em",
@@ -955,6 +991,24 @@ exports[`EmojioneV4 ascii aliases 1`] = `
 </span>
 `;
 
+exports[`EmojioneV4 composed emojis containing U+200D and U+FE0F chars 1`] = `
+<span
+  className="undefined">
+  <img
+    alt="👩‍⚕️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f469-2695.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`EmojioneV4 does nothing to unknown aliases 1`] = `
 <span
   className="">
@@ -982,7 +1036,7 @@ exports[`EmojioneV4 emoji with a multiple codepoints 1`] = `
   <img
     alt="👨‍👩‍👧‍👦"
     className={undefined}
-    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f468-1f469-1f467-1f466.png"
     style={
       Object {
         "height": "1em",
@@ -1376,6 +1430,24 @@ exports[`Twemoji ascii aliases 1`] = `
 </span>
 `;
 
+exports[`Twemoji composed emojis containing U+200D and U+FE0F chars 1`] = `
+<span
+  className="undefined">
+  <img
+    alt="👩‍⚕️"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f469-2695.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Twemoji does nothing to unknown aliases 1`] = `
 <span
   className="">
@@ -1403,7 +1475,7 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
   <img
     alt="👨‍👩‍👧‍👦"
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f468-1f469-1f467-1f466.png"
     style={
       Object {
         "height": "1em",

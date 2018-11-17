@@ -115,6 +115,14 @@ import renderer from "react-test-renderer";
     test("with size prop", () => {
       const component = renderer.create(
         <Component text="This :man::skin-tone-6: is 👌" size={32} />
+        );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+    
+    test("composed emojis containing U+200D and U+FE0F chars", () => {
+      const component = renderer.create(
+        <Component text="👩‍⚕️" />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
