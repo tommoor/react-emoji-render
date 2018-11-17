@@ -31,8 +31,15 @@ export function toArray(text, options = {}) {
       );
     }
 
+    let codepoint = unicodeToCodepoint(match, removeHelperCharacters);
+
+    // if Emojione we don't want to add helper characters in the URL
+    const removeHelperCharacters = options.emojione;
+    if(removeHelperCharacters) {
+      codepoint = codepoint.replace(/-200d/g, "").replace(/-fe0f/g, "");
+    }
+
     const separator = options.size ? "/" : "";
-    const codepoint = unicodeToCodepoint(match);
     const src = `${protocol}${options.baseUrl}${options.size}${separator}${codepoint}.${options.ext}`;
 
     return (

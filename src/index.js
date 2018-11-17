@@ -40,6 +40,7 @@ export function Emojione({ svg, options, ...rest }) {
     baseUrl: `//cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/${ext}/`,
     size: "",
     ext,
+    emojione: true,
     ...options
   };
 
@@ -60,6 +61,7 @@ export function EmojioneV4({ size, options, ...rest }) {
     baseUrl: `//cdn.jsdelivr.net/emojione/assets/4.0/${ext}/`,
     size,
     ext,
+    emojione: true,
     ...options
   };
 

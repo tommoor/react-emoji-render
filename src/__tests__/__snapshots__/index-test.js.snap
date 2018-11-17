@@ -1436,7 +1436,7 @@ exports[`Twemoji composed emojis containing U+200D and U+FE0F chars 1`] = `
   <img
     alt="👩‍⚕️"
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f469-2695.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f469-200d-2695-fe0f.png"
     style={
       Object {
         "height": "1em",
@@ -1475,7 +1475,7 @@ exports[`Twemoji emoji with a multiple codepoints 1`] = `
   <img
     alt="👨‍👩‍👧‍👦"
     className={undefined}
-    src="https://twemoji.maxcdn.com/2/72x72/1f468-1f469-1f467-1f466.png"
+    src="https://twemoji.maxcdn.com/2/72x72/1f468-200d-1f469-200d-1f467-200d-1f466.png"
     style={
       Object {
         "height": "1em",
