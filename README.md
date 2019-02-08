@@ -94,6 +94,26 @@ import { toArray } from 'react-emoji-render';
 const content = toArray("This ❤️ sentence includes :+1: a variety of emoji types :)");
 ```
 
+Then, for example, you can parse all the text and emojis in a single string like the following:
+
+```javascript
+const parseEmojis = value => {
+  const emojisArray = toArray(value);
+  
+  // toArray outputs React elements for emojis and strings for other
+  const newValue = emojisArray.reduce((previous, current) => {
+    if (typeof current === "string") {
+      return previous + current;
+    }
+    return previous + current.props.children;
+  }, "");
+  
+  return newValue;
+};
+
+parseEmojis(":)hello"); // => "😃hello"
+```
+
 
 ### Custom Images
 If you wish to use a custom emoji set / location then you can pass options into
