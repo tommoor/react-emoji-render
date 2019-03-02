@@ -6,6 +6,8 @@ module.exports = {
   "skin-tone-6": "🏿",
   "100": "💯",
   "1234": "🔢",
+  money_mouth_face: "🤑",
+  skull_and_crossbones: "☠️",
   smile: "😄",
   smiley: "😃",
   grinning: "😀",
