@@ -9,7 +9,8 @@
     "build": "babel src -d lib --ignore test",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "lint": "eslint src --fix"
+    "lint": "eslint src --fix",
+    "update-aliases": "rm -rf data/aliases.js && node scripts/parse-aliases.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "cheerio": "^1.0.0-rc.3",
     "eslint": "^3.15.0",
     "eslint-plugin-prettier": "^2.0.0",
     "jest": "^18.1.0",
