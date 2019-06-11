@@ -38,6 +38,5 @@ fs.writeFile(OUTPUT_FILE_PATH, content, function(error) {
     return console.log(error);
   }
 
-  console.log("Alias generated!", OUTPUT_FILE_PATH);
+  console.log("Aliases file generated!", OUTPUT_FILE_PATH);
 });
-
