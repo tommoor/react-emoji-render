@@ -7,7 +7,8 @@ function quoteRE(str) {
 
 const names = flatten(
   Object.keys(asciiAliases).map(name =>
-    asciiAliases[name].map(alias => quoteRE(alias)))
+    asciiAliases[name].map(alias => quoteRE(alias))
+  )
 ).join("|");
 
 const edgeCases = ["http", "https"].join("|");

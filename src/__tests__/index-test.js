@@ -17,9 +17,7 @@ import renderer from "react-test-renderer";
     });
 
     test("emoji with a multiple codepoints", () => {
-      const component = renderer.create(
-        <Component text="Great work 👍🏾 👨‍👩‍👧‍👦" />
-      );
+      const component = renderer.create(<Component text="Great work 👍🏾 👨‍👩‍👧‍👦" />);
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
@@ -64,9 +62,7 @@ import renderer from "react-test-renderer";
 
     test("a mixture of emoji syntax", () => {
       const component = renderer.create(
-        <Component
-          text=":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-3:"
-        />
+        <Component text=":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-3:" />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
@@ -115,15 +111,13 @@ import renderer from "react-test-renderer";
     test("with size prop", () => {
       const component = renderer.create(
         <Component text="This :man::skin-tone-6: is 👌" size={32} />
-        );
+      );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
-    
+
     test("composed emojis containing U+200D and U+FE0F chars", () => {
-      const component = renderer.create(
-        <Component text="👩‍⚕️" />
-      );
+      const component = renderer.create(<Component text="👩‍⚕️" />);
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
@@ -138,87 +132,59 @@ describe("toArray", () => {
     expect(content).toMatchSnapshot();
   });
   test("consecutive same ascii emojis", () => {
-    const content = toArray(
-      ":) :)"
-    );
+    const content = toArray(":) :)");
     expect(content).toMatchSnapshot();
   });
   test("consecutive different ascii emojis", () => {
-    const content = toArray(
-      ":) :D"
-    );
+    const content = toArray(":) :D");
     expect(content).toMatchSnapshot();
   });
   test("consecutive same ascii emojis without word-break", () => {
-    const content = toArray(
-      ":):)"
-    );
+    const content = toArray(":):)");
     expect(content).toMatchSnapshot();
   });
   test("consecutive different ascii emojis without word-break", () => {
-    const content = toArray(
-      ":)<3"
-    );
+    const content = toArray(":)<3");
     expect(content).toMatchSnapshot();
   });
   test("consecutive ascii and simple alias emojis without word-break", () => {
-    const content = toArray(
-      ":):smile:"
-    );
+    const content = toArray(":):smile:");
     expect(content).toMatchSnapshot();
   });
   test("consecutive simple alias and ascii emojis without word-break", () => {
-    const content = toArray(
-      ":smile::)"
-    );
+    const content = toArray(":smile::)");
     expect(content).toMatchSnapshot();
   });
   test("consecutive ascii and unicode emojis without word-break", () => {
-    const content = toArray(
-      ":)💩"
-    );
+    const content = toArray(":)💩");
     expect(content).toMatchSnapshot();
   });
   test("consecutive unicode and ascii emojis without word-break", () => {
-    const content = toArray(
-      "💩:)"
-    );
+    const content = toArray("💩:)");
     expect(content).toMatchSnapshot();
   });
   test("consecutive ascii and non char word-break", () => {
-    const content = toArray(
-      ":)a"
-    );
+    const content = toArray(":)a");
     expect(content).toMatchSnapshot();
   });
-  test("urls not parsing ascii emoji \":/\"", () => {
-    const content = toArray(
-      "https://google.com"
-    );
+  test('urls not parsing ascii emoji ":/"', () => {
+    const content = toArray("https://google.com");
     expect(content).toMatchSnapshot();
   });
   test("url and emoji (no space)", () => {
-    const content = toArray(
-      "https://google.com:)"
-    );
+    const content = toArray("https://google.com:)");
     expect(content).toMatchSnapshot();
   });
   test("url and emoji (with space)", () => {
-    const content = toArray(
-      "https://google.com :)"
-    );
+    const content = toArray("https://google.com :)");
     expect(content).toMatchSnapshot();
   });
   test("emoji and url (no space)", () => {
-    const content = toArray(
-      ":)https://google.com"
-    );
+    const content = toArray(":)https://google.com");
     expect(content).toMatchSnapshot();
   });
   test("emoji and url (with space)", () => {
-    const content = toArray(
-      ":) https://google.com"
-    );
+    const content = toArray(":) https://google.com");
     expect(content).toMatchSnapshot();
   });
 });

@@ -27,7 +27,9 @@ export function toArray(text, options = {}) {
   function replaceUnicodeEmoji(match, i) {
     if (!options.baseUrl) {
       return (
-        <span key={i} style={style} className={options.className}>{match}</span>
+        <span key={i} style={style} className={options.className}>
+          {match}
+        </span>
       );
     }
 
@@ -35,7 +37,7 @@ export function toArray(text, options = {}) {
 
     // if Emojione we don't want to add helper characters in the URL
     const removeHelperCharacters = options.emojione;
-    if(removeHelperCharacters) {
+    if (removeHelperCharacters) {
       codepoint = codepoint.replace(/-200d/g, "").replace(/-fe0f/g, "");
     }
 
@@ -90,9 +92,13 @@ export function toArray(text, options = {}) {
   );
 }
 
-export default function Emoji(
-  { text, onlyEmojiClassName, options = {}, className, ...rest }
-) {
+export default function Emoji({
+  text,
+  onlyEmojiClassName,
+  options = {},
+  className,
+  ...rest
+}) {
   function isOnlyEmoji(output) {
     if (output.length > 3) return false;
 
