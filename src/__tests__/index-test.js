@@ -40,7 +40,7 @@ import renderer from "react-test-renderer";
 
     test("aliases with skin tone modifiers", () => {
       const component = renderer.create(
-        <Component text="Say hello to :woman::skin-tone-3:" />
+        <Component text="Say hello to :woman::skin-tone-6:" />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
@@ -62,7 +62,7 @@ import renderer from "react-test-renderer";
 
     test("a mixture of emoji syntax", () => {
       const component = renderer.create(
-        <Component text=":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-3:" />
+        <Component text=":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-6:" />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
@@ -127,7 +127,7 @@ import renderer from "react-test-renderer";
 describe("toArray", () => {
   test("a mixture of emoji syntax", () => {
     const content = toArray(
-      ":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-3:"
+      ":laughing: This is a selection of 💩 emoji :) :ok_hand::skin-tone-6:"
     );
     expect(content).toMatchSnapshot();
   });
