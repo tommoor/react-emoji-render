@@ -116,9 +116,10 @@ parseEmojis(":)hello"); // => "😃hello"
 
 
 ### Custom Images
+
 If you wish to use a custom emoji set / location then you can pass options into
-the prop. I recommend creating a higher order component which wraps your options
-and exposes a new component, something like:
+the props. One way to achive this is to create a wrapping component which provides 
+your options and exposes a new component, something like:
 
 ```javascript
 import Emoji from 'react-emoji-render';
@@ -135,7 +136,7 @@ function MyEmojiRenderer({children, ...rest}) {
 }
 ```
 
-You can then use the HOC like so:
+You can then use the new component:
 
 ```javascript
 <MyEmojiRenderer text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
