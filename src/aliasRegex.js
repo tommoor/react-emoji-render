@@ -1,5 +1,7 @@
+export const allowedAliasCharacters = "\\w\\-\\_\\+\\*\\(\\)\\!#&åô’çéãí“”,";
+
 function getAliasesRegex() {
-  return /:([\w\-\_\+\*\(\)\!#&åô’çéãí“”,]+):/g;
+  return new RegExp(`:([${allowedAliasCharacters}]+):`, "g");
 }
 
 export default getAliasesRegex;

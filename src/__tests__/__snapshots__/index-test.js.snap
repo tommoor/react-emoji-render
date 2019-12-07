@@ -2005,6 +2005,24 @@ Array [
 ]
 `;
 
+exports[`toArray consecutive simple alias and ascii emojis that overlap 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    😄
+</span>,
+  ")",
+]
+`;
+
 exports[`toArray consecutive simple alias and ascii emojis without word-break 1`] = `
 Array [
   <span
@@ -2096,6 +2114,73 @@ Array [
     😃
 </span>,
   " https://google.com",
+]
+`;
+
+exports[`toArray single letter aliases 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ✌
+</span>,
+  "️ ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    *️⃣
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    #️⃣
+</span>,
+  " ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ⭕
+</span>,
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❌
+</span>,
 ]
 `;
 

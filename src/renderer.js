@@ -14,8 +14,8 @@ import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
 
 const asciiAliasesRegex = asciiRegex();
-const unicodeEmojiRegex = emojiRegex();
 const aliasesRegex = aliasRegex();
+const unicodeEmojiRegex = emojiRegex();
 
 // using em's we can ensure size matches surrounding font
 const style = {
@@ -63,34 +63,71 @@ export function toArray(text, options = {}) {
   function replaceAsciiAliases(...match) {
     const asciiAliasKeys = Object.keys(asciiAliases);
 
+    const fullMatch = match[0];
+    const edgeCase = match[1];
+    const asciiAlias = match[2];
+    const maybeBiggerAliasCharacters = match[3];
+
     for (let i in asciiAliasKeys) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
-      const aliasFound = match[2];
 
-      if (data.includes(aliasFound)) {
-        const isEdgeCase = match[1];
-        const fullMatchContent = match[0].slice(1, -1); // remove ":" at the beginning and end
-        const validAsciiAlias = !aliases[fullMatchContent]; // ":" + fullMatchContent + ":" alias doesn't exist
+      if (data.includes(asciiAlias)) {
+        const isEdgeCase = edgeCase !== undefined;
 
-        if (!isEdgeCase && validAsciiAlias) {
-          return `:${alias}:`;
+        if (isEdgeCase) {
+          return fullMatch; // do nothing
         }
 
-        // return the original word to replace its value in aliasesRegex
-        return match[0];
+        const isMaybePartOfBiggerAlias =
+          maybeBiggerAliasCharacters !== undefined;
+
+        if (!isMaybePartOfBiggerAlias) {
+          return `:${alias}:`; // asciiAlias transformed in alias to be replaced afterwards by aliasRegex
+        }
+
+        const fullMatchContent = fullMatch.slice(1, -1); // remove ":" at the beginning and end
+        const isPartOfBiggerAlias = aliases[fullMatchContent] !== undefined; // ":" + fullMatchContent + ":" alias doesn't exist
+
+        if (isPartOfBiggerAlias) {
+          return fullMatch; // do nothing
+        }
+
+        return `:${alias}:${maybeBiggerAliasCharacters}`; // return matched characters afterwards to don't delete them
       }
     }
   }
 
   function replaceAliases(...match) {
-    return aliases[match[1]] || match[0];
+    const fullMatch = match[0];
+    const alias = match[1];
+
+    const aliasEmoji = aliases[alias];
+
+    return aliasEmoji || fullMatch;
   }
 
+  // We need to execute several times `string.replace` for cases for such as ":):)"
+  // As we are forced to match ":):" to check if it's a normal alias, the second colon is consumed and cannot match again
+  function replaceAllAsciiAliases(textWithAsciiAliases) {
+    let previousTextWithoutAsciiAliases = null;
+    let textWithoutAsciiAliases = textWithAsciiAliases;
+
+    while (previousTextWithoutAsciiAliases !== textWithoutAsciiAliases) {
+      previousTextWithoutAsciiAliases = textWithoutAsciiAliases;
+      textWithoutAsciiAliases = textWithoutAsciiAliases.replace(
+        asciiAliasesRegex,
+        replaceAsciiAliases
+      );
+    }
+
+    return textWithoutAsciiAliases;
+  }
+
+  const textWithouAsciiAliases = replaceAllAsciiAliases(text);
+
   return replace(
-    text
-      .replace(asciiAliasesRegex, replaceAsciiAliases)
-      .replace(aliasesRegex, replaceAliases),
+    textWithouAsciiAliases.replace(aliasesRegex, replaceAliases),
     unicodeEmojiRegex,
     replaceUnicodeEmoji
   );

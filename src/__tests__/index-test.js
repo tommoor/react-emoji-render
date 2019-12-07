@@ -151,6 +151,10 @@ describe("toArray", () => {
     const content = toArray(":):smile:");
     expect(content).toMatchSnapshot();
   });
+  test("consecutive simple alias and ascii emojis that overlap", () => {
+    const content = toArray(":smile:)");
+    expect(content).toMatchSnapshot();
+  });
   test("consecutive simple alias and ascii emojis without word-break", () => {
     const content = toArray(":smile::)");
     expect(content).toMatchSnapshot();
@@ -185,6 +189,10 @@ describe("toArray", () => {
   });
   test("emoji and url (with space)", () => {
     const content = toArray(":) https://google.com");
+    expect(content).toMatchSnapshot();
+  });
+  test("single letter aliases", () => {
+    const content = toArray(":v: :*::#: :o::x:");
     expect(content).toMatchSnapshot();
   });
 });
