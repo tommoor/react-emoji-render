@@ -8,7 +8,7 @@ function getAllScripts(callback) {
   return glob(allScriptFilesGlob, callback);
 }
 
-console.log("\n***validate***");
+console.log("\n***VALIDATE***");
 
 // Execute all validate scripts
 getAllScripts((error, result) => {
