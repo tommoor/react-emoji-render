@@ -1,14 +1,13 @@
 import asciiAliases from "../data/asciiAliases";
 import flatten from "lodash.flatten";
 
-function quoteRE(str) {
-  return str.replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
-}
+import { allowedAliasCharacters } from "./aliasRegex";
+import { escapeStringToBeUsedInRegExp } from "./utils";
 
 const names = flatten(
-  Object.keys(asciiAliases).map(name =>
-    asciiAliases[name].map(alias => quoteRE(alias))
-  )
+  Object.keys(asciiAliases).map(name => {
+    return asciiAliases[name].map(escapeStringToBeUsedInRegExp);
+  })
 ).join("|");
 
 const edgeCases = ["http", "https"].join("|");
@@ -21,7 +20,7 @@ const edgeCases = ["http", "https"].join("|");
 //    - Allow characters included in normal aliases (to check later cases like :s and :smile:)
 export default function() {
   return new RegExp(
-    `(${edgeCases})?(${names})((?!(${edgeCases}))[a-z0-9_\\-\\+]+:)?`,
+    `(${edgeCases})?(${names})([${allowedAliasCharacters}]*:)?`,
     "g"
   );
 }

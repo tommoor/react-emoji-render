@@ -20,7 +20,7 @@ export function Twemoji({ svg, options, ...rest }) {
     baseUrl: `//twemoji.maxcdn.com/2/${svg ? "svg/" : ""}`,
     size,
     ext,
-    ...options
+    ...options,
   };
 
   return <Emoji options={options} {...rest} />;
@@ -29,7 +29,7 @@ export function Twemoji({ svg, options, ...rest }) {
 Twemoji.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
-  svg: PropTypes.bool
+  svg: PropTypes.bool,
 };
 
 export function Emojione({ svg, options, ...rest }) {
@@ -41,7 +41,7 @@ export function Emojione({ svg, options, ...rest }) {
     size: "",
     ext,
     emojione: true,
-    ...options
+    ...options,
   };
 
   return <Emoji options={options} {...rest} />;
@@ -50,7 +50,7 @@ export function Emojione({ svg, options, ...rest }) {
 Emojione.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
-  svg: PropTypes.bool
+  svg: PropTypes.bool,
 };
 
 export function EmojioneV4({ size, options, ...rest }) {
@@ -62,7 +62,7 @@ export function EmojioneV4({ size, options, ...rest }) {
     size,
     ext,
     emojione: true,
-    ...options
+    ...options,
   };
 
   return <Emoji options={options} {...rest} />;
@@ -71,8 +71,8 @@ export function EmojioneV4({ size, options, ...rest }) {
 EmojioneV4.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
-  size: PropTypes.oneOf([32, 64, 128])
+  size: PropTypes.oneOf([32, 64, 128]),
 };
 EmojioneV4.defaultProps = {
-  size: 64
+  size: 64,
 };

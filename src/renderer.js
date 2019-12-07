@@ -3,22 +3,26 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
+
 import asciiRegex from "./asciiRegex";
+import aliasRegex from "./aliasRegex";
+
 import normalizeProtocol from "./normalizeProtocol";
 import unicodeToCodepoint from "./unicodeToCodepoint";
+
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
 
 const asciiAliasesRegex = asciiRegex();
+const aliasesRegex = aliasRegex();
 const unicodeEmojiRegex = emojiRegex();
-const aliasesRegex = /:([\w\-\_\+]+):/g;
 
 // using em's we can ensure size matches surrounding font
 const style = {
   width: "1em",
   height: "1em",
   margin: "0 .05em 0 .1em",
-  verticalAlign: "-0.1em"
+  verticalAlign: "-0.1em",
 };
 
 export function toArray(text, options = {}) {
@@ -59,34 +63,71 @@ export function toArray(text, options = {}) {
   function replaceAsciiAliases(...match) {
     const asciiAliasKeys = Object.keys(asciiAliases);
 
+    const fullMatch = match[0];
+    const edgeCase = match[1];
+    const asciiAlias = match[2];
+    const maybeBiggerAliasCharacters = match[3];
+
     for (let i in asciiAliasKeys) {
       const alias = asciiAliasKeys[i];
       const data = asciiAliases[alias];
-      const aliasFound = match[2];
 
-      if (data.includes(aliasFound)) {
-        const isEdgeCase = match[1];
-        const fullMatchContent = match[0].slice(1, -1); // remove ":" at the beginning and end
-        const validAsciiAlias = !aliases[fullMatchContent]; // ":" + fullMatchContent + ":" alias doesn't exist
+      if (data.includes(asciiAlias)) {
+        const isEdgeCase = edgeCase !== undefined;
 
-        if (!isEdgeCase && validAsciiAlias) {
-          return `:${alias}:`;
+        if (isEdgeCase) {
+          return fullMatch; // do nothing
         }
 
-        // return the original word to replace its value in aliasesRegex
-        return match[0];
+        const isMaybePartOfBiggerAlias =
+          maybeBiggerAliasCharacters !== undefined;
+
+        if (!isMaybePartOfBiggerAlias) {
+          return `:${alias}:`; // asciiAlias transformed in alias to be replaced afterwards by aliasRegex
+        }
+
+        const fullMatchContent = fullMatch.slice(1, -1); // remove ":" at the beginning and end
+        const isPartOfBiggerAlias = aliases[fullMatchContent] !== undefined; // ":" + fullMatchContent + ":" alias doesn't exist
+
+        if (isPartOfBiggerAlias) {
+          return fullMatch; // do nothing
+        }
+
+        return `:${alias}:${maybeBiggerAliasCharacters}`; // also return matched characters afterwards to handle them in next iteration
       }
     }
   }
 
   function replaceAliases(...match) {
-    return aliases[match[1]] || match[0];
+    const fullMatch = match[0];
+    const alias = match[1];
+
+    const aliasEmoji = aliases[alias];
+
+    return aliasEmoji || fullMatch;
   }
 
+  // We need to execute several times `string.replace` for cases for such as ":):)"
+  // As we are forced to match ":):" to check if it's a normal alias, the second colon is consumed and cannot match again
+  function replaceAllAsciiAliases(textWithAsciiAliases) {
+    let previousTextWithoutAsciiAliases = null;
+    let textWithoutAsciiAliases = textWithAsciiAliases;
+
+    while (previousTextWithoutAsciiAliases !== textWithoutAsciiAliases) {
+      previousTextWithoutAsciiAliases = textWithoutAsciiAliases;
+      textWithoutAsciiAliases = textWithoutAsciiAliases.replace(
+        asciiAliasesRegex,
+        replaceAsciiAliases
+      );
+    }
+
+    return textWithoutAsciiAliases;
+  }
+
+  const textWithouAsciiAliases = replaceAllAsciiAliases(text);
+
   return replace(
-    text
-      .replace(asciiAliasesRegex, replaceAsciiAliases)
-      .replace(aliasesRegex, replaceAliases),
+    textWithouAsciiAliases.replace(aliasesRegex, replaceAliases),
     unicodeEmojiRegex,
     replaceUnicodeEmoji
   );
@@ -111,7 +152,7 @@ export default function Emoji({
 
   const output = toArray(text, options);
   const classes = classnames(className, {
-    [onlyEmojiClassName]: isOnlyEmoji(output)
+    [onlyEmojiClassName]: isOnlyEmoji(output),
   });
 
   return (
@@ -129,6 +170,6 @@ Emoji.propTypes = {
     baseUrl: PropTypes.string,
     size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     ext: PropTypes.string,
-    className: PropTypes.string
-  })
+    className: PropTypes.string,
+  }),
 };
