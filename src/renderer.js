@@ -18,7 +18,7 @@ const style = {
   width: "1em",
   height: "1em",
   margin: "0 .05em 0 .1em",
-  verticalAlign: "-0.1em"
+  verticalAlign: "-0.1em",
 };
 
 export function toArray(text, options = {}) {
@@ -111,7 +111,7 @@ export default function Emoji({
 
   const output = toArray(text, options);
   const classes = classnames(className, {
-    [onlyEmojiClassName]: isOnlyEmoji(output)
+    [onlyEmojiClassName]: isOnlyEmoji(output),
   });
 
   return (
@@ -129,6 +129,6 @@ Emoji.propTypes = {
     baseUrl: PropTypes.string,
     size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     ext: PropTypes.string,
-    className: PropTypes.string
-  })
+    className: PropTypes.string,
+  }),
 };
