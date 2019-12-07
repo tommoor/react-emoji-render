@@ -93,7 +93,7 @@ export function toArray(text, options = {}) {
           return fullMatch; // do nothing
         }
 
-        return `:${alias}:${maybeBiggerAliasCharacters}`; // return matched characters afterwards to don't delete them
+        return `:${alias}:${maybeBiggerAliasCharacters}`; // also return matched characters afterwards to handle them in next iteration
       }
     }
   }

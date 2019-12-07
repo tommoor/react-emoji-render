@@ -15,9 +15,11 @@ Normalize and render emoji's the way your users expect.
 ## Installation
 
 Install with your favorite package manager:
+
 ```
 npm install react-emoji-render --save
 ```
+
 ```
 yarn add react-emoji-render
 ```
@@ -28,9 +30,9 @@ By default the component will normalize all of the different emoji notations to
 native unicode characters.
 
 ```javascript
-import Emoji from 'react-emoji-render';
+import Emoji from "react-emoji-render";
 
-<Emoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+<Emoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />;
 ```
 
 ### Twemoji
@@ -87,11 +89,13 @@ If you want to do further processing on the output, for example parsing HTML the
 it may be useful to not have the normalized emojis be wrapped in a component.
 
 ```javascript
-import { toArray } from 'react-emoji-render';
+import { toArray } from "react-emoji-render";
 
 // content is an array of text and emoji components, you can now loop through this
 // array and perform further processing. Avoid using `dangerouslySetInnerHTML`!
-const content = toArray("This ❤️ sentence includes :+1: a variety of emoji types :)");
+const content = toArray(
+  "This ❤️ sentence includes :+1: a variety of emoji types :)"
+);
 ```
 
 Then, for example, you can parse all the text and emojis in a single string like the following:
@@ -99,7 +103,7 @@ Then, for example, you can parse all the text and emojis in a single string like
 ```javascript
 const parseEmojis = value => {
   const emojisArray = toArray(value);
-  
+
   // toArray outputs React elements for emojis and strings for other
   const newValue = emojisArray.reduce((previous, current) => {
     if (typeof current === "string") {
@@ -107,32 +111,29 @@ const parseEmojis = value => {
     }
     return previous + current.props.children;
   }, "");
-  
+
   return newValue;
 };
 
 parseEmojis(":)hello"); // => "😃hello"
 ```
 
-
 ### Custom Images
 
 If you wish to use a custom emoji set / location then you can pass options into
-the props. One way to achive this is to create a wrapping component which provides 
+the props. One way to achive this is to create a wrapping component which provides
 your options and exposes a new component, something like:
 
 ```javascript
-import Emoji from 'react-emoji-render';
+import Emoji from "react-emoji-render";
 
-function MyEmojiRenderer({children, ...rest}) {
+function MyEmojiRenderer({ children, ...rest }) {
   const options = {
-    baseUrl: 'https://mycustom.cdn.com/emojis/',
-    ext: 'svg'
+    baseUrl: "https://mycustom.cdn.com/emojis/",
+    ext: "svg",
   };
 
-  return (
-    <Emoji options={options} {...rest} />
-  );
+  return <Emoji options={options} {...rest} />;
 }
 ```
 
@@ -141,3 +142,11 @@ You can then use the new component:
 ```javascript
 <MyEmojiRenderer text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
+
+## Contributing
+
+### Emojis and aliases
+
+If our [dataset](data/aliases.js) is missing some emoji, please open an issue specifying which one is missing. The library has a package script (`yarn update-aliases`) that makes it easy to update with the latest emojis at any time. You can directly do it yourself and open a PR as well.
+
+If you would like to add a new alias to an existing emoji, please find the emoji in our [custom aliases](data/aliases/customAliases.json) file and add the alias to its array of aliases. If you have found a source of aliases that is being actively maintained and you would like to add it, please open an issue to discuss it.
