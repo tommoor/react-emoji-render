@@ -3,15 +3,19 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
+
 import asciiRegex from "./asciiRegex";
+import aliasRegex from "./aliasRegex";
+
 import normalizeProtocol from "./normalizeProtocol";
 import unicodeToCodepoint from "./unicodeToCodepoint";
+
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
 
 const asciiAliasesRegex = asciiRegex();
 const unicodeEmojiRegex = emojiRegex();
-const aliasesRegex = /:([\w\-\_\+]+):/g;
+const aliasesRegex = aliasRegex();
 
 // using em's we can ensure size matches surrounding font
 const style = {
