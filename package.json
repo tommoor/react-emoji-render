@@ -11,6 +11,7 @@
   "description": "Render emoji's the way your users expect.",
   "main": "lib/index.js",
   "files": [
+    "index.d.ts",
     "lib",
     "data/aliases.js",
     "data/asciiAliases.js",
