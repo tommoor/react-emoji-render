@@ -80,7 +80,7 @@ export function toArray(text, options = {}) {
         }
 
         const isMaybePartOfBiggerAlias =
-          maybeBiggerAliasCharacters !== undefined;
+          maybeBiggerAliasCharacters !== undefined && fullMatch[0] == ":";
 
         if (!isMaybePartOfBiggerAlias) {
           return `:${alias}:`; // asciiAlias transformed in alias to be replaced afterwards by aliasRegex
@@ -116,6 +116,9 @@ export function toArray(text, options = {}) {
     while (previousTextWithoutAsciiAliases !== textWithoutAsciiAliases) {
       previousTextWithoutAsciiAliases = textWithoutAsciiAliases;
       textWithoutAsciiAliases = textWithoutAsciiAliases.replace(
+        aliasesRegex,
+        replaceAliases
+      ).replace(
         asciiAliasesRegex,
         replaceAsciiAliases
       );
@@ -124,10 +127,10 @@ export function toArray(text, options = {}) {
     return textWithoutAsciiAliases;
   }
 
-  const textWithouAsciiAliases = replaceAllAsciiAliases(text);
+  const textWithoutAsciiAliases = replaceAllAsciiAliases(text);
 
   return replace(
-    textWithouAsciiAliases.replace(aliasesRegex, replaceAliases),
+    textWithoutAsciiAliases.replace(aliasesRegex, replaceAliases),
     unicodeEmojiRegex,
     replaceUnicodeEmoji
   );

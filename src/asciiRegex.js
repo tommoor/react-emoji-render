@@ -10,7 +10,7 @@ const names = flatten(
   })
 ).join("|");
 
-const edgeCases = ["http", "https"].join("|");
+const edgeCases = "https?\\S*";
 
 // Regex reads as following:
 //

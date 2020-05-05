@@ -2023,6 +2023,24 @@ Array [
 ]
 `;
 
+exports[`toArray consecutive simple alias and ascii emojis that overlap 2`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❤️
+</span>,
+  "o",
+]
+`;
+
 exports[`toArray consecutive simple alias and ascii emojis without word-break 1`] = `
 Array [
   <span
@@ -2184,6 +2202,12 @@ Array [
 ]
 `;
 
+exports[`toArray url and ascii emoji alias (no space) 1`] = `
+Array [
+  "https://google.com:)",
+]
+`;
+
 exports[`toArray url and emoji (no space) 1`] = `
 Array [
   "https://google.com",
@@ -2197,7 +2221,7 @@ Array [
             "width": "1em",
           }
     }>
-    😃
+    ❤️
 </span>,
 ]
 `;
@@ -2217,6 +2241,12 @@ Array [
     }>
     😃
 </span>,
+]
+`;
+
+exports[`toArray url including ascii emoji alias 1`] = `
+Array [
+  "https://foo:oops@example.com",
 ]
 `;
 
