@@ -2099,6 +2099,50 @@ Array [
 ]
 `;
 
+exports[`toArray edge cases 1`] = `
+Array [
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❤️
+</span>,
+  ": :1",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❤️
+</span>,
+  " ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❤️
+</span>,
+  "1:",
+]
+`;
+
 exports[`toArray emoji and url (no space) 1`] = `
 Array [
   <span
@@ -2214,7 +2258,7 @@ Array [
 ]
 `;
 
-exports[`toArray url and emoji (with space) 1`] = `
+exports[`toArray url and ascii emoji alias (with space) 1`] = `
 Array [
   "https://google.com ",
   <span
@@ -2232,7 +2276,7 @@ Array [
 ]
 `;
 
-exports[`toArray url and emoji (with space) 2`] = `
+exports[`toArray url and emoji (with space) 1`] = `
 Array [
   "https://google.com ",
   <span

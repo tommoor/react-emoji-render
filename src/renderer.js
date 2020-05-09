@@ -80,20 +80,20 @@ export function toArray(text, options = {}) {
         }
 
         const isMaybePartOfBiggerAlias =
-          maybeBiggerAliasCharacters !== undefined && fullMatch[0] == ":";
+          maybeBiggerAliasCharacters !== undefined;
 
         if (!isMaybePartOfBiggerAlias) {
-          return `:${alias}:`; // asciiAlias transformed in alias to be replaced afterwards by aliasRegex
+          return aliases[alias]; // replace with unicode
+        } else if (fullMatch[0] === ":") {
+          const fullMatchContent = fullMatch.slice(1, -1); // remove ":" at the beginning and end
+          const isPartOfBiggerAlias = aliases[fullMatchContent] !== undefined; // ":" + fullMatchContent + ":" alias doesn't exist
+
+          if (isPartOfBiggerAlias) {
+            return fullMatch; // do nothing
+          }
         }
 
-        const fullMatchContent = fullMatch.slice(1, -1); // remove ":" at the beginning and end
-        const isPartOfBiggerAlias = aliases[fullMatchContent] !== undefined; // ":" + fullMatchContent + ":" alias doesn't exist
-
-        if (isPartOfBiggerAlias) {
-          return fullMatch; // do nothing
-        }
-
-        return `:${alias}:${maybeBiggerAliasCharacters}`; // also return matched characters afterwards to handle them in next iteration
+        return `${aliases[alias]}${maybeBiggerAliasCharacters}`; // also return matched characters afterwards to handle them in next iteration
       }
     }
   }
@@ -116,9 +116,6 @@ export function toArray(text, options = {}) {
     while (previousTextWithoutAsciiAliases !== textWithoutAsciiAliases) {
       previousTextWithoutAsciiAliases = textWithoutAsciiAliases;
       textWithoutAsciiAliases = textWithoutAsciiAliases.replace(
-        aliasesRegex,
-        replaceAliases
-      ).replace(
         asciiAliasesRegex,
         replaceAsciiAliases
       );
@@ -127,13 +124,11 @@ export function toArray(text, options = {}) {
     return textWithoutAsciiAliases;
   }
 
-  const textWithoutAsciiAliases = replaceAllAsciiAliases(text);
-
-  return replace(
-    textWithoutAsciiAliases.replace(aliasesRegex, replaceAliases),
-    unicodeEmojiRegex,
-    replaceUnicodeEmoji
-  );
+  let replacedText = text;
+  replacedText = replacedText.replace(aliasesRegex, replaceAliases);
+  replacedText = replaceAllAsciiAliases(replacedText);
+  replacedText = replacedText.replace(aliasesRegex, replaceAliases);
+  return replace(replacedText, unicodeEmojiRegex, replaceUnicodeEmoji);
 }
 
 export default function Emoji({

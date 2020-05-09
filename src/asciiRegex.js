@@ -10,6 +10,8 @@ const names = flatten(
   })
 ).join("|");
 
+const edgeCases = [startOfURL].join("|");
+
 // Regex reads as following:
 //
 // Match ascii aliases with optional edge cases before it (to know if parsing is needed)
@@ -18,7 +20,7 @@ const names = flatten(
 //    - Allow characters included in normal aliases (to check later cases like :s and :smile:)
 export default function() {
   return new RegExp(
-    `(${startOfURL})?(${names})([${allowedAliasCharacters}]*:)?`,
+    `(${edgeCases})?(${names})([${allowedAliasCharacters}]*:)?`,
     "g"
   );
 }

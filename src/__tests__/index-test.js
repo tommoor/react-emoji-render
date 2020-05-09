@@ -187,7 +187,7 @@ describe("toArray", () => {
     const content = toArray("https://google.com:heart:");
     expect(content).toMatchSnapshot();
   });
-  test("url and emoji (with space)", () => {
+  test("url and ascii emoji alias (with space)", () => {
     const content = toArray("https://google.com :)");
     expect(content).toMatchSnapshot();
   });
@@ -209,6 +209,10 @@ describe("toArray", () => {
   });
   test("single letter aliases", () => {
     const content = toArray(":v: :*::#: :o::x:");
+    expect(content).toMatchSnapshot();
+  });
+  test("edge cases", () => {
+    const content = toArray("<3: :1<3 <31:");
     expect(content).toMatchSnapshot();
   });
 });
