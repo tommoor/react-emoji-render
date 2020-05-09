@@ -191,6 +191,10 @@ describe("toArray", () => {
     const content = toArray("https://google.com :)");
     expect(content).toMatchSnapshot();
   });
+  test("url and emoji (with space)", () => {
+    const content = toArray("https://google.com :heart:");
+    expect(content).toMatchSnapshot();
+  });
   test("emoji and url (no space)", () => {
     const content = toArray(":)https://google.com");
     expect(content).toMatchSnapshot();

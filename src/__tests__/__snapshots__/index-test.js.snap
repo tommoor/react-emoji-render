@@ -2210,19 +2210,7 @@ Array [
 
 exports[`toArray url and emoji (no space) 1`] = `
 Array [
-  "https://google.com",
-  <span
-    className={undefined}
-    style={
-        Object {
-            "height": "1em",
-            "margin": "0 .05em 0 .1em",
-            "verticalAlign": "-0.1em",
-            "width": "1em",
-          }
-    }>
-    ❤️
-</span>,
+  "https://google.com:heart:",
 ]
 `;
 
@@ -2240,6 +2228,24 @@ Array [
           }
     }>
     😃
+</span>,
+]
+`;
+
+exports[`toArray url and emoji (with space) 2`] = `
+Array [
+  "https://google.com ",
+  <span
+    className={undefined}
+    style={
+        Object {
+            "height": "1em",
+            "margin": "0 .05em 0 .1em",
+            "verticalAlign": "-0.1em",
+            "width": "1em",
+          }
+    }>
+    ❤️
 </span>,
 ]
 `;
