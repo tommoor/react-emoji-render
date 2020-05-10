@@ -10,7 +10,7 @@ Normalize and render emoji's the way your users expect.
 - Choose between native, twemoji, emojione or custom image sets.
 - Add custom styles when text contains only emoji (to make it bigger, of course)
 
-[Live Demo on CodeSandbox](https://codesandbox.io/s/stoic-leakey-eo51r)
+[Live Demo on CodeSandbox](https://codesandbox.io/s/tender-mclean-3glj1)
 
 ## Installation
 
