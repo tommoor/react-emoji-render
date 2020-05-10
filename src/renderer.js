@@ -4,7 +4,6 @@ import classnames from "classnames";
 import replace from "string-replace-to-array";
 import emojiRegex from "emoji-regex";
 
-import asciiRegex from "./asciiRegex";
 import aliasRegex from "./aliasRegex";
 
 import normalizeProtocol from "./normalizeProtocol";
@@ -13,8 +12,6 @@ import unicodeToCodepoint from "./unicodeToCodepoint";
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
 
-const asciiAliasesRegex = asciiRegex();
-const aliasesRegex = aliasRegex();
 const unicodeEmojiRegex = emojiRegex();
 
 // using em's we can ensure size matches surrounding font
@@ -24,6 +21,14 @@ const style = {
   margin: "0 .05em 0 .1em",
   verticalAlign: "-0.1em",
 };
+
+const asciiToAlias = { ":": ":" };
+
+for (const alias of Object.keys(asciiAliases)) {
+  for (const ascii of asciiAliases[alias]) {
+    asciiToAlias[ascii] = aliases[alias];
+  }
+}
 
 export function toArray(text, options = {}) {
   const protocol = normalizeProtocol(options.protocol);
@@ -60,80 +65,32 @@ export function toArray(text, options = {}) {
     );
   }
 
-  function replaceAsciiAliases(...match) {
-    const asciiAliasKeys = Object.keys(asciiAliases);
+  function replaceAliases(text) {
+    const regex = aliasRegex();
+    let match, textWithEmoji = [], pos = 0;
 
-    const fullMatch = match[0];
-    const edgeCase = match[1];
-    const asciiAlias = match[2];
-    const maybeBiggerAliasCharacters = match[3];
-
-    for (let i in asciiAliasKeys) {
-      const alias = asciiAliasKeys[i];
-      const data = asciiAliases[alias];
-
-      if (data.includes(asciiAlias)) {
-        const isEdgeCase = edgeCase !== undefined;
-
-        if (isEdgeCase) {
-          return fullMatch; // do nothing
-        }
-
-        const isMaybePartOfBiggerAlias =
-          maybeBiggerAliasCharacters !== undefined;
-
-        if (!isMaybePartOfBiggerAlias) {
-          return aliases[alias]; // replace with unicode
-        } else if (fullMatch[0] === ":") {
-          const fullMatchContent = fullMatch.slice(1, -1); // remove ":" at the beginning and end
-          const isPartOfBiggerAlias = aliases[fullMatchContent] !== undefined; // ":" + fullMatchContent + ":" alias doesn't exist
-
-          if (isPartOfBiggerAlias) {
-            return fullMatch; // do nothing
-          }
-        }
-
-        return `${aliases[alias]}${maybeBiggerAliasCharacters}`; // also return matched characters afterwards to handle them in next iteration
+    while (match = regex.exec(text)) {
+      let [ascii, full] = match.slice(1, 3);
+      let emoji = aliases[(ascii + full).slice(1, -1)];
+      if (match.index > pos) {
+        textWithEmoji.push(text.slice(pos, match.index));
       }
-    }
-  }
-
-  function replaceAliases(...match) {
-    const fullMatch = match[0];
-    const edgeCase = match[1];
-    const alias = match[2];
-
-    if (edgeCase) {
-      return fullMatch;
-    }
-
-    const aliasEmoji = aliases[alias];
-
-    return aliasEmoji || fullMatch;
-  }
-
-  // We need to execute several times `string.replace` for cases for such as ":):)"
-  // As we are forced to match ":):" to check if it's a normal alias, the second colon is consumed and cannot match again
-  function replaceAllAsciiAliases(textWithAsciiAliases) {
-    let previousTextWithoutAsciiAliases = null;
-    let textWithoutAsciiAliases = textWithAsciiAliases;
-
-    while (previousTextWithoutAsciiAliases !== textWithoutAsciiAliases) {
-      previousTextWithoutAsciiAliases = textWithoutAsciiAliases;
-      textWithoutAsciiAliases = textWithoutAsciiAliases.replace(
-        asciiAliasesRegex,
-        replaceAsciiAliases
-      );
+      if (ascii[0] === ":" && full && emoji) {
+        textWithEmoji.push(emoji);
+      } else {
+        textWithEmoji.push(asciiToAlias[ascii]);
+        if (full) {
+          regex.lastIndex -= full.length;
+        }
+      }
+      pos = regex.lastIndex;
     }
 
-    return textWithoutAsciiAliases;
+    textWithEmoji.push(text.slice(pos));
+    return textWithEmoji.join("");
   }
 
-  let replacedText = text;
-  replacedText = replacedText.replace(aliasesRegex, replaceAliases);
-  replacedText = replaceAllAsciiAliases(replacedText);
-  replacedText = replacedText.replace(aliasesRegex, replaceAliases);
-  return replace(replacedText, unicodeEmojiRegex, replaceUnicodeEmoji);
+  return replace(replaceAliases(text), unicodeEmojiRegex, replaceUnicodeEmoji);
 }
 
 export default function Emoji({
