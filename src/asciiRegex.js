@@ -1,7 +1,7 @@
 import asciiAliases from "../data/asciiAliases";
 import flatten from "lodash.flatten";
 
-import { allowedAliasCharacters } from "./aliasRegex";
+import { allowedAliasCharacters, startOfURL } from "./aliasRegex";
 import { escapeStringToBeUsedInRegExp } from "./utils";
 
 const names = flatten(
@@ -10,7 +10,7 @@ const names = flatten(
   })
 ).join("|");
 
-const edgeCases = ["http", "https"].join("|");
+const edgeCases = [startOfURL].join("|");
 
 // Regex reads as following:
 //

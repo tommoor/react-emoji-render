@@ -155,6 +155,10 @@ describe("toArray", () => {
     const content = toArray(":smile:)");
     expect(content).toMatchSnapshot();
   });
+  test("consecutive simple alias and ascii emojis that overlap", () => {
+    const content = toArray(":heart:o");
+    expect(content).toMatchSnapshot();
+  });
   test("consecutive simple alias and ascii emojis without word-break", () => {
     const content = toArray(":smile::)");
     expect(content).toMatchSnapshot();
@@ -175,12 +179,20 @@ describe("toArray", () => {
     const content = toArray("https://google.com");
     expect(content).toMatchSnapshot();
   });
-  test("url and emoji (no space)", () => {
+  test("url and ascii emoji alias (no space)", () => {
     const content = toArray("https://google.com:)");
     expect(content).toMatchSnapshot();
   });
-  test("url and emoji (with space)", () => {
+  test("url and emoji (no space)", () => {
+    const content = toArray("https://google.com:heart:");
+    expect(content).toMatchSnapshot();
+  });
+  test("url and ascii emoji alias (with space)", () => {
     const content = toArray("https://google.com :)");
+    expect(content).toMatchSnapshot();
+  });
+  test("url and emoji (with space)", () => {
+    const content = toArray("https://google.com :heart:");
     expect(content).toMatchSnapshot();
   });
   test("emoji and url (no space)", () => {
@@ -191,8 +203,16 @@ describe("toArray", () => {
     const content = toArray(":) https://google.com");
     expect(content).toMatchSnapshot();
   });
+  test("url including ascii emoji alias", () => {
+    const content = toArray("https://foo:oops@example.com");
+    expect(content).toMatchSnapshot();
+  });
   test("single letter aliases", () => {
     const content = toArray(":v: :*::#: :o::x:");
+    expect(content).toMatchSnapshot();
+  });
+  test("edge cases", () => {
+    const content = toArray("<3: :1<3 <31:");
     expect(content).toMatchSnapshot();
   });
 });
