@@ -67,11 +67,12 @@ export function toArray(text, options = {}) {
 
   function replaceAliases(text) {
     const regex = aliasRegex();
-    let match, textWithEmoji = [], pos = 0;
+    const textWithEmoji = [];
+    let match, pos = 0;
 
     while (match = regex.exec(text)) {
-      let [edgeCase, ascii, full] = match.slice(1, 4);
-      let emoji = aliases[(ascii + full).slice(1, -1)];
+      const [edgeCase, ascii, full] = match.slice(1, 4);
+      const emoji = aliases[(ascii + full).slice(1, -1)];
       if (match.index > pos) {
         textWithEmoji.push(text.slice(pos, match.index));
       }
