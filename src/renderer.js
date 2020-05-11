@@ -70,12 +70,14 @@ export function toArray(text, options = {}) {
     let match, textWithEmoji = [], pos = 0;
 
     while (match = regex.exec(text)) {
-      let [ascii, full] = match.slice(1, 3);
+      let [edgeCase, ascii, full] = match.slice(1, 4);
       let emoji = aliases[(ascii + full).slice(1, -1)];
       if (match.index > pos) {
         textWithEmoji.push(text.slice(pos, match.index));
       }
-      if (ascii[0] === ":" && full && emoji) {
+      if (edgeCase) {
+        textWithEmoji.push(match[0]);
+      } else if (ascii[0] === ":" && full && emoji) {
         textWithEmoji.push(emoji);
       } else {
         textWithEmoji.push(asciiToAlias[ascii]);

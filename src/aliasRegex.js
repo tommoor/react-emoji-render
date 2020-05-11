@@ -16,7 +16,7 @@ const edgeCases = [startOfURL].join("|");
 
 function getAliasesRegex() {
   return new RegExp(
-    `(?<!${edgeCases})(${names}|:)([${allowedAliasCharacters}]*:)?`,
+    `(${edgeCases})?(${names}|:)([${allowedAliasCharacters}]*:)?`,
     "g"
   );
 }
