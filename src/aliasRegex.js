@@ -10,7 +10,7 @@ const names = flatten(
   Object.keys(asciiAliases).map(name => {
     return asciiAliases[name].map(escapeStringToBeUsedInRegExp);
   })
-).join("|");
+).sort().reverse().join("|");
 
 const edgeCases = [startOfURL].join("|");
 
