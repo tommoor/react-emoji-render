@@ -100,7 +100,12 @@ export function toArray(text, options = {}) {
 
   function replaceAliases(...match) {
     const fullMatch = match[0];
-    const alias = match[1];
+    const edgeCase = match[1];
+    const alias = match[2];
+
+    if (edgeCase) {
+      return fullMatch;
+    }
 
     const aliasEmoji = aliases[alias];
 
