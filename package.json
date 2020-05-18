@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "emoji-regex": "^6.4.1",
+    "emoji-regex": "^8.0.0",
     "lodash.flatten": "^4.4.0",
     "prop-types": "^15.5.8",
     "string-replace-to-array": "^1.0.1"
