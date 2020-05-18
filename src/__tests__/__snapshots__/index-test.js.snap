@@ -2191,9 +2191,9 @@ Array [
             "width": "1em",
           }
     }>
-    ✌
+    ✌️
 </span>,
-  "️ ",
+  " ",
   <span
     className={undefined}
     style={
@@ -2252,12 +2252,6 @@ Array [
 ]
 `;
 
-exports[`toArray url and emoji (no space) 1`] = `
-Array [
-  "https://google.com:heart:",
-]
-`;
-
 exports[`toArray url and ascii emoji alias (with space) 1`] = `
 Array [
   "https://google.com ",
@@ -2273,6 +2267,12 @@ Array [
     }>
     😃
 </span>,
+]
+`;
+
+exports[`toArray url and emoji (no space) 1`] = `
+Array [
+  "https://google.com:heart:",
 ]
 `;
 
