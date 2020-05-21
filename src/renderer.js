@@ -71,24 +71,31 @@ export function toArray(text, options = {}) {
     let match, pos = 0;
 
     while (match = regex.exec(text)) {
-      const [edgeCase, ascii, full] = match.slice(1, 4);
-      const emoji = aliases[(ascii + full).slice(1, -1)];
+      const [edgeCase, asciiAlias, fullEmoji] = match.slice(1, 4);
+      // possible full emoji like :open_mouth:
+      const emoji = aliases[(asciiAlias + fullEmoji).slice(1, -1)];
       if (match.index > pos) {
+        // text between matches
         textWithEmoji.push(text.slice(pos, match.index));
       }
       if (edgeCase) {
+        // verbatim matched text
         textWithEmoji.push(match[0]);
-      } else if (ascii[0] === ":" && full && emoji) {
+      } else if (asciiAlias[0] === ":" && fullEmoji && emoji) {
+        // full emoji
         textWithEmoji.push(emoji);
       } else {
-        textWithEmoji.push(asciiToAlias[ascii]);
-        if (full) {
-          regex.lastIndex -= full.length;
+        // ascii alias or ":"
+        textWithEmoji.push(asciiToAlias[asciiAlias]);
+        if (fullEmoji) {
+          // false positive, "go back" and don't skip that substring
+          regex.lastIndex -= fullEmoji.length;
         }
       }
       pos = regex.lastIndex;
     }
 
+    // text after last match (if any)
     textWithEmoji.push(text.slice(pos));
     return textWithEmoji.join("");
   }
