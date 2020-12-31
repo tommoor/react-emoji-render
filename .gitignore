@@ -4,4 +4,7 @@ lib
 .DS_Store
 .log
 data/raw/
+
+# IDE
 .vscode
+.idea/
