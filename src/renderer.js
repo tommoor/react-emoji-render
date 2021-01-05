@@ -34,7 +34,7 @@ export function toArray(text, options = {}) {
   const protocol = normalizeProtocol(options.protocol);
 
   function replaceUnicodeEmoji(match, i) {
-    const isUnicode = match.length < 3;
+    const isUnicode = !match.startsWith(":");
     if (!options.baseUrl || (options.forceUnicode && isUnicode)) {
       return (
         <span key={i} style={style} className={options.className}>

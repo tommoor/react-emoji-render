@@ -201,6 +201,26 @@ exports[`Emoji emoji with a single codepoint 1`] = `
 </span>
 `;
 
+exports[`Emoji force unicode on img-supported emoji services 1`] = `
+<span
+  className="">
+  Hello World! 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍
+  </span>
+   <- should be unicode :electron: <- should be image on GitHub
+</span>
+`;
+
 exports[`Emoji four emoji should not add onlyEmojiClassName 1`] = `
 <span
   className="">
@@ -638,6 +658,26 @@ exports[`Emojione emoji with a single codepoint 1`] = `
         "width": "1em",
       }
     } />
+</span>
+`;
+
+exports[`Emojione force unicode on img-supported emoji services 1`] = `
+<span
+  className="">
+  Hello World! 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍
+  </span>
+   <- should be unicode :electron: <- should be image on GitHub
 </span>
 `;
 
@@ -1080,6 +1120,26 @@ exports[`EmojioneV4 emoji with a single codepoint 1`] = `
 </span>
 `;
 
+exports[`EmojioneV4 force unicode on img-supported emoji services 1`] = `
+<span
+  className="">
+  Hello World! 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍
+  </span>
+   <- should be unicode :electron: <- should be image on GitHub
+</span>
+`;
+
 exports[`EmojioneV4 four emoji should not add onlyEmojiClassName 1`] = `
 <span
   className="">
@@ -1316,6 +1376,479 @@ exports[`EmojioneV4 with svg prop 1`] = `
 </span>
 `;
 
+exports[`GitHub a mixture of emoji syntax 1`] = `
+<span
+  className="">
+  <img
+    alt="😆"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   This is a selection of 
+  <img
+    alt="💩"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a9.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   emoji 
+  <img
+    alt="😃"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   
+  <img
+    alt="👌🏿"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub aliases containing underscores 1`] = `
+<span
+  className="">
+  <img
+    alt="😜"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f61c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   wow
+</span>
+`;
+
+exports[`GitHub aliases with skin tone modifiers 1`] = `
+<span
+  className="">
+  Say hello to 
+  <img
+    alt="👩🏿"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub ascii aliases 1`] = `
+<span
+  className="">
+  That\'s awesome 
+  <img
+    alt="😃"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub composed emojis containing U+200D and U+FE0F chars 1`] = `
+<span
+  className="undefined">
+  <img
+    alt="👩‍⚕️"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-200d-2695-fe0f.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub does nothing to unknown aliases 1`] = `
+<span
+  className="">
+  An :unknown: alias
+</span>
+`;
+
+exports[`GitHub emoji with a multiple codepoints 1`] = `
+<span
+  className="">
+  Great work 
+  <img
+    alt="👍🏾"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   
+  <img
+    alt="👨‍👩‍👧‍👦"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-200d-1f469-200d-1f467-200d-1f466.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub emoji with a single codepoint 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub force unicode on img-supported emoji services 1`] = `
+<span
+  className="">
+  Hello World! 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍
+  </span>
+   <- should be unicode 
+  <img
+    alt=":electron:"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/electron.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   <- should be image on GitHub
+</span>
+`;
+
+exports[`GitHub four emoji should not add onlyEmojiClassName 1`] = `
+<span
+  className="">
+  <img
+    alt="👋"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="😀"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="👍🏾"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="💞"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub just emoji should add onlyEmojiClassName 1`] = `
+<span
+  className="onlyEmojiClass">
+  <img
+    alt="😀"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub just emoticon should add onlyEmojiClassName 1`] = `
+<span
+  className="onlyEmojiClass">
+  <img
+    alt="😄"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub simple aliases 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="😄"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is nice 
+  <img
+    alt="👍"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub strings with no emoji 1`] = `
+<span
+  className="">
+  Just some words
+</span>
+`;
+
+exports[`GitHub three emoji should add onlyEmojiClassName 1`] = `
+<span
+  className="onlyEmojiClass">
+  <img
+    alt="😀"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f600.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="👍🏾"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d-1f3fe.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <img
+    alt="💞"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f49e.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub with size prop 1`] = `
+<span
+  className=""
+  size={32}>
+  This 
+  <img
+    alt="👨🏿"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`GitHub with svg prop 1`] = `
+<span
+  className=""
+  svg={true}>
+  This 
+  <img
+    alt="👨🏿"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-1f3ff.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/unicode/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`Twemoji a mixture of emoji syntax 1`] = `
 <span
   className="">
@@ -1516,6 +2049,26 @@ exports[`Twemoji emoji with a single codepoint 1`] = `
         "width": "1em",
       }
     } />
+</span>
+`;
+
+exports[`Twemoji force unicode on img-supported emoji services 1`] = `
+<span
+  className="">
+  Hello World! 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👍
+  </span>
+   <- should be unicode :electron: <- should be image on GitHub
 </span>
 `;
 
