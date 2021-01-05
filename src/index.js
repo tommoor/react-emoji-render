@@ -78,7 +78,7 @@ EmojioneV4.defaultProps = {
   size: 64,
 };
 
-export function GitHub({ options, ...rest }) {
+export function GitHub({ options, forceUnicode, ...rest }) {
   options = {
     protocol,
     baseUrl: `//github.githubassets.com/images/icons/emoji/unicode/`,
@@ -105,6 +105,7 @@ export function GitHub({ options, ...rest }) {
       "suspect",
       "trollface",
     ],
+    forceUnicode: !!forceUnicode,
     ...options,
   };
   return <Emoji options={options} {...rest} />;
@@ -113,4 +114,5 @@ export function GitHub({ options, ...rest }) {
 GitHub.propTypes = {
   text: PropTypes.string,
   options: optionsType,
+  forceUnicode: PropTypes.bool,
 };
