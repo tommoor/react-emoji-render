@@ -217,7 +217,20 @@ exports[`Emoji force unicode on img-supported emoji services 1`] = `
     }>
     👍
   </span>
-   <- should be unicode :electron: <- should be image on GitHub
+   <- should be unicode ⚛ 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😮
+  </span>
+  ctocat: <- should be image on GitHub
 </span>
 `;
 
@@ -677,7 +690,20 @@ exports[`Emojione force unicode on img-supported emoji services 1`] = `
     }>
     👍
   </span>
-   <- should be unicode :electron: <- should be image on GitHub
+   <- should be unicode ⚛ 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😮
+  </span>
+  ctocat: <- should be image on GitHub
 </span>
 `;
 
@@ -1136,7 +1162,20 @@ exports[`EmojioneV4 force unicode on img-supported emoji services 1`] = `
     }>
     👍
   </span>
-   <- should be unicode :electron: <- should be image on GitHub
+   <- should be unicode ⚛ 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😮
+  </span>
+  ctocat: <- should be image on GitHub
 </span>
 `;
 
@@ -1595,11 +1634,9 @@ exports[`GitHub force unicode on img-supported emoji services 1`] = `
     }>
     👍
   </span>
-   <- should be unicode 
-  <img
-    alt=":electron:"
+   <- should be unicode ⚛ 
+  <span
     className={undefined}
-    src="https://github.githubassets.com/images/icons/emoji/electron.png"
     style={
       Object {
         "height": "1em",
@@ -1607,8 +1644,10 @@ exports[`GitHub force unicode on img-supported emoji services 1`] = `
         "verticalAlign": "-0.1em",
         "width": "1em",
       }
-    } />
-   <- should be image on GitHub
+    }>
+    😮
+  </span>
+  ctocat: <- should be image on GitHub
 </span>
 `;
 
@@ -2068,7 +2107,20 @@ exports[`Twemoji force unicode on img-supported emoji services 1`] = `
     }>
     👍
   </span>
-   <- should be unicode :electron: <- should be image on GitHub
+   <- should be unicode ⚛ 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    😮
+  </span>
+  ctocat: <- should be image on GitHub
 </span>
 `;
 

@@ -131,7 +131,7 @@ import renderer from "react-test-renderer";
     test("force unicode on img-supported emoji services", () => {
       const component = renderer.create(
         <Component
-          text="Hello World! :+1: <- should be unicode :electron: <- should be image on GitHub"
+          text="Hello World! :+1: <- should be unicode :atom: :octocat: <- should be image on GitHub"
           options={{ forceUnicode: true }}
         />
       );

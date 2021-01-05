@@ -70,7 +70,7 @@ export function toArray(text, options = {}) {
     );
   }
 
-  function replaceAliases(text) {
+  function replaceAliases(text, options = {}) {
     const regex = aliasRegex();
     const textWithEmoji = [];
     let match,
@@ -118,7 +118,11 @@ export function toArray(text, options = {}) {
           "g"
         )
       : unicodeEmojiRegex;
-  return replace(replaceAliases(text), modifiedRegex, replaceUnicodeEmoji);
+  return replace(
+    replaceAliases(text, options),
+    modifiedRegex,
+    replaceUnicodeEmoji
+  );
 }
 
 export default function Emoji({
