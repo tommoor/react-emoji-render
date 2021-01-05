@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Emoji from "./renderer";
+import Emoji, { optionsType } from "./renderer";
+
 export { toArray } from "./renderer";
 
 let protocol = "https";
@@ -28,7 +29,7 @@ export function Twemoji({ svg, options, ...rest }) {
 
 Twemoji.propTypes = {
   text: PropTypes.string,
-  options: PropTypes.object,
+  options: optionsType,
   svg: PropTypes.bool,
 };
 
@@ -49,7 +50,7 @@ export function Emojione({ svg, options, ...rest }) {
 
 Emojione.propTypes = {
   text: PropTypes.string,
-  options: PropTypes.object,
+  options: optionsType,
   svg: PropTypes.bool,
 };
 
@@ -70,9 +71,26 @@ export function EmojioneV4({ size, options, ...rest }) {
 
 EmojioneV4.propTypes = {
   text: PropTypes.string,
-  options: PropTypes.object,
+  options: optionsType,
   size: PropTypes.oneOf([32, 64, 128]),
 };
 EmojioneV4.defaultProps = {
   size: 64,
+};
+
+export function GitHub({ options, ...rest }) {
+  options = {
+    protocol,
+    baseUrl: `//github.githubassets.com/images/icons/emoji/unicode/`,
+    customUrl: `//github.githubassets.com/images/icons/emoji/`,
+    ext: "png",
+    customAliases: ["electron"],
+    ...options,
+  };
+  return <Emoji options={options} {...rest} />;
+}
+
+GitHub.propTypes = {
+  text: PropTypes.string,
+  options: optionsType,
 };
