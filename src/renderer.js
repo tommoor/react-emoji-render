@@ -80,8 +80,10 @@ export function toArray(text, options = {}) {
       const [edgeCase, asciiAlias, fullEmoji] = match.slice(1, 4);
       const rawInput = (asciiAlias + fullEmoji).slice(1, -1);
       // possible full emoji like :open_mouth:
+      // We also consider custom aliases to ensure we catch them
       const emoji = (options.customAliases || []).includes(rawInput)
-        ? ":" + rawInput + ":"
+        ? // if there's a hit, reformat it with the ':' so it can be processed by replaceUnicodeEmoji.
+          ":" + rawInput + ":"
         : aliases[rawInput];
       if (match.index > pos) {
         // text between matches
