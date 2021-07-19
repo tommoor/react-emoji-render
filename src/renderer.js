@@ -43,10 +43,10 @@ export function toArray(text, options = {}) {
       );
     }
 
-    let codepoint = unicodeToCodepoint(match, removeHelperCharacters);
-
     // if Emojione we don't want to add helper characters in the URL
     const removeHelperCharacters = options.emojione;
+    let codepoint = unicodeToCodepoint(match, removeHelperCharacters);
+
     if (removeHelperCharacters) {
       codepoint = codepoint.replace(/-200d/g, "").replace(/-fe0f/g, "");
     }
@@ -78,8 +78,11 @@ export function toArray(text, options = {}) {
 
     while ((match = regex.exec(text))) {
       const [edgeCase, asciiAlias, fullEmoji] = match.slice(1, 4);
+      const rawInput = (asciiAlias + fullEmoji).slice(1, -1);
       // possible full emoji like :open_mouth:
-      const emoji = aliases[(asciiAlias + fullEmoji).slice(1, -1)];
+      const emoji = (options.customAliases || []).includes(rawInput)
+        ? ":" + rawInput + ":"
+        : aliases[rawInput];
       if (match.index > pos) {
         // text between matches
         textWithEmoji.push(text.slice(pos, match.index));

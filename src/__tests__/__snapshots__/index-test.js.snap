@@ -1634,9 +1634,11 @@ exports[`GitHub force unicode on img-supported emoji services 1`] = `
     }>
     👍
   </span>
-   <- should be unicode ⚛ 
-  <span
+   <- should be unicode 
+  <img
+    alt=":atom:"
     className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/atom.png"
     style={
       Object {
         "height": "1em",
@@ -1644,10 +1646,21 @@ exports[`GitHub force unicode on img-supported emoji services 1`] = `
         "verticalAlign": "-0.1em",
         "width": "1em",
       }
-    }>
-    😮
-  </span>
-  ctocat: <- should be image on GitHub
+    } />
+   
+  <img
+    alt=":octocat:"
+    className={undefined}
+    src="https://github.githubassets.com/images/icons/emoji/octocat.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   <- should be image on GitHub
 </span>
 `;
 
