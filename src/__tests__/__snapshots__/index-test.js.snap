@@ -137,6 +137,38 @@ exports[`Emoji does nothing to unknown aliases 1`] = `
 </span>
 `;
 
+exports[`Emoji emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    ❤️
+  </span>
+   is 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
 exports[`Emoji emoji with a multiple codepoints 1`] = `
 <span
   className="">
@@ -574,6 +606,38 @@ exports[`Emojione does nothing to unknown aliases 1`] = `
 <span
   className="">
   An :unknown: alias
+</span>
+`;
+
+exports[`Emojione emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 
@@ -1016,6 +1080,38 @@ exports[`EmojioneV4 does nothing to unknown aliases 1`] = `
 </span>
 `;
 
+exports[`EmojioneV4 emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
 exports[`EmojioneV4 emoji with a multiple codepoints 1`] = `
 <span
   className="">
@@ -1452,6 +1548,38 @@ exports[`Twemoji does nothing to unknown aliases 1`] = `
 <span
   className="">
   An :unknown: alias
+</span>
+`;
+
+exports[`Twemoji emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
 </span>
 `;
 

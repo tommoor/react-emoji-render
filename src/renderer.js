@@ -11,6 +11,7 @@ import unicodeToCodepoint from "./unicodeToCodepoint";
 
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
+import { returnStrippedElements, stripNonStringElements } from "./utils";
 
 const unicodeEmojiRegex = emojiRegex();
 
@@ -108,8 +109,17 @@ export default function Emoji({
   onlyEmojiClassName,
   options = {},
   className,
+  children,
   ...rest
 }) {
+  let non_string_elements = [];
+
+  if (!!children) {
+    const [strippedChildren, elements] = stripNonStringElements(children);
+    text = strippedChildren;
+    non_string_elements = elements;
+  }
+
   function isOnlyEmoji(output) {
     if (output.length > 3) return false;
 
@@ -120,7 +130,11 @@ export default function Emoji({
     return true;
   }
 
-  const output = toArray(text, options);
+  let output = returnStrippedElements(
+    toArray(text, options),
+    non_string_elements
+  );
+
   const classes = classnames(className, {
     [onlyEmojiClassName]: isOnlyEmoji(output),
   });
