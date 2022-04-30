@@ -13,6 +13,7 @@ declare module 'react-emoji-render' {
      * variants.
      */
     text?: string;
+    children?: React.ReactNode;
     props?: any;
     className?: string;
     /** The className passed as the onlyEmojiClassName prop is added when the provided text contains only three or less emoji characters. This allows you to add custom styles in this scenario. */

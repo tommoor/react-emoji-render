@@ -16,6 +16,12 @@ import renderer from "react-test-renderer";
       expect(tree).toMatchSnapshot();
     });
 
+    test("emoji as children", () => {
+      const component = renderer.create(<Component>This ❤️ is 👌</Component>);
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
     test("emoji with a multiple codepoints", () => {
       const component = renderer.create(<Component text="Great work 👍🏾 👨‍👩‍👧‍👦" />);
       let tree = component.toJSON();
