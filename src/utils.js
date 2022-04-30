@@ -20,7 +20,7 @@ export function returnStrippedElements(stripped, elements) {
   if (!elements || !elements.length) return stripped;
 
   let count = -1;
-  return stripped.flatMap((x, i) => {
+  return stripped.flatMap(x => {
     if (typeof x === "string") {
       if (x.trim() === NON_STRING_PLACEHOLDER) {
         count++;
