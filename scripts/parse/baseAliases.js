@@ -14,7 +14,7 @@ const baseAliases = JSON.parse(
 const baseAliasesParsed = {};
 const emojis = Object.keys(baseAliases);
 const uniqueEmojis = [...new Set(emojis)];
-uniqueEmojis.forEach(emoji => {
+uniqueEmojis.forEach((emoji) => {
   baseAliasesParsed[emoji] = [baseAliases[emoji].name];
 });
 
@@ -23,7 +23,7 @@ const formattedContent = prettier.format(content, {
   parser: "json-stringify",
 });
 
-fs.writeFile(OUTPUT_FILE_PATH, formattedContent, function(error) {
+fs.writeFile(OUTPUT_FILE_PATH, formattedContent, function (error) {
   if (error) {
     return console.log(error);
   }

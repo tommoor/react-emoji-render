@@ -12,7 +12,7 @@ console.log("\n***PARSE***");
 
 // Execute all parse scripts
 getAllScripts((error, result) => {
-  result.forEach(file => {
+  result.forEach((file) => {
     const filePath = path.resolve(parseScripsDir, file);
     console.log("Running =>", filePath.slice(filePath.indexOf("/parse")));
     require(filePath);

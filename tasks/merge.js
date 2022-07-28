@@ -12,7 +12,7 @@ console.log("\n***MERGE***");
 
 // Execute all merge scripts
 getAllScripts((error, result) => {
-  result.forEach(file => {
+  result.forEach((file) => {
     const filePath = path.resolve(mergeScripsDir, file);
     console.log("Running =>", filePath.slice(filePath.indexOf("/merge")));
     require(filePath);

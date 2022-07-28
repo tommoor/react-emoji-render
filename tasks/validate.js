@@ -12,7 +12,7 @@ console.log("\n***VALIDATE***");
 
 // Execute all validate scripts
 getAllScripts((error, result) => {
-  result.forEach(file => {
+  result.forEach((file) => {
     const filePath = path.resolve(validateScripsDir, file);
     console.log("Running =>", filePath.slice(filePath.indexOf("/validate")));
     require(filePath);

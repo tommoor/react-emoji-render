@@ -15,9 +15,9 @@ const uniqueEmojis = [...new Set(Object.values(customAliases))];
 
 const customAliasesParsed = {};
 const aliases = Object.keys(customAliases);
-uniqueEmojis.forEach(emoji => {
+uniqueEmojis.forEach((emoji) => {
   customAliasesParsed[emoji] = aliases.filter(
-    alias => customAliases[alias] === emoji
+    (alias) => customAliases[alias] === emoji
   );
 });
 
@@ -26,7 +26,7 @@ const formattedContent = prettier.format(content, {
   parser: "json-stringify",
 });
 
-fs.writeFile(OUTPUT_FILE_PATH, formattedContent, function(error) {
+fs.writeFile(OUTPUT_FILE_PATH, formattedContent, function (error) {
   if (error) {
     return console.log(error);
   }

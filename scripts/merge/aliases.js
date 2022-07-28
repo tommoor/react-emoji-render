@@ -12,7 +12,7 @@ const mergedAliases = {};
 
 function addAliases(aliases) {
   Object.entries(aliases).forEach(([emoji, aliases]) => {
-    aliases.forEach(alias => {
+    aliases.forEach((alias) => {
       mergedAliases[alias] = emoji;
     });
   });
@@ -28,7 +28,7 @@ const postGlue = ";\n";
 const content = `${preGlue}${JSON.stringify(mergedAliases)}${postGlue}`;
 const formattedContent = prettier.format(content, { parser: "babel" });
 
-fs.writeFile(OUTPUT_FILE_PATH, formattedContent, error => {
+fs.writeFile(OUTPUT_FILE_PATH, formattedContent, (error) => {
   if (error) {
     return console.log(error);
   }

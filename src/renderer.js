@@ -68,9 +68,10 @@ export function toArray(text, options = {}) {
   function replaceAliases(text) {
     const regex = aliasRegex();
     const textWithEmoji = [];
-    let match, pos = 0;
+    let match,
+      pos = 0;
 
-    while (match = regex.exec(text)) {
+    while ((match = regex.exec(text))) {
       const [edgeCase, asciiAlias, fullEmoji] = match.slice(1, 4);
       // possible full emoji like :open_mouth:
       const emoji = aliases[(asciiAlias + fullEmoji).slice(1, -1)];

@@ -2,7 +2,7 @@ import React from "react";
 import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../../src/index";
 import renderer from "react-test-renderer";
 
-[Emoji, Twemoji, Emojione, EmojioneV4].forEach(Component => {
+[Emoji, Twemoji, Emojione, EmojioneV4].forEach((Component) => {
   describe(Component.name, () => {
     test("strings with no emoji", () => {
       const component = renderer.create(<Component text="Just some words" />);

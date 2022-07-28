@@ -12,7 +12,7 @@ const gemojiAliases = JSON.parse(
 );
 
 const gemojiAliasesParsed = {};
-gemojiAliases.forEach(emojiData => {
+gemojiAliases.forEach((emojiData) => {
   gemojiAliasesParsed[emojiData.emoji] = emojiData.aliases;
 });
 
@@ -21,7 +21,7 @@ const formattedContent = prettier.format(content, {
   parser: "json-stringify",
 });
 
-fs.writeFile(OUTPUT_FILE_PATH, formattedContent, function(error) {
+fs.writeFile(OUTPUT_FILE_PATH, formattedContent, function (error) {
   if (error) {
     return console.log(error);
   }
