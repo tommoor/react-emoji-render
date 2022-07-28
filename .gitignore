@@ -1,6 +1,5 @@
 node_modules
 build
-lib
 .DS_Store
 .log
 data/raw/
