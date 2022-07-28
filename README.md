@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/react-emoji-render.svg)](https://badge.fury.io/js/react-emoji-render) ![Node.js CI](https://github.com/tommoor/react-emoji-render/workflows/Node.js%20CI/badge.svg)
+[![npm version](https://badge.fury.io/js/react-emoji-render.svg)](https://badge.fury.io/js/react-emoji-render) ![Node.js CI](https://github.com/geczy/react-emoji-render/workflows/Node.js%20CI/badge.svg)
 
 # react-emoji-render
 
@@ -101,7 +101,7 @@ const content = toArray(
 Then, for example, you can parse all the text and emojis in a single string like the following:
 
 ```javascript
-const parseEmojis = value => {
+const parseEmojis = (value) => {
   const emojisArray = toArray(value);
 
   // toArray outputs React elements for emojis and strings for other
