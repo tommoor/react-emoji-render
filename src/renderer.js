@@ -69,9 +69,10 @@ export function toArray(text, options = {}) {
   function replaceAliases(text) {
     const regex = aliasRegex();
     const textWithEmoji = [];
-    let match, pos = 0;
+    let match,
+      pos = 0;
 
-    while (match = regex.exec(text)) {
+    while ((match = regex.exec(text))) {
       const [edgeCase, asciiAlias, fullEmoji] = match.slice(1, 4);
       // possible full emoji like :open_mouth:
       const emoji = aliases[(asciiAlias + fullEmoji).slice(1, -1)];
@@ -114,10 +115,14 @@ export default function Emoji({
 }) {
   let non_string_elements = [];
 
-  if (!!children) {
+  if (!!children && Array.isArray(children)) {
     const [strippedChildren, elements] = stripNonStringElements(children);
     text = strippedChildren;
     non_string_elements = elements;
+  }
+
+  if (!Array.isArray(children) && !text) {
+    throw new Error("Emoji: either children or text prop must be provided");
   }
 
   function isOnlyEmoji(output) {

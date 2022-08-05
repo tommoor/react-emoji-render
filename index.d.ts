@@ -23,27 +23,31 @@ declare module 'react-emoji-render' {
     options?: Options;
   }
 
+  type RequireProperty<T, Prop extends keyof T> = T & {[key in Prop]-?:T[key]};
+
+  type PropsRequireTextOrChildren = RequireProperty<Props, 'text'> | RequireProperty<Props, 'children'>;
+
   type ReturnType = JSX.Element;
 
   /**
    * By default the component will normalize all of the different emoji
    * notations to native unicode characters.
    */
-  export function Emoji(opts: Props): ReturnType;
+  export function Emoji(opts: PropsRequireTextOrChildren): ReturnType;
   /**
    * Twemoji is an emoji set designed by Twitter, you can use the included Twemoji
    * component to render emoji images in this style.
    *
    * @see https://github.com/twitter/twemoji
    */
-  export function Twemoji(opts: Props): ReturnType;
+  export function Twemoji(opts: PropsRequireTextOrChildren): ReturnType;
   /**
    * Emojione is a great looking open source emoji set, you can use
    * the included Emojione component to render emoji images in this style.
    *
    * @see https://github.com/Ranks/emojione
    */
-  export function Emojione(opts: Props): ReturnType;
+  export function Emojione(opts: PropsRequireTextOrChildren): ReturnType;
 
   export default Emoji;
 
