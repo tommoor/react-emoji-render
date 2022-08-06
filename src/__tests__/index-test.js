@@ -22,6 +22,40 @@ import renderer from "react-test-renderer";
       expect(tree).toMatchSnapshot();
     });
 
+    test("emoji as children with other HTML elements", () => {
+      const component = renderer.create(
+        <Component>
+          This ❤️ is 👌
+          <h1>Title</h1>
+        </Component>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji as children with other react components", () => {
+      const SubComponent = () => <h1>Title</h1>;
+      const component = renderer.create(
+        <Component>
+          This ❤️ is 👌
+          <SubComponent />
+        </Component>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji as children with embedded expression", () => {
+      let text = "This ❤️ is 👌";
+      const component = renderer.create(<Component>{text}</Component>);
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("no children and no text prop", () => {
+      expect(() => renderer.create(<Component></Component>)).toThrow();
+    });
+
     test("emoji with a multiple codepoints", () => {
       const component = renderer.create(<Component text="Great work 👍🏾 👨‍👩‍👧‍👦" />);
       let tree = component.toJSON();
