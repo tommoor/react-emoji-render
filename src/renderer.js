@@ -119,9 +119,9 @@ export default function Emoji({
     const [strippedChildren, elements] = stripNonStringElements(children);
     text = strippedChildren;
     non_string_elements = elements;
-  }
-
-  if (!Array.isArray(children) && !text) {
+  } else if (!!children && typeof children === "string") {
+    text = children;
+  } else if (!text) {
     throw new Error("Emoji: either children or text prop must be provided");
   }
 
