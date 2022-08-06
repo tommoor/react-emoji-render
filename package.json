@@ -23,8 +23,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint": "eslint src --fix",
-    "prettier": "prettier --config \"./.prettierrc\" --write \"./**/*.@(js|json|jsx)\"",
-    "prettier:check": "prettier --config \"./.prettierrc\" --check \"./**/*.@(js|json|jsx)\"",
+    "format": "prettier --config \"./.prettierrc\" --write \"./**/*.@(js|json|jsx)\"",
+    "format:check": "prettier --config \"./.prettierrc\" --check \"./**/*.@(js|json|jsx)\"",
     "update-aliases": "node tasks/parse.js && node tasks/merge.js && node tasks/validate.js"
   },
   "repository": {
