@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/react-emoji-render.svg)](https://badge.fury.io/js/react-emoji-render) ![Tests](https://github.com/tommoor/react-emoji-render/workflows/test.yml/badge.svg)
+[![npm version](https://badge.fury.io/js/react-emoji-render.svg)](https://badge.fury.io/js/react-emoji-render) ![Tests](https://github.com/tommoor/react-emoji-render/actions/workflows/test.yml/badge.svg)
 
 # react-emoji-render
 
