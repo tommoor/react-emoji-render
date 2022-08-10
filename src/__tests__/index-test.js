@@ -1,8 +1,14 @@
 import React from "react";
-import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../../src/index";
+import Emoji, {
+  Twemoji,
+  Emojione,
+  EmojioneV4,
+  GitHub,
+  toArray,
+} from "../../src/index";
 import renderer from "react-test-renderer";
 
-[Emoji, Twemoji, Emojione, EmojioneV4].forEach(Component => {
+[Emoji, Twemoji, Emojione, EmojioneV4, GitHub].forEach(Component => {
   describe(Component.name, () => {
     test("strings with no emoji", () => {
       const component = renderer.create(<Component text="Just some words" />);
@@ -118,6 +124,17 @@ import renderer from "react-test-renderer";
 
     test("composed emojis containing U+200D and U+FE0F chars", () => {
       const component = renderer.create(<Component text="👩‍⚕️" />);
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("force unicode on img-supported emoji services", () => {
+      const component = renderer.create(
+        <Component
+          text="Hello World! :+1: <- should be unicode :atom: :octocat: <- should be image on GitHub"
+          options={{ forceUnicode: true }}
+        />
+      );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });

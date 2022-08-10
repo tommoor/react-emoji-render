@@ -34,7 +34,8 @@ export function toArray(text, options = {}) {
   const protocol = normalizeProtocol(options.protocol);
 
   function replaceUnicodeEmoji(match, i) {
-    if (!options.baseUrl) {
+    const isUnicode = !match.startsWith(":");
+    if (!options.baseUrl || (options.forceUnicode && isUnicode)) {
       return (
         <span key={i} style={style} className={options.className}>
           {match}
@@ -42,16 +43,20 @@ export function toArray(text, options = {}) {
       );
     }
 
-    let codepoint = unicodeToCodepoint(match, removeHelperCharacters);
-
     // if Emojione we don't want to add helper characters in the URL
     const removeHelperCharacters = options.emojione;
+    let codepoint = unicodeToCodepoint(match, removeHelperCharacters);
+
     if (removeHelperCharacters) {
       codepoint = codepoint.replace(/-200d/g, "").replace(/-fe0f/g, "");
     }
-
     const separator = options.size ? "/" : "";
-    const src = `${protocol}${options.baseUrl}${options.size}${separator}${codepoint}.${options.ext}`;
+    const src = `${protocol}${
+      isUnicode ? options.baseUrl : options.customUrl
+    }${options.size || ""}${separator}${
+      // slice removes colons from custom emoji alias e.g :electron:->electron
+      isUnicode ? codepoint : match.slice(1, -1)
+    }.${options.ext}`;
 
     return (
       <img
@@ -65,7 +70,7 @@ export function toArray(text, options = {}) {
     );
   }
 
-  function replaceAliases(text) {
+  function replaceAliases(text, options = {}) {
     const regex = aliasRegex();
     const textWithEmoji = [];
     let match,
@@ -73,8 +78,13 @@ export function toArray(text, options = {}) {
 
     while ((match = regex.exec(text))) {
       const [edgeCase, asciiAlias, fullEmoji] = match.slice(1, 4);
+      const rawInput = (asciiAlias + fullEmoji).slice(1, -1);
       // possible full emoji like :open_mouth:
-      const emoji = aliases[(asciiAlias + fullEmoji).slice(1, -1)];
+      // We also consider custom aliases to ensure we catch them
+      const emoji = (options.customAliases || []).includes(rawInput)
+        ? // if there's a hit, reformat it with the ':' so it can be processed by replaceUnicodeEmoji.
+          ":" + rawInput + ":"
+        : aliases[rawInput];
       if (match.index > pos) {
         // text between matches
         textWithEmoji.push(text.slice(pos, match.index));
@@ -101,7 +111,23 @@ export function toArray(text, options = {}) {
     return textWithEmoji.join("");
   }
 
-  return replace(replaceAliases(text), unicodeEmojiRegex, replaceUnicodeEmoji);
+  const customAliases = options.customAliases || [];
+  // adds custom aliases to the regex to detect. e.g GitHub's :electron: which isn't part of the unicode standard.
+  const modifiedRegex =
+    customAliases.length > 0
+      ? new RegExp(
+          // slice here removes the /.../g on regex tags
+          `${unicodeEmojiRegex.toString().slice(1, -2)}|:(${customAliases.join(
+            "|"
+          )}):`,
+          "g"
+        )
+      : unicodeEmojiRegex;
+  return replace(
+    replaceAliases(text, options),
+    modifiedRegex,
+    replaceUnicodeEmoji
+  );
 }
 
 export default function Emoji({
@@ -132,15 +158,19 @@ export default function Emoji({
     </span>
   );
 }
-
+export const optionsType = PropTypes.shape({
+  baseUrl: PropTypes.string,
+  customUrl: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  ext: PropTypes.string,
+  // image props
+  props: PropTypes.object,
+  className: PropTypes.string,
+  customAliases: PropTypes.arrayOf(PropTypes.string),
+  forceUnicode: PropTypes.bool,
+});
 Emoji.propTypes = {
   text: PropTypes.string,
-  props: PropTypes.object,
   onlyEmojiClassName: PropTypes.string,
-  options: PropTypes.shape({
-    baseUrl: PropTypes.string,
-    size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    ext: PropTypes.string,
-    className: PropTypes.string,
-  }),
+  options: optionsType,
 };
