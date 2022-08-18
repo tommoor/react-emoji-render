@@ -1,6 +1,7 @@
 import React from "react";
 import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../../src/index";
 import renderer from "react-test-renderer";
+import Linkify from "linkify-react";
 
 [Emoji, Twemoji, Emojione, EmojioneV4].forEach(Component => {
   describe(Component.name, () => {
@@ -54,6 +55,18 @@ import renderer from "react-test-renderer";
 
     test("no children and no text prop", () => {
       expect(() => renderer.create(<Component></Component>)).toThrow();
+    });
+
+    test("compatibility with another library that manipulates the text", () => {
+      const component = renderer.create(
+        <Linkify>
+          <Component>
+            This 🔗 is 👌 <span /> github.com
+          </Component>
+        </Linkify>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
     });
 
     test("emoji with a multiple codepoints", () => {
