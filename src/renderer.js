@@ -115,10 +115,14 @@ export default function Emoji({
 }) {
   let non_string_elements = [];
 
-  if (!!children) {
+  if (!!children && Array.isArray(children)) {
     const [strippedChildren, elements] = stripNonStringElements(children);
     text = strippedChildren;
     non_string_elements = elements;
+  }
+
+  if (!Array.isArray(children) && !text) {
+    throw new Error("Emoji: either children or text prop must be provided");
   }
 
   function isOnlyEmoji(output) {

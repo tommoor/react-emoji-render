@@ -31,13 +31,17 @@ declare module 'react-emoji-render' {
     size?: 32 | 64 | 128;
   }
 
+  type RequireProperty<T, Prop extends keyof T> = T & {[key in Prop]-?:T[key]};
+
+  type PropsRequireTextOrChildren<T> = RequireProperty<T, 'text'> | RequireProperty<T, 'children'>;
+
   type ReturnType = JSX.Element;
 
   /**
    * By default the component will normalize all of the different emoji
    * notations to native unicode characters.
    */
-  export function Emoji(opts: SvgProps): ReturnType;
+  export function Emoji(opts: PropsRequireTextOrChildren<SvgProps>): ReturnType;
 
   /**
    * Twemoji is an emoji set designed by Twitter, you can use the included Twemoji
@@ -45,7 +49,7 @@ declare module 'react-emoji-render' {
    *
    * @see https://github.com/twitter/twemoji
    */
-  export function Twemoji(opts: SvgProps): ReturnType;
+  export function Twemoji(opts: PropsRequireTextOrChildren<SvgProps>): ReturnType;
 
   /**
    * Emojione is a great looking open source emoji set, you can use
@@ -53,7 +57,7 @@ declare module 'react-emoji-render' {
    *
    * @see https://github.com/Ranks/emojione
    */
-  export function Emojione(opts: SvgProps): ReturnType;
+  export function Emojione(opts: PropsRequireTextOrChildren<SvgProps>): ReturnType;
 
   /**
    * Emojione is a great looking open source emoji set, you can use
@@ -61,7 +65,7 @@ declare module 'react-emoji-render' {
    *
    * @see https://github.com/Ranks/emojione
    */
-  export function EmojioneV4(opts: SizeProps): ReturnType;
+  export function EmojioneV4(opts: PropsRequireTextOrChildren<SizeProps>): ReturnType;
 
   export default Emoji;
 
