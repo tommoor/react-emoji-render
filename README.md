@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/react-emoji-render.svg)](https://badge.fury.io/js/react-emoji-render) ![Node.js CI](https://github.com/tommoor/react-emoji-render/workflows/Node.js%20CI/badge.svg)
+[![npm version](https://badge.fury.io/js/react-emoji-render.svg)](https://badge.fury.io/js/react-emoji-render) ![Tests](https://github.com/tommoor/react-emoji-render/actions/workflows/test.yml/badge.svg)
 
 # react-emoji-render
 
@@ -50,6 +50,9 @@ import { Twemoji } from 'react-emoji-render';
 
 <Twemoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 
+// or with children
+<Twemoji>This ❤️ sentence includes :+1: a variety of emoji types :)</Twemoji>
+
 // or, for svg images:
 <Twemoji svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
@@ -63,6 +66,9 @@ you can use the included `Emojione` component to render emoji images in this sty
 import { Emojione } from 'react-emoji-render';
 
 <Emojione text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
+
+// or with children
+<Emojione>This ❤️ sentence includes :+1: a variety of emoji types :)</Emojione>
 
 // or, for svg images:
 <Emojione svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />

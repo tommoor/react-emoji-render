@@ -8,7 +8,7 @@ declare module 'react-emoji-render' {
     className?: string;
   }
 
-  export interface Props {
+  export interface BaseProps {
     /** Text to render to emoji. Can include unicode emojis, as well as :shortcode:
      * variants.
      */
@@ -18,14 +18,22 @@ declare module 'react-emoji-render' {
     className?: string;
     /** The className passed as the onlyEmojiClassName prop is added when the provided text contains only three or less emoji characters. This allows you to add custom styles in this scenario. */
     onlyEmojiClassName?: string;
+    options?: Options;
+  }
+
+  export interface SvgProps extends BaseProps {
     /** Use SVG for Twemoji and Emojion. Defaults to false (using .png instead). */
     svg?: boolean;
-    options?: Options;
+  }
+
+  export interface SizeProps extends BaseProps {
+    /** The pixels size of the emoji image */
+    size?: 32 | 64 | 128;
   }
 
   type RequireProperty<T, Prop extends keyof T> = T & {[key in Prop]-?:T[key]};
 
-  type PropsRequireTextOrChildren = RequireProperty<Props, 'text'> | RequireProperty<Props, 'children'>;
+  type PropsRequireTextOrChildren<T> = RequireProperty<T, 'text'> | RequireProperty<T, 'children'>;
 
   type ReturnType = JSX.Element;
 
@@ -33,21 +41,31 @@ declare module 'react-emoji-render' {
    * By default the component will normalize all of the different emoji
    * notations to native unicode characters.
    */
-  export function Emoji(opts: PropsRequireTextOrChildren): ReturnType;
+  export function Emoji(opts: PropsRequireTextOrChildren<SvgProps>): ReturnType;
+
   /**
    * Twemoji is an emoji set designed by Twitter, you can use the included Twemoji
    * component to render emoji images in this style.
    *
    * @see https://github.com/twitter/twemoji
    */
-  export function Twemoji(opts: PropsRequireTextOrChildren): ReturnType;
+  export function Twemoji(opts: PropsRequireTextOrChildren<SvgProps>): ReturnType;
+
   /**
    * Emojione is a great looking open source emoji set, you can use
    * the included Emojione component to render emoji images in this style.
    *
    * @see https://github.com/Ranks/emojione
    */
-  export function Emojione(opts: PropsRequireTextOrChildren): ReturnType;
+  export function Emojione(opts: PropsRequireTextOrChildren<SvgProps>): ReturnType;
+
+  /**
+   * Emojione is a great looking open source emoji set, you can use
+   * the included Emojione component to render emoji images in this style.
+   *
+   * @see https://github.com/Ranks/emojione
+   */
+  export function EmojioneV4(opts: PropsRequireTextOrChildren<SizeProps>): ReturnType;
 
   export default Emoji;
 
