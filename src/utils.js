@@ -5,10 +5,11 @@ export function escapeStringToBeUsedInRegExp(string) {
 }
 
 export function stripNonStringElements(children) {
-  const stripped = children
+  const strippedChildren = children
     .map(x => (typeof x === "string" ? x : NON_STRING_PLACEHOLDER))
     .join("");
-  return [stripped, children.filter(x => typeof x !== "string")];
+  const elements = children.filter(x => typeof x !== "string");
+  return [strippedChildren, elements];
 }
 
 function flatMap(array, mapper) {
@@ -29,7 +30,7 @@ function flatMap(array, mapper) {
   return result;
 }
 
-export function returnStrippedElements(stripped, elements) {
+export function returnNonStringStrippedElements(stripped, elements) {
   if (!stripped || !Array.isArray(stripped)) return stripped;
   if (!elements || !elements.length) return stripped;
 
@@ -38,11 +39,11 @@ export function returnStrippedElements(stripped, elements) {
   function replacePlaceholder(string) {
     const split = string.split(NON_STRING_PLACEHOLDER);
     if (split.length > 1) {
-      return flatMap(split, (y, i) => {
-        if (i === 0) return [y];
+      return flatMap(split, (item, index) => {
+        if (index === 0) return [item];
         else {
           count++;
-          return [elements[count], y];
+          return [elements[count], item];
         }
       });
     } else {
@@ -51,15 +52,15 @@ export function returnStrippedElements(stripped, elements) {
     }
   }
 
-  return flatMap(stripped, x => {
-    if (typeof x === "string") {
-      if (x.trim() === NON_STRING_PLACEHOLDER) {
+  return flatMap(stripped, item => {
+    if (typeof item === "string") {
+      if (item.trim() === NON_STRING_PLACEHOLDER) {
         count++;
         return elements[count];
-      } else if (x.includes(NON_STRING_PLACEHOLDER)) {
-        return replacePlaceholder(x);
+      } else if (item.includes(NON_STRING_PLACEHOLDER)) {
+        return replacePlaceholder(item);
       }
     }
-    return x;
+    return item;
   });
 }
