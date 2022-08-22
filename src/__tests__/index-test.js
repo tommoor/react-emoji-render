@@ -1,6 +1,7 @@
 import React from "react";
-import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../../src/index";
+import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../index";
 import renderer from "react-test-renderer";
+import Linkify from "linkify-react";
 
 [Emoji, Twemoji, Emojione, EmojioneV4].forEach(Component => {
   describe(Component.name, () => {
@@ -12,6 +13,79 @@ import renderer from "react-test-renderer";
 
     test("emoji with a single codepoint", () => {
       const component = renderer.create(<Component text="This ❤️ is 👌" />);
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji as children", () => {
+      const component = renderer.create(<Component>This ❤️ is 👌</Component>);
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji as children with other HTML elements", () => {
+      const component = renderer.create(
+        <Component>
+          This ❤️ is 👌
+          <h1>Title</h1>
+        </Component>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji as children with other react components", () => {
+      const SubComponent = () => <h1>Title</h1>;
+      const component = renderer.create(
+        <Component>
+          This ❤️ is 👌
+          <SubComponent />
+        </Component>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji as children with embedded expression", () => {
+      let text = "This ❤️ is 👌";
+      const component = renderer.create(<Component>{text}</Component>);
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("no children and no text prop", () => {
+      expect(() => renderer.create(<Component></Component>)).toThrow();
+    });
+
+    test("compatibility with another library that manipulates the text", () => {
+      const component = renderer.create(
+        <Linkify>
+          <Component>
+            This 🔗 is 👌 <span /> github.com
+          </Component>
+        </Linkify>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji inside an HTML element", () => {
+      const component = renderer.create(
+        <Component>
+          <h1>This ❤️ is 👌</h1>
+        </Component>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji inside a react component", () => {
+      const SubComponent = () => <h1>This ❤️ is 👌</h1>;
+      const component = renderer.create(
+        <Component>
+          <SubComponent />
+        </Component>
+      );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });

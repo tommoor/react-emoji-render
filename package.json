@@ -73,6 +73,8 @@
     "eslint-plugin-prettier": "^3.1.0",
     "glob": "^7.1.6",
     "jest": "^18.1.0",
+    "linkify-react": "^3.0.4",
+    "linkifyjs": "^3.0.5",
     "prettier": "1.18.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

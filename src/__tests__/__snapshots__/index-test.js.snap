@@ -112,6 +112,48 @@ exports[`Emoji ascii aliases 1`] = `
 </span>
 `;
 
+exports[`Emoji compatibility with another library that manipulates the text 1`] = `
+<span>
+  <span
+    className="">
+    This 
+    <span
+      className={undefined}
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      }>
+      🔗
+    </span>
+     is 
+    <span
+      className={undefined}
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      }>
+      👌
+    </span>
+     
+    <span />
+     
+    <a
+      href="http://github.com">
+      github.com
+    </a>
+    
+  </span>
+</span>
+`;
+
 exports[`Emoji composed emojis containing U+200D and U+FE0F chars 1`] = `
 <span
   className="undefined">
@@ -134,6 +176,158 @@ exports[`Emoji does nothing to unknown aliases 1`] = `
 <span
   className="">
   An :unknown: alias
+</span>
+`;
+
+exports[`Emoji emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    ❤️
+  </span>
+   is 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
+exports[`Emoji emoji as children with embedded expression 1`] = `
+<span
+  className="">
+  This 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    ❤️
+  </span>
+   is 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+</span>
+`;
+
+exports[`Emoji emoji as children with other HTML elements 1`] = `
+<span
+  className="">
+  This 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    ❤️
+  </span>
+   is 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`Emoji emoji as children with other react components 1`] = `
+<span
+  className="">
+  This 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    ❤️
+  </span>
+   is 
+  <span
+    className={undefined}
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    }>
+    👌
+  </span>
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`Emoji emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`Emoji emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
 </span>
 `;
 
@@ -552,6 +746,48 @@ exports[`Emojione ascii aliases 1`] = `
 </span>
 `;
 
+exports[`Emojione compatibility with another library that manipulates the text 1`] = `
+<span>
+  <span
+    className="">
+    This 
+    <img
+      alt="🔗"
+      className={undefined}
+      src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f517.png"
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      } />
+     is 
+    <img
+      alt="👌"
+      className={undefined}
+      src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      } />
+     
+    <span />
+     
+    <a
+      href="http://github.com">
+      github.com
+    </a>
+    
+  </span>
+</span>
+`;
+
 exports[`Emojione composed emojis containing U+200D and U+FE0F chars 1`] = `
 <span
   className="undefined">
@@ -574,6 +810,158 @@ exports[`Emojione does nothing to unknown aliases 1`] = `
 <span
   className="">
   An :unknown: alias
+</span>
+`;
+
+exports[`Emojione emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione emoji as children with embedded expression 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Emojione emoji as children with other HTML elements 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`Emojione emoji as children with other react components 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`Emojione emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`Emojione emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
 </span>
 `;
 
@@ -991,6 +1379,48 @@ exports[`EmojioneV4 ascii aliases 1`] = `
 </span>
 `;
 
+exports[`EmojioneV4 compatibility with another library that manipulates the text 1`] = `
+<span>
+  <span
+    className="">
+    This 
+    <img
+      alt="🔗"
+      className={undefined}
+      src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f517.png"
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      } />
+     is 
+    <img
+      alt="👌"
+      className={undefined}
+      src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      } />
+     
+    <span />
+     
+    <a
+      href="http://github.com">
+      github.com
+    </a>
+    
+  </span>
+</span>
+`;
+
 exports[`EmojioneV4 composed emojis containing U+200D and U+FE0F chars 1`] = `
 <span
   className="undefined">
@@ -1013,6 +1443,158 @@ exports[`EmojioneV4 does nothing to unknown aliases 1`] = `
 <span
   className="">
   An :unknown: alias
+</span>
+`;
+
+exports[`EmojioneV4 emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 emoji as children with embedded expression 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`EmojioneV4 emoji as children with other HTML elements 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`EmojioneV4 emoji as children with other react components 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/64/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`EmojioneV4 emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`EmojioneV4 emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
 </span>
 `;
 
@@ -1430,6 +2012,48 @@ exports[`Twemoji ascii aliases 1`] = `
 </span>
 `;
 
+exports[`Twemoji compatibility with another library that manipulates the text 1`] = `
+<span>
+  <span
+    className="">
+    This 
+    <img
+      alt="🔗"
+      className={undefined}
+      src="https://twemoji.maxcdn.com/2/72x72/1f517.png"
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      } />
+     is 
+    <img
+      alt="👌"
+      className={undefined}
+      src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
+      style={
+        Object {
+          "height": "1em",
+          "margin": "0 .05em 0 .1em",
+          "verticalAlign": "-0.1em",
+          "width": "1em",
+        }
+      } />
+     
+    <span />
+     
+    <a
+      href="http://github.com">
+      github.com
+    </a>
+    
+  </span>
+</span>
+`;
+
 exports[`Twemoji composed emojis containing U+200D and U+FE0F chars 1`] = `
 <span
   className="undefined">
@@ -1452,6 +2076,158 @@ exports[`Twemoji does nothing to unknown aliases 1`] = `
 <span
   className="">
   An :unknown: alias
+</span>
+`;
+
+exports[`Twemoji emoji as children 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji emoji as children with embedded expression 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+</span>
+`;
+
+exports[`Twemoji emoji as children with other HTML elements 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`Twemoji emoji as children with other react components 1`] = `
+<span
+  className="">
+  This 
+  <img
+    alt="❤️"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/2764.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+   is 
+  <img
+    alt="👌"
+    className={undefined}
+    src="https://twemoji.maxcdn.com/2/72x72/1f44c.png"
+    style={
+      Object {
+        "height": "1em",
+        "margin": "0 .05em 0 .1em",
+        "verticalAlign": "-0.1em",
+        "width": "1em",
+      }
+    } />
+  <h1>
+    Title
+  </h1>
+</span>
+`;
+
+exports[`Twemoji emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`Twemoji emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
 </span>
 `;
 

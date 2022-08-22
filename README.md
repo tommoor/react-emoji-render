@@ -33,6 +33,11 @@ native unicode characters.
 import Emoji from "react-emoji-render";
 
 <Emoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />;
+
+// or as a child
+<Emoji>
+  This ❤️ sentence includes :+1: a variety of emoji types :)
+<Emoji/>;
 ```
 
 ### Twemoji

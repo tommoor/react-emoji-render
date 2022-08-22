@@ -11,6 +11,10 @@ import unicodeToCodepoint from "./unicodeToCodepoint";
 
 import aliases from "../data/aliases";
 import asciiAliases from "../data/asciiAliases";
+import {
+  returnNonStringStrippedElements,
+  stripNonStringElements,
+} from "./utils";
 
 const unicodeEmojiRegex = emojiRegex();
 
@@ -109,8 +113,28 @@ export default function Emoji({
   onlyEmojiClassName,
   options = {},
   className,
+  children,
   ...rest
 }) {
+  let nonStringElements = [];
+
+  if (!!children && Array.isArray(children)) {
+    const [strippedChildren, elements] = stripNonStringElements(children);
+    text = strippedChildren;
+    nonStringElements = elements;
+  } else if (!!children && typeof children === "string") {
+    text = children;
+  } else if (!!children) {
+    //children must then be an object (react component or html element)
+    const [strippedChildren, elements] = stripNonStringElements([children]);
+    text = strippedChildren;
+    nonStringElements = elements;
+  } else if (!text) {
+    throw new Error(
+      "react-emoji-render: either children or text prop must be provided"
+    );
+  }
+
   function isOnlyEmoji(output) {
     if (output.length > 3) return false;
 
@@ -121,7 +145,11 @@ export default function Emoji({
     return true;
   }
 
-  const output = toArray(text, options);
+  const output = returnNonStringStrippedElements(
+    toArray(text, options),
+    nonStringElements
+  );
+
   const classes = classnames(className, {
     [onlyEmojiClassName]: isOnlyEmoji(output),
   });

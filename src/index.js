@@ -30,6 +30,10 @@ Twemoji.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export function Emojione({ svg, options, ...rest }) {
@@ -51,6 +55,10 @@ Emojione.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
   svg: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export function EmojioneV4({ size, options, ...rest }) {
@@ -72,6 +80,10 @@ EmojioneV4.propTypes = {
   text: PropTypes.string,
   options: PropTypes.object,
   size: PropTypes.oneOf([32, 64, 128]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 EmojioneV4.defaultProps = {
   size: 64,
