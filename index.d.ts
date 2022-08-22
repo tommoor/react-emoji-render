@@ -33,7 +33,7 @@ declare module 'react-emoji-render' {
 
   type RequireProperty<T, Prop extends keyof T> = T & {[key in Prop]-?:T[key]};
 
-  type PropsRequireTextOrChildren<T> = RequireProperty<T, 'text'> | RequireProperty<T, 'children'>;
+  type PropsRequireTextOrChildren<T extends BaseProps> = RequireProperty<T, 'text'> | RequireProperty<T, 'children'>;
 
   type ReturnType = JSX.Element;
 

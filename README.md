@@ -35,7 +35,7 @@ import Emoji from "react-emoji-render";
 <Emoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />;
 
 // or as a child
-<Emoji >
+<Emoji>
   This ❤️ sentence includes :+1: a variety of emoji types :)
 <Emoji/>;
 ```
@@ -50,9 +50,6 @@ import { Twemoji } from 'react-emoji-render';
 
 <Twemoji text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 
-// or with children
-<Twemoji>This ❤️ sentence includes :+1: a variety of emoji types :)</Twemoji>
-
 // or, for svg images:
 <Twemoji svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
 ```
@@ -66,9 +63,6 @@ you can use the included `Emojione` component to render emoji images in this sty
 import { Emojione } from 'react-emoji-render';
 
 <Emojione text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
-
-// or with children
-<Emojione>This ❤️ sentence includes :+1: a variety of emoji types :)</Emojione>
 
 // or, for svg images:
 <Emojione svg text="This ❤️ sentence includes :+1: a variety of emoji types :)" />
