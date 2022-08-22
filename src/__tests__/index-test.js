@@ -1,5 +1,5 @@
 import React from "react";
-import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../../src/index";
+import Emoji, { Twemoji, Emojione, EmojioneV4, toArray } from "../index";
 import renderer from "react-test-renderer";
 import Linkify from "linkify-react";
 
@@ -64,6 +64,27 @@ import Linkify from "linkify-react";
             This 🔗 is 👌 <span /> github.com
           </Component>
         </Linkify>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji inside an HTML element", () => {
+      const component = renderer.create(
+        <Component>
+          <h1>This ❤️ is 👌</h1>
+        </Component>
+      );
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    test("emoji inside a react component", () => {
+      const SubComponent = () => <h1>This ❤️ is 👌</h1>;
+      const component = renderer.create(
+        <Component>
+          <SubComponent />
+        </Component>
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();

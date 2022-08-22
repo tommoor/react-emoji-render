@@ -313,6 +313,24 @@ exports[`Emoji emoji as children with other react components 1`] = `
 </span>
 `;
 
+exports[`Emoji emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`Emoji emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
 exports[`Emoji emoji with a multiple codepoints 1`] = `
 <span
   className="">
@@ -925,6 +943,24 @@ exports[`Emojione emoji as children with other react components 1`] = `
     } />
   <h1>
     Title
+  </h1>
+</span>
+`;
+
+exports[`Emojione emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`Emojione emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
   </h1>
 </span>
 `;
@@ -1544,6 +1580,24 @@ exports[`EmojioneV4 emoji as children with other react components 1`] = `
 </span>
 `;
 
+exports[`EmojioneV4 emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`EmojioneV4 emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
 exports[`EmojioneV4 emoji with a multiple codepoints 1`] = `
 <span
   className="">
@@ -2155,6 +2209,24 @@ exports[`Twemoji emoji as children with other react components 1`] = `
     } />
   <h1>
     Title
+  </h1>
+</span>
+`;
+
+exports[`Twemoji emoji inside a react component 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
+  </h1>
+</span>
+`;
+
+exports[`Twemoji emoji inside an HTML element 1`] = `
+<span
+  className="undefined">
+  <h1>
+    This ❤️ is 👌
   </h1>
 </span>
 `;

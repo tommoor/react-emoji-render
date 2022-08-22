@@ -118,7 +118,6 @@ export default function Emoji({
 }) {
   let nonStringElements = [];
 
-  console.log("children:", children);
   if (!!children && Array.isArray(children)) {
     const [strippedChildren, elements] = stripNonStringElements(children);
     text = strippedChildren;
