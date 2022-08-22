@@ -6,9 +6,9 @@ export function escapeStringToBeUsedInRegExp(string) {
 
 export function stripNonStringElements(children) {
   const strippedChildren = children
-    .map(x => (typeof x === "string" ? x : NON_STRING_PLACEHOLDER))
+    .map(child => (typeof child === "string" ? child : NON_STRING_PLACEHOLDER))
     .join("");
-  const elements = children.filter(x => typeof x !== "string");
+  const elements = children.filter(child => typeof child !== "string");
   return [strippedChildren, elements];
 }
 
