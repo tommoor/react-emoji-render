@@ -17,7 +17,7 @@ export function Twemoji({ svg, options, ...rest }) {
 
   options = {
     protocol,
-    baseUrl: `//twemoji.maxcdn.com/2/${svg ? "svg/" : ""}`,
+    baseUrl: `//cdnjs.cloudflare.com/ajax/libs/twemoji/12.0.4/${svg ? "svg/" : ""}`,
     size,
     ext,
     ...options,
