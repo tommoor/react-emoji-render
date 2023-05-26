@@ -17,6 +17,7 @@
     "data/asciiAliases.js",
     "README.md"
   ],
+  "types": "index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src -d lib --ignore test",
