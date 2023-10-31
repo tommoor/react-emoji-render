@@ -34,13 +34,13 @@ for (const alias of Object.keys(asciiAliases)) {
   }
 }
 
-export function toArray(text, options = {}) {
+export function toArray(text, isDefault, options = {}) {
   const protocol = normalizeProtocol(options.protocol);
 
   function replaceUnicodeEmoji(match, i) {
     if (!options.baseUrl) {
       return (
-        <span key={i} style={style} className={options.className}>
+        <span key={i} style={isDefault? style:{}} className={options.className}>
           {match}
         </span>
       );
@@ -62,7 +62,7 @@ export function toArray(text, options = {}) {
         key={i}
         alt={match}
         src={src}
-        style={style}
+        style={isDefault? style:{}}
         className={options.className}
         {...options.props}
       />
@@ -112,6 +112,7 @@ export default function Emoji({
   text,
   onlyEmojiClassName,
   options = {},
+  isDefault=true,
   className,
   children,
   ...rest
@@ -146,7 +147,7 @@ export default function Emoji({
   }
 
   const output = returnNonStringStrippedElements(
-    toArray(text, options),
+    toArray(text, isDefault, options),
     nonStringElements
   );
 
